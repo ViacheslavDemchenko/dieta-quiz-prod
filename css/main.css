@@ -1624,17 +1624,17 @@ template {
 }
 
 .form__group.field .form__label-first {
-  top: 4.1875rem;
+  top: 4.3125rem;
   left: 10rem;
 }
 
 .form__group.field .form__label-second {
-  top: 7.75rem;
+  top: 7.875rem;
   left: 11.5625rem;
 }
 
 .form__group.field .form__label-third {
-  top: 11.25rem;
+  top: 11.375rem;
   left: 11.0625rem;
 }
 
@@ -1653,17 +1653,17 @@ template {
 }
 
 .form__group.field .form__field:focus ~ .form__label-first {
-  top: 4.1875rem;
+  top: 4.3125rem;
   left: 10rem;
 }
 
 .form__group.field .form__field:focus ~ .form__label-second {
-  top: 7.75rem;
+  top: 7.875rem;
   left: 11.5625rem;
 }
 
 .form__group.field .form__field:focus ~ .form__label-third {
-  top: 11.25rem;
+  top: 11.375rem;
   left: 11.0625rem;
 }
 
@@ -2153,6 +2153,12 @@ template {
   color: #3a4148;
 }
 
+.menu-list .menu__item--light-text {
+  font-family: "UniNeueRegular";
+  font-weight: 400;
+  font-style: normal;
+}
+
 .menu-list .menu__item::before {
   position: absolute;
   top: 50%;
@@ -2317,6 +2323,12 @@ template {
   font-size: 1rem;
   line-height: 1.3;
   color: #2e3338;
+}
+
+.form__title--light {
+  font-family: "UniNeueRegular";
+  font-weight: 400;
+  font-style: normal;
 }
 
 .form .email-input {

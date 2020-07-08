@@ -291,14 +291,9 @@ $(document).ready(function () {
     owl.owlCarousel({
       items: 1,
       autoHeight: true,
-      // touchDrag: false,
-      // mouseDrag: false,
-      // pullDrag: false,
-      // nav: true,
-      // navText: ['<span class="arrow__left"></span>', '<span class="arrow__right">Далее</span>'],
-      onChange: function onChange(e) {
-        $('.counter').text('1 из ' + this.items().length);
-      }
+      touchDrag: false,
+      mouseDrag: false,
+      pullDrag: false
     });
     $(".arrow__right").click(function () {
       owl.trigger("next.owl.carousel");
@@ -310,12 +305,9 @@ $(document).ready(function () {
     owl.on('changed.owl.carousel', function (e) {
       if ($('.owl-next').length) {
         var btnNext = document.querySelector('.owl-next');
-        console.log(btnNext);
         $('.counter').text(++e.page.index + ' из ' + e.item.count);
-        console.log("".concat(+e.page.index, " \u0438\u0437 ").concat(e.item.count));
 
         if (+e.page.index == e.item.count && +e.page.index != 0) {
-          console.log('end');
           btnNext.classList.add('owl-next--last');
         } else {
           btnNext.classList.remove('owl-next--last');
