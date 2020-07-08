@@ -1,0 +1,57 @@
+/* FONTS */
+
+/* Satisfy-Regular */
+
+@font-face {
+  font-family: 'Satisfy-Regular';
+  src: url('../fonts/satisfy-regular/Satisfy-Regular.eot');
+  src: url('../fonts/satisfy-regular/Satisfy-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/satisfy-regular/Satisfy-Regular.svg#Satisfy-Regular') format('svg'),
+    url('../fonts/satisfy-regular/Satisfy-Regular.ttf') format('truetype'),
+    url('../fonts/satisfy-regular/Satisfy-Regular.woff') format('woff'),
+    url('../fonts/satisfy-regular/Satisfy-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* UniNeueBold */
+
+@font-face {
+  font-family: 'UniNeueBold';
+  src: url('../fonts/unisans-bold/UniNeueBold.eot');
+  src: url('../fonts/unisans-bold/UniNeueBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/unisans-bold/UniNeueBold.svg#UniNeueBold') format('svg'),
+    url('../fonts/unisans-bold/UniNeueBold.ttf') format('truetype'),
+    url('../fonts/unisans-bold/UniNeueBold.woff') format('woff'),
+    url('../fonts/unisans-bold/UniNeueBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* UniNeueRegular */
+
+@font-face {
+  font-family: 'UniNeueRegular';
+  src: url('../fonts/unisans-regular/UniNeueRegular.eot');
+  src: url('../fonts/unisans-regular/UniNeueRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/unisans-regular/UniNeueRegular.svg#UniNeueRegular') format('svg'),
+    url('../fonts/unisans-regular/UniNeueRegular.ttf') format('truetype'),
+    url('../fonts/unisans-regular/UniNeueRegular.woff') format('woff'),
+    url('../fonts/unisans-regular/UniNeueRegular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* UniNeueRegular-Italic */
+
+@font-face {
+  font-family: 'UniNeueRegular-Italic';
+  src: url('../fonts/unisans-regular-italic/UniNeueRegular-Italic.eot');
+  src: url('../fonts/unisans-regular-italic/UniNeueRegular-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/unisans-regular-italic/UniNeueRegular-Italic.svg#UniNeueRegular-Italic') format('svg'),
+    url('../fonts/unisans-regular-italic/UniNeueRegular-Italic.ttf') format('truetype'),
+    url('../fonts/unisans-regular-italic/UniNeueRegular-Italic.woff') format('woff'),
+    url('../fonts/unisans-regular-italic/UniNeueRegular-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
