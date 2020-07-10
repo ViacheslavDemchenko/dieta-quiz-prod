@@ -167,80 +167,40 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return webp;
   }
 
-  if ($('.program-calc').length) {
+  if ($('.program-calc__dish').length) {
     var bgImageChange = function bgImageChange() {
       var screenWidth = window.screen.width;
 
-      if (webpSupportCheck() && screenWidth == 320 && window.devicePixelRatio == 1) {
-        console.log('WEBP');
-        console.log('320');
-        console.log('window.devicePixelRatio 1');
-        bgImage.style.backgroundImage = "url('./img/program-calc-bg-mobile-320-1@1x.webp')";
-        src = './img/program-calc-bg-mobile-320-';
-        imgType = '@1x.webp';
+      if (webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio == 1) {
+        // console.log('WEBP');
+        // console.log('< 481');
+        // console.log('window.devicePixelRatio 1');
+        // src = './img/dish-';
+        imgType = '-480@1x.webp';
       }
 
-      if (webpSupportCheck() && screenWidth == 320 && window.devicePixelRatio > 1) {
-        console.log('WEBP');
-        console.log('320');
-        console.log('window.devicePixelRatio > 1');
-        bgImage.style.backgroundImage = "url('./img/program-calc-bg-mobile-320-1@2x.webp')";
-        src = './img/program-calc-bg-mobile-320-';
-        imgType = '@2x.webp';
+      if (webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio > 1) {
+        // console.log('WEBP');
+        // console.log('< 481');
+        // console.log('window.devicePixelRatio > 1');
+        // src = './img/dish-';
+        imgType = '-480@2x.webp';
       }
 
-      if (webpSupportCheck() && screenWidth >= 375 && screenWidth < 560 && window.devicePixelRatio == 1) {
-        console.log('WEBP');
-        console.log('480');
-        console.log('window.devicePixelRatio 1');
-        bgImage.style.backgroundImage = "url('./img/program-calc-bg-mobile-480-1@1x.webp')";
-        src = './img/program-calc-bg-mobile-480-';
-        imgType = '@1x.webp';
+      if (!webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio == 1) {
+        // console.log('jpg');
+        // console.log('< 481');
+        // console.log('window.devicePixelRatio 1');
+        // src = './img/dish-';
+        imgType = '-480@1x.jpg';
       }
 
-      if (webpSupportCheck() && screenWidth >= 375 && screenWidth < 560 && window.devicePixelRatio > 1) {
-        console.log('WEBP');
-        console.log('480');
-        console.log('window.devicePixelRatio > 1');
-        bgImage.style.backgroundImage = "url('./img/program-calc-bg-mobile-480-1@2x.webp')";
-        src = './img/program-calc-bg-mobile-480-';
-        imgType = '@2x.webp';
-      }
-
-      if (!webpSupportCheck() && screenWidth == 320 && window.devicePixelRatio == 1) {
-        console.log('jpg');
-        console.log('320');
-        console.log('window.devicePixelRatio 1');
-        bgImage.style.backgroundImage = "url('./img/program-calc-bg-mobile-320-1@1x.jpg')";
-        src = './img/program-calc-bg-mobile-320-';
-        imgType = '@1x.jpg';
-      }
-
-      if (!webpSupportCheck() && screenWidth == 320 && window.devicePixelRatio > 1) {
-        console.log('jpg');
-        console.log('320');
-        console.log('window.devicePixelRatio > 1');
-        bgImage.style.backgroundImage = "url('./img/program-calc-bg-mobile-320-1@2x.jpg')";
-        src = './img/program-calc-bg-mobile-320-';
-        imgType = '@2x.jpg';
-      }
-
-      if (!webpSupportCheck() && screenWidth >= 375 && screenWidth < 560 && window.devicePixelRatio == 1) {
-        console.log('jpg');
-        console.log('480');
-        console.log('window.devicePixelRatio 1');
-        bgImage.style.backgroundImage = "url('./img/program-calc-bg-mobile-480-1@1x.jpg')";
-        src = './img/program-calc-bg-mobile-480-';
-        imgType = '@1x.jpg';
-      }
-
-      if (!webpSupportCheck() && screenWidth >= 375 && screenWidth < 560 && window.devicePixelRatio > 1) {
-        console.log('jpg');
-        console.log('480');
-        console.log('window.devicePixelRatio > 1');
-        bgImage.style.backgroundImage = "url('./img/program-calc-bg-mobile-480-1@2x.jpg')";
-        src = './img/program-calc-bg-mobile-480-';
-        imgType = '@2x.jpg';
+      if (!webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio > 1) {
+        // console.log('jpg');
+        // console.log('< 481');
+        // console.log('window.devicePixelRatio > 1');
+        // src = './img/dish-';
+        imgType = '-480@2x.jpg';
       }
     };
 
@@ -249,16 +209,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       timer = setInterval(function () {
         if (i >= 3) {
           i = 0;
-        }
+        } // console.log(`url(${src}${i}${imgType})`);
 
-        console.log("url(".concat(src).concat(i + 1).concat(imgType));
-        bgImage.style.backgroundImage = "url(".concat(src).concat(i + 1).concat(imgType);
+
+        dish.style.backgroundImage = "url(".concat(src).concat(i + 1).concat(imgType);
         i++;
-      }, 3000);
+      }, 1500);
     };
 
-    var bgImage = document.querySelector('.program-calc');
-    var src;
+    var dish = document.querySelector('.program-calc__dish');
+    var src = './img/dish-';
     var imgType;
     var timer;
     bgImageChange();
@@ -269,13 +229,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       $('.progress').animate({
         num: 100 - 0
       }, {
-        duration: 20000,
+        duration: 10000,
         step: function step(num) {
           this.innerHTML = (num + 0).toFixed(0) + '%';
 
           if (this.innerHTML == '100%') {
-            clearInterval(timer);
-            window.location.href = 'personal-profile.html';
+            clearInterval(timer); // window.location.href = 'personal-profile.html';
           }
         }
       });
@@ -300,8 +259,7 @@ $(document).ready(function () {
     });
     $(".arrow__left").click(function () {
       owl.trigger("prev.owl.carousel");
-    }); // let owl = $('.owl-carousel');
-
+    });
     owl.on('changed.owl.carousel', function (e) {
       if ($('.owl-next').length) {
         var btnNext = document.querySelector('.owl-next');

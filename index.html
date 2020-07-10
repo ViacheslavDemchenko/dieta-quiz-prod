@@ -32,34 +32,29 @@
               <div class="quiz-slide__percent quiz-slide__percent--first">20%</div>
               <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--border"></span><span class="range-line range-line--border"></span><span class="range-line range-line--border"></span><span class="range-line"></span></div>
               <div class="quiz-slide-icons">
-                <div class="female sex sex--active">
+                <button class="female sex sex--active" value="female">
                   <svg class="quiz-slide-icon female-icon" width="47" height="67">
                     <use xlink:href="img/icons/sprite.svg#woman"></use>
                   </svg>
                   <svg class="check-icon check-icon--active" width="15" height="11">
                     <use xlink:href="img/icons/sprite.svg#check"></use>
                   </svg>
-                </div>
-                <div class="male sex">
+                </button>
+                <button class="male sex" value="male">
                   <svg class="quiz-slide-icon male-icon" width="58" height="75">
                     <use xlink:href="img/icons/sprite.svg#man"></use>
                   </svg>
                   <svg class="check-icon" width="15" height="11">
                     <use xlink:href="img/icons/sprite.svg#check"></use>
                   </svg>
-                </div>
+                </button>
               </div>
               <div class="quiz-slide-titles">
                 <div class="quiz-slide__title quiz-slide__title--active">Женский</div>
                 <div class="quiz-slide__title">Мужской</div>
               </div>
             </div>
-            <div class="quiz-arrows">
-              <div class="arrow__left">
-                <svg class="arrow-icon-left" width="11" height="18">
-                  <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
-                </svg>
-              </div>
+            <div class="quiz-arrows quiz-arrows--first">
               <div class="arrow__right">Далее
                 <svg class="arrow-icon-right" width="8" height="14">
                   <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
@@ -76,7 +71,7 @@
               <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span><span class="range-line"></span><span class="range-line"></span></div>
               <div class="quiz-slide-checkbox">
                 <div class="checkbox-block">
-                  <input type="radio" id="lose-weight" name="target" value="1" checked>
+                  <input type="radio" id="lose-weight" name="target" value="1">
                   <label for="lose-weight">Похудеть</label>
                 </div>
                 <div class="checkbox-block">
@@ -114,14 +109,14 @@
               <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span><span class="range-line"></span></div>
               <div class="exercices">
                 <div class="exercice-block">
-                  <div class="quantaty quantaty--active">
-                    <div class="exercice-num exercice-num--active">0</div>
-                    <div class="exercice-text exercice-text--active">раз</div>
+                  <div class="quantaty">
+                    <div class="exercice-num">0</div>
+                    <div class="exercice-text">раз</div>
                     <svg class="quantaty-check-icon" width="15" height="11">
                       <use xlink:href="img/icons/sprite.svg#check"></use>
                     </svg>
                   </div>
-                  <div class="intensity intensity--active">Минимум</div>
+                  <div class="intensity">Минимум</div>
                 </div>
                 <div class="exercice-block">
                   <div class="quantaty">
@@ -241,12 +236,12 @@
               <div class="quiz-slide__percent quiz-slide__percent--fourth">80%</div>
               <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span></div>
               <div class="quiz-slide-measure">
-                <div class="input-wrap input-wrap--active">
+                <div class="input-wrap">
                   <svg class="check-yellow" width="15" height="11">
                     <use xlink:href="img/icons/sprite.svg#check-yellow"></use>
                   </svg>
                   <div class="form__group field">
-                    <input class="form__field" type="input" placeholder="Ваш возраст*" name="age" id="age" required>
+                    <input class="form__field" type="input" placeholder="Ваш возраст*" name="age" id="age" pattern="^[0-9]+$" required>
                     <label class="form__label form__label-first" for="age">Ваш возраст*</label>
                   </div>
                 </div>
@@ -336,5 +331,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
   </body>
 </html>

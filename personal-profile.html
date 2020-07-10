@@ -24,7 +24,7 @@
         <div class="personal-profile__header">
           <div class="personal-profile__header-content">
             <div class="personal-profile__ready">Готово</div>
-            <div class="personal-profile__text">Посмотрите ваш персональный профиль</div><a class="personal-profile__get-program" href="payment.html">Получить программу</a>
+            <div class="personal-profile__text">Посмотрите ваш персональный профиль</div><a class="personal-profile__get-program" href="form.html">Получить программу</a>
             <div class="personal-profile__elipse">
               <svg class="arrow-icon-down" width="15" height="21">
                 <use xlink:href="img/icons/sprite.svg#arrow-down"></use>
@@ -36,13 +36,13 @@
           <div class="result-block result-block--bmi">
             <div class="question-mark question-mark--yellow">?</div>
             <div class="result-block__title">Ваш ИМТ:</div>
-            <div class="result-block__text">Нормальный</div>
+            <div class="result-block__text result-block__text--bmi">Нормальный</div>
             <div class="result-block__icon">
               <svg class="libra-icon" width="150" height="150">
                 <use xlink:href="img/icons/sprite.svg#libra"></use>
               </svg>
             </div>
-            <div class="result-block__number--bmi">20</div>
+            <div class="result-block__number result-block__number--bmi">20</div>
             <div class="result-block__footnote">Индекс массы тела*</div>
             <div class="result-block-modal result-block-modal--bmi">
               <div class="close">x</div>
@@ -52,13 +52,13 @@
           <div class="data-block data-block--energy">
             <div class="question-mark question-mark--yellow">?</div>
             <div class="result-block__title">Норма в сутки:</div>
-            <div class="result-block__text">Минимум энергии</div>
+            <div class="result-block__text result-block__text--energy">Минимум энергии</div>
             <div class="result-block__icon">
               <svg class="battery-icon" width="250" height="90">
                 <use xlink:href="img/icons/sprite.svg#battery"></use>
               </svg>
             </div>
-            <div class="result-block__number">1735-1835</div>
+            <div class="result-block__number result-block__number--energy">1735-1835</div>
             <div class="result-block__footnote">Базовый метаболизм*</div>
             <div class="result-block-modal result-block-modal--energy">
               <div class="close">x</div>
@@ -107,7 +107,7 @@
             <div class="menu__item">Подробное руководство <span class="menu__item--light-text">по составлению рациона</span></div>
             <div class="menu__item">Список продуктов для похода в магазин</div>
           </div>
-        </div><a class="get-program__btn" href="payment.html">Получить программу</a>
+        </div><a class="get-program__btn" href="form.html">Получить программу</a>
       </div>
       <footer class="footer footer--program-calc">
         <div class="container">
@@ -134,7 +134,8 @@
         </div>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/result-show.js"></script>
   </body>
 </html>
