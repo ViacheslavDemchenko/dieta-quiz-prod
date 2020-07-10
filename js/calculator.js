@@ -47,19 +47,20 @@ function webpSupportCheck() {
     return webp;
 }
 
+
 /* ФУНКЦИИ ДЛЯ РАСЧЕТОВ */
 
 function userParams(webp) {
     let screenWidth = window.screen.width;
     const bgImage = document.querySelector('.quiz-slide-first');
-    let src;
+    let src = './img/first-slide-bg-';
     let imgType;
 
     if (webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio == 1) {
         // console.log('WEBP');
         // console.log('< 481');
         // console.log('window.devicePixelRatio 1');
-        src = './img/first-slide-bg-';
+        // src = './img/first-slide-bg-';
         imgType = '-480@1x.webp';
     }
 
@@ -67,7 +68,7 @@ function userParams(webp) {
         // console.log('WEBP');
         // console.log('< 481');
         // console.log('window.devicePixelRatio > 1');
-        src = './img/first-slide-bg-';
+        /////
         imgType = '-480@2x.webp';
     }
 
@@ -75,7 +76,7 @@ function userParams(webp) {
         // console.log('jpg');
         // console.log('< 481');
         // console.log('window.devicePixelRatio 1');
-        src = './img/first-slide-bg-';
+        // src = './img/first-slide-bg-';
         imgType = '-480@1x.jpg';
     }
 
@@ -83,7 +84,7 @@ function userParams(webp) {
         // console.log('jpg');
         // console.log('< 481');
         // console.log('window.devicePixelRatio > 1');
-        src = './img/first-slide-bg-';
+        // src = './img/first-slide-bg-';
         imgType = '-480@2x.jpg';
     }
 
@@ -101,6 +102,7 @@ function userParams(webp) {
             btn.classList.add('sex--active');
             sexCheckIcons[i].classList.add('check-icon--active');
             quizSlideTitle[i].classList.add('quiz-slide__title--active');
+            // console.log(`url(${src}${i}${imgType})`);
             bgImage.style.backgroundImage = `url(${src}${i}${imgType})`;
             userSex = btn.value;
             console.log(`Пол: ${userSex}`);
