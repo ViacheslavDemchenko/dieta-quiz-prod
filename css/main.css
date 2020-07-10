@@ -1796,18 +1796,26 @@ template {
 .circle {
   position: absolute;
   z-index: 2000;
+  top: -155%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  width: 15.625rem;
+  height: 15.625rem;
+  border: 0.3125rem solid red;
+  border-radius: 50%;
+}
+
+.progress {
+  position: absolute;
+  z-index: 2500;
+  top: 48%;
+  left: 43%;
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
   font-size: 1.125rem;
   line-height: 0.715;
   color: #140d23;
-}
-
-.progress {
-  position: absolute;
-  z-index: 2500;
 }
 
 .dieta-icon {
@@ -1865,6 +1873,34 @@ template {
   flex-direction: column;
   align-items: center;
   padding: 5.625rem 0 3.75rem 0;
+}
+
+.webp .personal-profile {
+  background-repeat: no-repeat !important;
+  background-position: center 11.8125rem !important;
+  background-size: 105% !important;
+  background: url(../img/personal-profile-bg-480@1x.webp);
+}
+
+.no-webp .personal-profile {
+  background-repeat: no-repeat !important;
+  background-position: center 11.8125rem !important;
+  background-size: 105% !important;
+  background: url(../img/personal-profile-bg-480@1x.jpg);
+}
+
+.webp .personal-profile__header {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/personal-profile-header-bg-480@1x.webp);
+}
+
+.no-webp .personal-profile__header {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/personal-profile-header-bg-480@1x.jpg);
 }
 
 .personal-profile__ready {
@@ -1969,6 +2005,34 @@ template {
   left: 0;
   right: 0;
   background: rgba(203, 220, 234, 0.3);
+}
+
+.webp .result-block--bmi {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/result-block-480-1@1x.webp), #cbdcea;
+}
+
+.no-webp .result-block--bmi {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/result-block-480-1@1x.png), #cbdcea;
+}
+
+.webp .result-block--loose-weight {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/result-block-480-2@1x.webp), #cbdcea;
+}
+
+.no-webp .result-block--loose-weight {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/result-block-480-2@1x.png), #cbdcea;
 }
 
 .result-block__title {
@@ -2284,6 +2348,34 @@ template {
   background: linear-gradient(90deg, #e7b03d 0%, #fcce59 100%);
 }
 
+.webp .get-program-smuzi {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/smuzi-480@1x.webp);
+}
+
+.no-webp .get-program-smuzi {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/smuzi-480@1x.png);
+}
+
+.webp .get-program {
+  background-repeat: no-repeat !important;
+  background-position: 100% 5px !important;
+  background-size: cover !important;
+  background: url(../img/get-program-bg-480@1x.webp);
+}
+
+.no-webp .get-program {
+  background-repeat: no-repeat !important;
+  background-position: 100% 5px !important;
+  background-size: cover !important;
+  background: url(../img/get-program-bg-480@1x.jpg);
+}
+
 .result-block-modal {
   position: absolute;
   z-index: 2000;
@@ -2353,6 +2445,20 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.webp .form-page {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/form-bg-480@1x.webp);
+}
+
+.no-webp .form-page {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/form-bg-480@1x.jpg);
 }
 
 .quiz-slide__content--form {
@@ -2574,10 +2680,38 @@ template {
   align-items: center;
 }
 
+.webp .payment-page {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/payment-bg-480@1x.webp);
+}
+
+.no-webp .payment-page {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/payment-bg-480@1x.jpg);
+}
+
 .book {
   width: 16.1875rem;
   height: 17.625rem;
   margin-top: 5.375rem;
+}
+
+.webp .book {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/book-480@1x.webp);
+}
+
+.no-webp .book {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/book-480@1x.jpg);
 }
 
 .quiz-slide__content--payment {
@@ -2944,6 +3078,20 @@ template {
   background-color: #f8fefe;
 }
 
+.webp .gratitude {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/gratitude-480@1x.webp);
+}
+
+.no-webp .gratitude {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/gratitude-480@1x.jpg);
+}
+
 .quiz-slide__content--gratitude {
   margin: 5.9375rem 0 0.625rem 0;
   padding: 1.25rem 1.3125rem;
@@ -3014,230 +3162,6 @@ template {
   font-size: 0.625rem;
   line-height: 1.857;
   color: #fefefe;
-}
-
-@media screen and (min-width: 0) {
-  .webp .personal-profile {
-    background-repeat: no-repeat !important;
-    background-position: center 9.3125rem !important;
-    background-size: 105% !important;
-    background: url(../img/personal-profile-bg-320@1x.webp);
-  }
-
-  .no-webp .personal-profile {
-    background-repeat: no-repeat !important;
-    background-position: center 9.3125rem !important;
-    background-size: 105% !important;
-    background: url(../img/personal-profile-bg-320@1x.jpg);
-  }
-
-  .webp .personal-profile__header {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/personal-profile-header-bg-320@1x.webp);
-  }
-
-  .no-webp .personal-profile__header {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/personal-profile-header-bg-320@1x.jpg);
-  }
-
-  .webp .result-block--bmi {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/result-block-320-1@1x.webp), #cbdcea;
-  }
-
-  .no-webp .result-block--bmi {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/result-block-320-1@1x.png), #cbdcea;
-  }
-
-  .webp .result-block--loose-weight {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/result-block-320-2@1x.webp), #cbdcea;
-  }
-
-  .no-webp .result-block--loose-weight {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/result-block-320-2@1x.png), #cbdcea;
-  }
-
-  .webp .get-program-smuzi {
-    background-repeat: no-repeat !important;
-    background-position: center -11px !important;
-    background-size: cover !important;
-    background: url(../img/smuzi-320@1x.webp);
-  }
-
-  .no-webp .get-program-smuzi {
-    background-repeat: no-repeat !important;
-    background-position: center -11px !important;
-    background-size: cover !important;
-    background: url(../img/smuzi-320@1x.png);
-  }
-
-  .webp .get-program {
-    background-repeat: no-repeat !important;
-    background-position: center -15px !important;
-    background-size: cover !important;
-    background: url(../img/get-program-bg-320@1x.webp);
-  }
-
-  .no-webp .get-program {
-    background-repeat: no-repeat !important;
-    background-position: center -15px !important;
-    background-size: cover !important;
-    background: url(../img/get-program-bg-320@1x.jpg);
-  }
-
-  .webp .form-page {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/form-bg-320@1x.webp);
-  }
-
-  .no-webp .form-page {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/form-bg-320@1x.jpg);
-  }
-
-  .webp .payment-page {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/payment-bg-320@1x.webp);
-  }
-
-  .no-webp .payment-page {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/payment-bg-320@1x.jpg);
-  }
-
-  .webp .book {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/book-320@1x.webp);
-  }
-
-  .no-webp .book {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/book-320@1x.jpg);
-  }
-
-  .webp .gratitude {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/gratitude-320@1x.webp);
-  }
-
-  .no-webp .gratitude {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/gratitude-320@1x.jpg);
-  }
-}
-
-@media screen and (min-width: 0) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 0) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 0) and (min-resolution: 192dpi) {
-  .webp .personal-profile {
-    background: url(../img/personal-profile-bg-320@2x.webp);
-  }
-
-  .no-webp .personal-profile {
-    background: url(../img/personal-profile-bg-320@2x.jpg);
-  }
-
-  .webp .personal-profile__header {
-    background: url(../img/personal-profile-header-bg-320@2x.webp);
-  }
-
-  .no-webp .personal-profile__header {
-    background: url(../img/personal-profile-header-bg-320@2x.jpg);
-  }
-
-  .webp .result-block--bmi {
-    background: url(../img/result-block-320-1@2x.webp), #cbdcea;
-  }
-
-  .no-webp .result-block--bmi {
-    background: url(../img/result-block-320-1@2x.png), #cbdcea;
-  }
-
-  .webp .result-block--loose-weight {
-    background: url(../img/result-block-320-2@2x.webp), #cbdcea;
-  }
-
-  .no-webp .result-block--loose-weight {
-    background: url(../img/result-block-320-2@2x.png), #cbdcea;
-  }
-
-  .webp .get-program-smuzi {
-    background: url(../img/smuzi-320@1x.webp);
-  }
-
-  .no-webp .get-program-smuzi {
-    background: url(../img/smuzi-320@1x.png);
-  }
-
-  .webp .get-program {
-    background: url(../img/get-program-bg-320@2x.webp);
-  }
-
-  .no-webp .get-program {
-    background: url(../img/get-program-bg-320@2x.jpg);
-  }
-
-  .webp .form-page {
-    background: url(../img/form-bg-320@2x.webp);
-  }
-
-  .no-webp .form-page {
-    background: url(../img/form-bg-320@2x.jpg);
-  }
-
-  .webp .payment-page {
-    background: url(../img/payment-bg-320@2x.webp);
-  }
-
-  .no-webp .payment-page {
-    background: url(../img/payment-bg-320@2x.jpg);
-  }
-
-  .webp .book {
-    background: url(../img/book-320@2x.webp);
-  }
-
-  .no-webp .book {
-    background: url(../img/book-320@2x.jpg);
-  }
-
-  .webp .gratitude {
-    background: url(../img/gratitude-320@2x.webp);
-  }
-
-  .no-webp .gratitude {
-    background: url(../img/gratitude-320@2x.jpg);
-  }
 }
 
 @media screen and (min-width: 320px) {
@@ -3722,8 +3646,6 @@ template {
     transform: translate(-50%, -50%);
     width: 15.625rem;
     height: 15.625rem;
-    border: 0.3125rem solid red;
-    border-radius: 50%;
   }
 
   .progress {
@@ -3744,34 +3666,6 @@ template {
 
   .personal-profile__header-content {
     padding: 10.3125rem 0 6.25rem 0;
-  }
-
-  .webp .personal-profile {
-    background-repeat: no-repeat !important;
-    background-position: center 11.8125rem !important;
-    background-size: 105% !important;
-    background: url(../img/personal-profile-bg-480@1x.webp);
-  }
-
-  .no-webp .personal-profile {
-    background-repeat: no-repeat !important;
-    background-position: center 11.8125rem !important;
-    background-size: 105% !important;
-    background: url(../img/personal-profile-bg-480@1x.jpg);
-  }
-
-  .webp .personal-profile__header {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/personal-profile-header-bg-480@1x.webp);
-  }
-
-  .no-webp .personal-profile__header {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/personal-profile-header-bg-480@1x.jpg);
   }
 
   .personal-profile__ready {
@@ -3816,34 +3710,6 @@ template {
     width: 21.0625rem;
     height: 19rem;
     padding: 1.25rem 0.625rem;
-  }
-
-  .webp .result-block--bmi {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/result-block-480-1@1x.webp), #cbdcea;
-  }
-
-  .no-webp .result-block--bmi {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/result-block-480-1@1x.png), #cbdcea;
-  }
-
-  .webp .result-block--loose-weight {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/result-block-480-2@1x.webp), #cbdcea;
-  }
-
-  .no-webp .result-block--loose-weight {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/result-block-480-2@1x.png), #cbdcea;
   }
 
   .result-block__title {
@@ -4009,34 +3875,6 @@ template {
     font-size: 1rem;
   }
 
-  .webp .get-program-smuzi {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/smuzi-480@1x.webp);
-  }
-
-  .no-webp .get-program-smuzi {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/smuzi-480@1x.png);
-  }
-
-  .webp .get-program {
-    background-repeat: no-repeat !important;
-    background-position: 100% 5px !important;
-    background-size: cover !important;
-    background: url(../img/get-program-bg-480@1x.webp);
-  }
-
-  .no-webp .get-program {
-    background-repeat: no-repeat !important;
-    background-position: 100% 5px !important;
-    background-size: cover !important;
-    background: url(../img/get-program-bg-480@1x.jpg);
-  }
-
   .result-block-modal .close {
     top: 0.625rem;
     width: 1.75rem;
@@ -4067,20 +3905,6 @@ template {
 
   .result-block-modal--result {
     padding: 2.5rem 2.5rem 2.1875rem 1.25rem;
-  }
-
-  .webp .form-page {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/form-bg-480@1x.webp);
-  }
-
-  .no-webp .form-page {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/form-bg-480@1x.jpg);
   }
 
   .quiz-slide__content--form {
@@ -4170,38 +3994,10 @@ template {
     height: 0.9375rem;
   }
 
-  .webp .payment-page {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/payment-bg-480@1x.webp);
-  }
-
-  .no-webp .payment-page {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/payment-bg-480@1x.jpg);
-  }
-
   .book {
     width: 24.25rem;
     height: 26.4375rem;
     margin-top: 6.6875rem;
-  }
-
-  .webp .book {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/book-480@1x.webp);
-  }
-
-  .no-webp .book {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/book-480@1x.jpg);
   }
 
   .quiz-slide__content--payment {
@@ -4343,20 +4139,6 @@ template {
     padding: 2.8125rem 1.25rem 3.75rem 1.25rem;
   }
 
-  .webp .gratitude {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/gratitude-480@1x.webp);
-  }
-
-  .no-webp .gratitude {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background: url(../img/gratitude-480@1x.jpg);
-  }
-
   .quiz-slide__content--gratitude {
     margin: 7.875rem 0 0.625rem 0;
     padding: 1.6875rem 1.75rem;
@@ -4388,86 +4170,6 @@ template {
 @media screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi) {
   .no-webp .quiz-slide-fifth {
     background: url(../img/fifth-slide-bg-480@2x.jpg);
-  }
-
-  .webp .personal-profile {
-    background: url(../img/personal-profile-bg-480@2x.webp);
-  }
-
-  .no-webp .personal-profile {
-    background: url(../img/personal-profile-bg-480@2x.jpg);
-  }
-
-  .webp .personal-profile__header {
-    background: url(../img/personal-profile-header-bg-480@2x.webp);
-  }
-
-  .no-webp .personal-profile__header {
-    background: url(../img/personal-profile-header-bg-480@2x.jpg);
-  }
-
-  .webp .result-block--bmi {
-    background: url(../img/result-block-480-1@2x.webp), #cbdcea;
-  }
-
-  .no-webp .result-block--bmi {
-    background: url(../img/result-block-480-1@2x.png), #cbdcea;
-  }
-
-  .webp .result-block--loose-weight {
-    background: url(../img/result-block-480-2@2x.webp), #cbdcea;
-  }
-
-  .no-webp .result-block--loose-weight {
-    background: url(../img/result-block-480-2@2x.png), #cbdcea;
-  }
-
-  .webp .get-program-smuzi {
-    background: url(../img/smuzi-480@2x.webp);
-  }
-
-  .no-webp .get-program-smuzi {
-    background: url(../img/smuzi-480@2x.png);
-  }
-
-  .webp .get-program {
-    background: url(../img/get-program-bg-480@2x.webp);
-  }
-
-  .no-webp .get-program {
-    background: url(../img/get-program-bg-480@2x.jpg);
-  }
-
-  .webp .form-page {
-    background: url(../img/form-bg-480@2x.webp);
-  }
-
-  .no-webp .form-page {
-    background: url(../img/form-bg-480@2x.jpg);
-  }
-
-  .webp .payment-page {
-    background: url(../img/payment-bg-480@2x.webp);
-  }
-
-  .no-webp .payment-page {
-    background: url(../img/payment-bg-480@2x.jpg);
-  }
-
-  .webp .book {
-    background: url(../img/book-480@2x.webp);
-  }
-
-  .no-webp .book {
-    background: url(../img/book-480@2x.jpg);
-  }
-
-  .webp .gratitude {
-    background: url(../img/gratitude-480@2x.webp);
-  }
-
-  .no-webp .gratitude {
-    background: url(../img/gratitude-480@2x.jpg);
   }
 }
 
@@ -4554,5 +4256,85 @@ template {
 
   .no-webp .program-calc {
     background: url(../img/program-calc-bg-mobile-480@2x.jpg);
+  }
+
+  .webp .personal-profile {
+    background: url(../img/personal-profile-bg-480@2x.webp);
+  }
+
+  .no-webp .personal-profile {
+    background: url(../img/personal-profile-bg-480@2x.jpg);
+  }
+
+  .webp .personal-profile__header {
+    background: url(../img/personal-profile-header-bg-480@2x.webp);
+  }
+
+  .no-webp .personal-profile__header {
+    background: url(../img/personal-profile-header-bg-480@2x.jpg);
+  }
+
+  .webp .result-block--bmi {
+    background: url(../img/result-block-480-1@2x.webp), #cbdcea;
+  }
+
+  .no-webp .result-block--bmi {
+    background: url(../img/result-block-480-1@2x.png), #cbdcea;
+  }
+
+  .webp .result-block--loose-weight {
+    background: url(../img/result-block-480-2@2x.webp), #cbdcea;
+  }
+
+  .no-webp .result-block--loose-weight {
+    background: url(../img/result-block-480-2@2x.png), #cbdcea;
+  }
+
+  .webp .get-program-smuzi {
+    background: url(../img/smuzi-480@2x.webp);
+  }
+
+  .no-webp .get-program-smuzi {
+    background: url(../img/smuzi-480@2x.png);
+  }
+
+  .webp .get-program {
+    background: url(../img/get-program-bg-480@2x.webp);
+  }
+
+  .no-webp .get-program {
+    background: url(../img/get-program-bg-480@2x.jpg);
+  }
+
+  .webp .form-page {
+    background: url(../img/form-bg-480@2x.webp);
+  }
+
+  .no-webp .form-page {
+    background: url(../img/form-bg-480@2x.jpg);
+  }
+
+  .webp .payment-page {
+    background: url(../img/payment-bg-480@2x.webp);
+  }
+
+  .no-webp .payment-page {
+    background: url(../img/payment-bg-480@2x.jpg);
+  }
+
+  .webp .book {
+    background: url(../img/book-480@2x.webp);
+  }
+
+  .no-webp .book {
+    background: url(../img/book-480@2x.jpg);
+  }
+
+  .webp .gratitude {
+    background: url(../img/gratitude-480@2x.webp);
+  }
+
+  .no-webp .gratitude {
+    background: url(../img/gratitude-480@2x.jpg);
   }
 }
