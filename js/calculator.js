@@ -114,6 +114,16 @@ function userParams(webp) {
         radio.addEventListener('click', () => {
             target = radio.value;
             console.log(`Цель: ${target}`);
+
+            if (target == 1) {
+                localStorage.setItem('target', 'Похудеть');
+            }
+            if (target == 2) {
+                localStorage.setItem('target', 'Набрать вес');
+            }
+            if (target == 3) {
+                localStorage.setItem('target', 'Удержать вес');
+            }
         });
         return target;
     });
@@ -218,6 +228,8 @@ function weightIndexCalc() {
     console.log("ИМТ: ");
     console.log(weightIndex);
 
+    localStorage.setItem('BMI', weightIndex);
+
     if (weightIndex >= 0 && weightIndex < 16) {
         console.log("ИМТ: Выраженный дефицит массы тела");
         weightIndexMessage = "Выраженный дефицит массы тела";
@@ -246,6 +258,7 @@ function weightIndexCalc() {
         console.log("ИМТ: Ожирение 3-ой степени");
         weightIndexMessage = "Ожирение 3-ой степени";
     }
+    localStorage.setItem('weightIndexMessage', weightIndexMessage);
     return weightIndex;
 }
 
@@ -275,6 +288,7 @@ function minCalories() {
             );
         }
     }
+    localStorage.setItem('metabolism', metabolism);
     console.log("Минимальная калорийность (основной обмен): ");
     console.log(metabolism);
     return metabolism;
@@ -287,8 +301,7 @@ function dailyCaloriesCalc() {
 
     if (weightIndex >= 0 && weightIndex < 19) {
         dailyCalories = Math.round(metabolism * userActivity);
-        // userCaloriesResult.innerHTML = dailyCalories;
-        userCaloriesResult = dailyCalories;
+        localStorage.setItem('dailyCalories', dailyCalories);
     }
 
     if (target == 1) {
@@ -301,9 +314,8 @@ function dailyCaloriesCalc() {
             );
             console.log("Кал. для похудения: ");
             console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd);
-            // userCaloriesResult.innerHTML =
-            //     caloriesDeficiteStart + " - " + caloriesDeficiteEnd;
             userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
+            localStorage.setItem('userCaloriesResult', userCaloriesResult);
         } else if (weightIndex >= 25 && weightIndex < 30) {
             caloriesDeficiteStart = Math.round(
                 dailyCalories - (dailyCalories / 100) * 15
@@ -313,9 +325,8 @@ function dailyCaloriesCalc() {
             );
             console.log("Кал. для похудения: ");
             console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd);
-            // userCaloriesResult.innerHTML =
-            //     caloriesDeficiteStart + " - " + caloriesDeficiteEnd;
             userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
+            localStorage.setItem('userCaloriesResult', userCaloriesResult);
         } else if (weightIndex >= 30) {
             caloriesDeficiteStart = Math.round(
                 dailyCalories - (dailyCalories / 100) * 10
@@ -325,18 +336,16 @@ function dailyCaloriesCalc() {
             );
             console.log("Кал. для похудения: ");
             console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd);
-            // userCaloriesResult.innerHTML =
-            //     caloriesDeficiteStart + " - " + caloriesDeficiteEnd;
             userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
+            localStorage.setItem('userCaloriesResult', userCaloriesResult);
         }
     } else if (target == 2) {
         caloriesDeficiteStart = dailyCalories + 100;
         caloriesDeficiteEnd = dailyCalories + 200;
         console.log("Кал. для набора веса: ");
         console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd);
-        // userCaloriesResult.innerHTML =
-        //     caloriesDeficiteStart + " - " + caloriesDeficiteEnd;
         userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
+        localStorage.setItem('userCaloriesResult', userCaloriesResult);
     }
 }
 

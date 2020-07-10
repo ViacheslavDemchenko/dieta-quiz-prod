@@ -229,7 +229,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       $('.progress').animate({
         num: 100 - 0
       }, {
-        duration: 10000,
+        duration: 5000,
         step: function step(num) {
           this.innerHTML = (num + 0).toFixed(0) + '%';
 
