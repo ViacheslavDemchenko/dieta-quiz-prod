@@ -3697,7 +3697,111 @@ template {
 }
 
 .reviews-slider {
+  position: relative;
   margin-bottom: 2.1875rem;
+}
+
+.reviews-slider::before {
+  position: absolute;
+  content: "";
+  top: -2.125rem;
+  right: 4.375rem;
+  width: 1.5625rem;
+  height: 1.625rem;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background: url(../img/swipe@2x.png);
+  -webkit-animation: finger-320 3s infinite linear;
+  animation: finger-320 3s infinite linear;
+}
+
+@-webkit-keyframes finger-480 {
+  0% {
+    right: 4.375rem;
+  }
+
+  25% {
+    right: 8.75rem;
+  }
+
+  50% {
+    right: 4.375rem;
+  }
+
+  75% {
+    right: 0;
+  }
+
+  100% {
+    right: 4.375rem;
+  }
+}
+
+@keyframes finger-480 {
+  0% {
+    right: 4.375rem;
+  }
+
+  25% {
+    right: 8.75rem;
+  }
+
+  50% {
+    right: 4.375rem;
+  }
+
+  75% {
+    right: 0;
+  }
+
+  100% {
+    right: 4.375rem;
+  }
+}
+
+@-webkit-keyframes finger-320 {
+  0% {
+    right: 3.125rem;
+  }
+
+  25% {
+    right: 5.625rem;
+  }
+
+  50% {
+    right: 3.125rem;
+  }
+
+  75% {
+    right: 0;
+  }
+
+  100% {
+    right: 3.125rem;
+  }
+}
+
+@keyframes finger-320 {
+  0% {
+    right: 3.125rem;
+  }
+
+  25% {
+    right: 5.625rem;
+  }
+
+  50% {
+    right: 3.125rem;
+  }
+
+  75% {
+    right: 0;
+  }
+
+  100% {
+    right: 3.125rem;
+  }
 }
 
 .reviews-page__slide {
@@ -4992,6 +5096,11 @@ template {
 
   .reviews-slider {
     margin-bottom: 3.4375rem;
+  }
+
+  .reviews-slider::before {
+    -webkit-animation: finger-480 3s infinite linear;
+    animation: finger-480 3s infinite linear;
   }
 
   .reviews-page__slide {
