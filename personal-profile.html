@@ -34,7 +34,7 @@
         </div>
         <div class="personal-profile__body">
           <div class="result-block result-block--bmi">
-            <div class="question-mark question-mark--yellow">?</div>
+            <div class="question-mark question-mark--yellow question-mark--bmi">?</div>
             <div class="result-block__title">Ваш ИМТ:</div>
             <div class="result-block__text result-block__text--bmi">Нормальный</div>
             <div class="result-block__icon">
@@ -45,12 +45,12 @@
             <div class="result-block__number result-block__number--bmi"> </div>
             <div class="result-block__footnote">Индекс массы тела*</div>
             <div class="result-block-modal result-block-modal--bmi">
-              <div class="close">x</div>
+              <div class="close close-modal--bmi">x</div>
               <div class="result-block-modal__text">ИМТ <span class="result-block-modal__text--black">- величина, позволяющая  оценить степень соответствия массы человека и его роста и тем самым косвенно судить о том, является ли масса недостаточной, нормальной или избыточной</span></div>
             </div>
           </div>
           <div class="data-block data-block--energy">
-            <div class="question-mark question-mark--yellow">?</div>
+            <div class="question-mark question-mark--yellow question-mark--energy">?</div>
             <div class="result-block__title">Норма в сутки:</div>
             <div class="result-block__text result-block__text--energy">Минимум энергии</div>
             <div class="result-block__icon">
@@ -61,12 +61,12 @@
             <div class="result-block__number result-block__number--energy"> </div>
             <div class="result-block__footnote">Базовый метаболизм*</div>
             <div class="result-block-modal result-block-modal--energy">
-              <div class="close">x</div>
+              <div class="close close-modal--energy">x</div>
               <div class="result-block-modal__text">Основной обмен <span class="result-block-modal__text--black">– это минимальное количество энергии, необходимое для обеспечения нормальной жизнедеятельности организма в условиях покоя. Ниже этой калорийности опускаться нельзя!</span></div>
             </div>
           </div>
           <div class="result-block result-block--loose-weight">
-            <div class="question-mark question-mark--yellow">?</div>
+            <div class="question-mark question-mark--yellow question-mark--weight">?</div>
             <div class="result-block__title">Норма калорий в день:</div>
             <div class="result-block__text result-block__text--target">Похудеть</div>
             <div class="result-block__icon">
@@ -76,19 +76,19 @@
             </div>
             <div class="result-block__number result-block__number--loose-weight"></div>
             <div class="result-block-modal result-block-modal--loose-weight">
-              <div class="close">x</div>
+              <div class="close close-modal--weight">x</div>
               <div class="result-block-modal__text--black">Именно <span class="result-block-modal__text">столько </span><span class="result-block-modal__text--black">вам нужно употреблять в среднем калорий в день для достижения результата</span></div>
             </div>
           </div>
           <div class="data-block data-block--result">
-            <div class="question-mark question-mark--yellow">?</div>
+            <div class="question-mark question-mark--yellow question-mark--result">?</div>
             <div class="result-block__title">С использованием  программ Be In Shape:</div>
             <div class="result-block__text">Результат за 30 дней</div>
             <div class="result-block__icon"><span></span><span></span></div>
             <div class="result-block__number">-4кг</div>
             <div class="result-block__footnote">Прогнозируемый результат через 30 дней*</div>
             <div class="result-block-modal result-block-modal--result">
-              <div class="close">x</div>
+              <div class="close close-modal--result">x</div>
               <div class="result-block-modal__text">Вес<span class="result-block-modal__text--black">, который вы можете потерять  за 30 дней, следуя нашему плану питания и не подвергая риску свое здоровье. Результаты могут отличаться в зависимости от большого количества факторов</span></div>
             </div>
           </div>
@@ -127,12 +127,11 @@
                     </svg></a></li>
               </ul>
             </nav>
-            <div class="copyright">Be In Shape © 2020
-              <div class="overlay overlay--get-program"></div>
-            </div>
+            <div class="copyright">Be In Shape © 2020</div>
           </div>
         </div>
       </footer>
+      <div class="overlay"></div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>

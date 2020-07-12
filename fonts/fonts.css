@@ -42,6 +42,20 @@
   font-style: normal;
 }
 
+/* UniNeueLight */
+
+@font-face {
+  font-family: 'UniNeueLight';
+  src: url('../fonts/unisans-light/UniNeueLight.eot');
+  src: url('../fonts/unisans-light/UniNeueLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/unisans-light/UniNeueLight.svg#UniNeueLight') format('svg'),
+    url('../fonts/unisans-light/UniNeueLight.ttf') format('truetype'),
+    url('../fonts/unisans-light/UniNeueLight.woff') format('woff'),
+    url('../fonts/unisans-light/UniNeueLight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* UniNeueRegular-Italic */
 
 @font-face {
