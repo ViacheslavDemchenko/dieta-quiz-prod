@@ -117,12 +117,15 @@ $(document).ready(function () {
 
                 if (target == 1) {
                     localStorage.setItem('target', 'Похудеть');
+                    localStorage.setItem('target-weight', target);
                 }
                 if (target == 2) {
                     localStorage.setItem('target', 'Набрать вес');
+                    localStorage.setItem('target-weight', target);
                 }
                 if (target == 3) {
                     localStorage.setItem('target', 'Удержать вес');
+                    localStorage.setItem('target-weight', target);
                 }
             });
             return target;
@@ -141,6 +144,7 @@ $(document).ready(function () {
             userWeight = Number(weight.value);
             console.log("Вес: ");
             console.log(userWeight);
+            localStorage.setItem('weight', userWeight);
             return userWeight;
         });
 
@@ -315,7 +319,8 @@ $(document).ready(function () {
                 console.log("Кал. для похудения: ");
                 console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd);
                 userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
-                localStorage.setItem('userCaloriesResult', userCaloriesResult);
+                localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+                localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
             } else if (weightIndex >= 25 && weightIndex < 30) {
                 caloriesDeficiteStart = Math.round(
                     dailyCalories - (dailyCalories / 100) * 15
@@ -326,7 +331,8 @@ $(document).ready(function () {
                 console.log("Кал. для похудения: ");
                 console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd);
                 userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
-                localStorage.setItem('userCaloriesResult', userCaloriesResult);
+                localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+                localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
             } else if (weightIndex >= 30) {
                 caloriesDeficiteStart = Math.round(
                     dailyCalories - (dailyCalories / 100) * 10
@@ -337,7 +343,8 @@ $(document).ready(function () {
                 console.log("Кал. для похудения: ");
                 console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd);
                 userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
-                localStorage.setItem('userCaloriesResult', userCaloriesResult);
+                localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+                localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
             }
         } else if (target == 2) {
             caloriesDeficiteStart = dailyCalories + 100;
@@ -345,7 +352,8 @@ $(document).ready(function () {
             console.log("Кал. для набора веса: ");
             console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd);
             userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
-            localStorage.setItem('userCaloriesResult', userCaloriesResult);
+            localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+            localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
         }
     }
 

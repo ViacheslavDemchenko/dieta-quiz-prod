@@ -180,6 +180,26 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 })();
 "use strict";
 
+;
+
+(function () {
+  function getYear() {
+    var date = new Date(),
+        currentYear = date.getFullYear(),
+        yearWrite = document.querySelector('.copyright');
+
+    if (currentYear > 2020) {
+      yearWrite.innerHTML = "\xA9 2020 \u2014 ".concat(currentYear);
+    } else {
+      yearWrite.innerHTML = "\xA9 ".concat(currentYear);
+    }
+  }
+
+  ;
+  getYear();
+})();
+"use strict";
+
 $(document).ready(function () {
   if ($('.quiz-slide-third').length) {
     var openQuizSlideThirdModal = function openQuizSlideThirdModal() {
