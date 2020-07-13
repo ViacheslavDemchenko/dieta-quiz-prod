@@ -1848,8 +1848,8 @@ template {
 .progress {
   position: absolute;
   z-index: 2500;
-  top: 48%;
-  left: 43%;
+  top: 48.5%;
+  left: 44%;
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
@@ -4407,7 +4407,7 @@ template {
   }
 
   .progress {
-    top: 51%;
+    top: 50%;
     left: 51%;
     transform: translate(-50%, -50%);
     font-size: 1.25rem;
