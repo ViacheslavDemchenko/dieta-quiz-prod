@@ -1835,7 +1835,7 @@ template {
 
 .circle {
   position: absolute;
-  z-index: 2000;
+  z-index: 20000;
   top: -155%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -4397,11 +4397,13 @@ template {
   }
 
   .circle {
-    top: -132%;
+    top: 300px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 15.625rem;
     height: 15.625rem;
+    border: 0.3125rem solid red;
+    border-radius: 50%;
   }
 
   .progress {
