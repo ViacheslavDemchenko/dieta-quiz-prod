@@ -46,12 +46,12 @@
 
 @font-face {
   font-family: 'UniNeueLight';
-  src: url('../fonts/unisans-light/UniNeueLight.eot');
-  src: url('../fonts/unisans-light/UniNeueLight.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/unisans-light/UniNeueLight.svg#UniNeueLight') format('svg'),
-    url('../fonts/unisans-light/UniNeueLight.ttf') format('truetype'),
-    url('../fonts/unisans-light/UniNeueLight.woff') format('woff'),
-    url('../fonts/unisans-light/UniNeueLight.woff2') format('woff2');
+  src: url('../fonts/unisans-light/unineuelight.eot');
+  src: url('../fonts/unisans-light/unineuelight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/unisans-light/unineuelight.svg#unineuelight') format('svg'),
+    url('../fonts/unisans-light/unineuelight.ttf') format('truetype'),
+    url('../fonts/unisans-light/unineuelight.woff') format('woff'),
+    url('../fonts/unisans-light/unineuelight.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

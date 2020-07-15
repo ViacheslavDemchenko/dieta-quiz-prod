@@ -477,7 +477,8 @@ $(document).ready(function () {
       autoHeight: true,
       touchDrag: false,
       mouseDrag: false,
-      pullDrag: false
+      pullDrag: false,
+      lazyLoad: true
     });
     $(".arrow__right").click(function () {
       owl.trigger("next.owl.carousel");
