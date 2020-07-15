@@ -663,9 +663,6 @@ $(document).ready(function () {
       overlay.appendChild(message);
       overlay.appendChild(siteOverlay);
       body.classList.add('no-scroll');
-      console.log('Это IE');
-    } else {
-      console.log('Это не IE');
     }
   }
 

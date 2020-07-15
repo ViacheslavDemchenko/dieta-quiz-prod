@@ -1880,16 +1880,9 @@ template {
 .circle {
   position: absolute;
   z-index: 20000;
-  top: -155%;
+  top: 20.875rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 15.625rem;
-  height: 15.625rem;
-  border: 0.3125rem solid red;
-  border-radius: 50%;
-}
-
-.circle svg {
   width: 15.625rem;
   height: 15.625rem;
 }
@@ -1908,8 +1901,11 @@ template {
 }
 
 .circle-icon {
-  width: 15.625rem;
-  height: 15.625rem;
+  position: absolute;
+  transform: scale(4);
+  top: 10.25rem;
+  width: 20.4375rem;
+  height: 15.375rem;
 }
 
 .dieta-icon {
@@ -4442,15 +4438,19 @@ template {
     transform: translate(-50%, -50%);
     width: 15.625rem;
     height: 15.625rem;
-    border: 0.3125rem solid red;
-    border-radius: 50%;
   }
 
   .progress {
-    top: 50%;
+    top: 49.5%;
     left: 51%;
     transform: translate(-50%, -50%);
     font-size: 1.25rem;
+  }
+
+  .circle-icon {
+    top: 12.375rem;
+    width: 20.5625rem;
+    height: 15.4375rem;
   }
 
   .dieta-icon {
