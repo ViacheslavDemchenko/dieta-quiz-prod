@@ -155,6 +155,391 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 ;
 
 (function () {
+  if ($('.about-list').length) {
+    var accordItems = document.querySelectorAll('.about-item__title'),
+        active = document.getElementsByClassName('about-item__title--active');
+    Array.from(accordItems).forEach(function (item) {
+      item.addEventListener('click', function () {
+        if (active.length > 0 && active[0] !== this) active[0].classList.remove('about-item__title--active');
+        this.classList.toggle('about-item__title--active');
+      });
+    });
+  }
+
+  if ($('.faq-list').length) {
+    var _accordItems = document.querySelectorAll('.faq-item__title'),
+        _active = document.getElementsByClassName('faq-item__title--active');
+
+    Array.from(_accordItems).forEach(function (item) {
+      item.addEventListener('click', function () {
+        if (_active.length > 0 && _active[0] !== this) _active[0].classList.remove('faq-item__title--active');
+        this.classList.toggle('faq-item__title--active');
+      });
+    });
+  }
+})();
+"use strict";
+
+$(document).ready(function () {
+  /* ПЕРЕМЕННЫЕ  */
+  if ($('.quiz').length) {
+    /* ОПРЕДЕЛЯЕМ ПОДДЕРЖКУ БРАУЗЕРОМ WEBP ФОРМАТА */
+    var webpSupportCheck = function webpSupportCheck() {
+      var webp = true;
+      Modernizr.on('webp', function (result) {
+        if (result) {
+          webp = true;
+        } else {
+          webp = false;
+        }
+      });
+      return webp;
+    };
+    /* ФУНКЦИИ ДЛЯ РАСЧЕТОВ */
+
+
+    var userParams = function userParams(webp) {
+      var screenWidth = window.screen.width;
+      var bgImage = document.querySelector('.quiz-slide-first');
+      var src = './img/first-slide-bg-';
+      var imgType;
+
+      if (webpSupportCheck() && window.devicePixelRatio == 1) {
+        // console.log('WEBP');
+        // console.log('< 481');
+        // console.log('window.devicePixelRatio 1');
+        // src = './img/first-slide-bg-';
+        imgType = '-480@1x.webp';
+      }
+
+      if (webpSupportCheck() && window.devicePixelRatio > 1) {
+        // console.log('WEBP');
+        // console.log('< 481');
+        // console.log('window.devicePixelRatio > 1');
+        /////
+        imgType = '-480@2x.webp';
+      }
+
+      if (!webpSupportCheck() && window.devicePixelRatio == 1) {
+        // console.log('jpg');
+        // console.log('< 481');
+        // console.log('window.devicePixelRatio 1');
+        // src = './img/first-slide-bg-';
+        imgType = '-480@1x.jpg';
+      }
+
+      if (!webpSupportCheck() && window.devicePixelRatio > 1) {
+        // console.log('jpg');
+        // console.log('< 481');
+        // console.log('window.devicePixelRatio > 1');
+        // src = './img/first-slide-bg-';
+        imgType = '-480@2x.jpg';
+      }
+
+      femaleBtns.forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          femaleBtns.forEach(function (btn) {
+            btn.classList.remove('sex--active');
+          });
+          sexCheckIcons.forEach(function (icon) {
+            icon.classList.remove('check-icon--active');
+          });
+          quizSlideTitle.forEach(function (title) {
+            title.classList.remove('quiz-slide__title--active');
+          });
+          btn.classList.add('sex--active');
+          sexCheckIcons[i].classList.add('check-icon--active');
+          quizSlideTitle[i].classList.add('quiz-slide__title--active'); // console.log(`url(${src}${i}${imgType})`);
+
+          bgImage.style.backgroundImage = "url(".concat(src).concat(i).concat(imgType, ")");
+          userSex = btn.value;
+          console.log("\u041F\u043E\u043B: ".concat(userSex));
+        });
+        return userSex;
+      });
+      targetBtns.forEach(function (radio) {
+        radio.addEventListener('click', function () {
+          target = radio.value;
+          console.log("\u0426\u0435\u043B\u044C: ".concat(target));
+
+          if (target == 1) {
+            localStorage.setItem('target', 'Похудеть');
+            localStorage.setItem('target-weight', target);
+          }
+
+          if (target == 2) {
+            localStorage.setItem('target', 'Набрать вес');
+            localStorage.setItem('target-weight', target);
+          }
+
+          if (target == 3) {
+            localStorage.setItem('target', 'Удержать вес');
+            localStorage.setItem('target-weight', target);
+          }
+        });
+        return target;
+      });
+      age.addEventListener('keyup', function () {
+        age.value = age.value.replace(/[^0-9]/g, '');
+        userAge = Number(age.value);
+        console.log("Возраст: ");
+        console.log(userAge);
+        return userAge;
+      });
+      weight.addEventListener('keyup', function () {
+        weight.value = weight.value.replace(/[^0-9]/g, '');
+        userWeight = Number(weight.value);
+        console.log("Вес: ");
+        console.log(userWeight);
+        localStorage.setItem('weight', userWeight);
+        return userWeight;
+      });
+      height.addEventListener('keyup', function () {
+        height.value = height.value.replace(/[^0-9]/g, '');
+        userHeight = Number(height.value);
+        console.log("Рост: ");
+        console.log(userHeight);
+        return userHeight;
+      });
+      formField.forEach(function (input, i) {
+        input.addEventListener('change', function () {
+          if (input.value != '') {
+            inputWrap[i].classList.add('input-wrap--active');
+          } else {
+            inputWrap[i].classList.remove('input-wrap--active');
+          }
+        });
+      });
+    };
+
+    var activity = function activity() {
+      activityBtns.forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          activityBtns.forEach(function (btn) {
+            btn.classList.remove('quantaty--active');
+          });
+          exerciceNum.forEach(function (num) {
+            num.classList.remove('exercice-num--active');
+          });
+          exerciceText.forEach(function (text) {
+            text.classList.remove('exercice-text--active');
+          });
+          quantatyCheckIcon.forEach(function (icon) {
+            icon.classList.remove('quantaty-check-icon--active');
+          });
+          intensity.forEach(function (text) {
+            text.classList.remove('intensity--active');
+          });
+          btn.classList.add('quantaty--active');
+          exerciceNum[i].classList.add('exercice-num--active');
+          exerciceText[i].classList.add('exercice-text--active');
+          quantatyCheckIcon[i].classList.add('quantaty-check-icon--active');
+          intensity[i].classList.add('intensity--active');
+
+          if (i == 0) {
+            userActivity = 1.2;
+            console.log("Коэф. активности: ");
+            console.log(userActivity);
+          } else if (i == 1) {
+            userActivity = 1.3;
+            console.log("Коэф. активности: ");
+            console.log(userActivity);
+          } else if (i == 2) {
+            userActivity = 1.4;
+            console.log("Коэф. активности: ");
+            console.log(userActivity);
+          } else if (i == 3) {
+            userActivity = 1.5;
+            console.log("Коэф. активности: ");
+            console.log(userActivity);
+          } else if (i == 4) {
+            userActivity = 1.6;
+            console.log("Коэф. активности: ");
+            console.log(userActivity);
+          } else if (i == 5) {
+            userActivity = 1.9;
+            console.log("Коэф. активности: ");
+            console.log(userActivity);
+          }
+        });
+      });
+      return userActivity;
+    };
+
+    var weightIndexCalc = function weightIndexCalc() {
+      userHeightMeters = userHeight / 100;
+      console.log("Вес в метрах: ");
+      console.log(userHeightMeters);
+      weightIndex = Number(Math.round(userWeight / (userHeightMeters * userHeightMeters)));
+      console.log("ИМТ: ");
+      console.log(weightIndex);
+      localStorage.setItem('BMI', weightIndex);
+
+      if (weightIndex >= 0 && weightIndex < 16) {
+        console.log("ИМТ: Выраженный дефицит массы тела");
+        weightIndexMessage = "Выраженный дефицит массы тела";
+      }
+
+      if (weightIndex >= 16 && weightIndex < 19) {
+        console.log("ИМТ: Недостаточная масса тела");
+        weightIndexMessage = "Недостаточная масса тела";
+      }
+
+      if (weightIndex >= 20 && weightIndex < 25) {
+        console.log("ИМТ: Нормальная масса тела");
+        weightIndexMessage = "Нормальная масса тела";
+      }
+
+      if (weightIndex >= 25 && weightIndex < 30) {
+        console.log("ИМТ: Избыточная масса тела (предожирение)");
+        weightIndexMessage = "Избыточная масса тела (предожирение)";
+      }
+
+      if (weightIndex >= 30 && weightIndex < 35) {
+        console.log("ИМТ: Ожирение 1-ой степени");
+        weightIndexMessage = "Ожирение 1-ой степени";
+      }
+
+      if (weightIndex >= 35 && weightIndex <= 40) {
+        console.log("ИМТ: Ожирение 2-ой степени");
+        weightIndexMessage = "Ожирение 2-ой степени";
+      }
+
+      if (weightIndex > 40) {
+        console.log("ИМТ: Ожирение 3-ой степени");
+        weightIndexMessage = "Ожирение 3-ой степени";
+      }
+
+      localStorage.setItem('weightIndexMessage', weightIndexMessage);
+      return weightIndex;
+    };
+
+    var minCalories = function minCalories() {
+      if (weightIndex > 29 || weightIndex >= 0 && weightIndex <= 19) {
+        normalWeight = userHeight - 100;
+        console.log("Нормальный вес: ");
+        console.log(normalWeight);
+
+        if (userSex == "male") {
+          metabolism = Math.round(9.9 * normalWeight + 6.25 * userHeight - 4.92 * userAge + 5);
+        } else if (userSex == "female") {
+          metabolism = Math.round(9.9 * normalWeight + 6.25 * userHeight - 4.92 * userAge - 161);
+        }
+      } else {
+        if (userSex == "male") {
+          metabolism = Math.round(9.9 * userWeight + 6.25 * userHeight - 4.92 * userAge + 5);
+        } else if (userSex == "female") {
+          metabolism = Math.round(9.9 * userWeight + 6.25 * userHeight - 4.92 * userAge - 161);
+        }
+      }
+
+      localStorage.setItem('metabolism', metabolism);
+      console.log("Минимальная калорийность (основной обмен): ");
+      console.log(metabolism);
+      return metabolism;
+    };
+
+    var dailyCaloriesCalc = function dailyCaloriesCalc() {
+      dailyCalories = Math.round(metabolism * userActivity);
+      console.log("Дневная калорийность: ");
+      console.log(dailyCalories);
+
+      if (weightIndex >= 0 && weightIndex < 19) {
+        dailyCalories = Math.round(metabolism * userActivity);
+        localStorage.setItem('dailyCalories', dailyCalories);
+      }
+
+      if (target == 1) {
+        if (weightIndex >= 19 && weightIndex < 25) {
+          caloriesDeficiteStart = Math.round(dailyCalories - dailyCalories / 100 * 10);
+          caloriesDeficiteEnd = Math.round(dailyCalories - dailyCalories / 100 * 15);
+          console.log("Кал. для похудения: ");
+          console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd); // userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
+
+          localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+          localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
+        } else if (weightIndex >= 25 && weightIndex < 30) {
+          caloriesDeficiteStart = Math.round(dailyCalories - dailyCalories / 100 * 15);
+          caloriesDeficiteEnd = Math.round(dailyCalories - dailyCalories / 100 * 20);
+          console.log("Кал. для похудения: ");
+          console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd); // userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
+
+          localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+          localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
+        } else if (weightIndex >= 30) {
+          caloriesDeficiteStart = Math.round(dailyCalories - dailyCalories / 100 * 10);
+          caloriesDeficiteEnd = Math.round(dailyCalories - dailyCalories / 100 * 15);
+          console.log("Кал. для похудения: ");
+          console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd); // userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
+
+          localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+          localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
+        }
+      } else if (target == 2) {
+        caloriesDeficiteStart = dailyCalories + 100;
+        caloriesDeficiteEnd = dailyCalories + 200;
+        console.log("Кал. для набора веса: ");
+        console.log(caloriesDeficiteStart + " - " + caloriesDeficiteEnd); // userCaloriesResult = `${caloriesDeficiteStart} - ${caloriesDeficiteEnd}`;
+
+        localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+        localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
+      }
+    };
+
+    var femaleBtns = document.querySelectorAll('.sex'),
+        sexCheckIcons = document.querySelectorAll('.check-icon'),
+        quizSlideTitle = document.querySelectorAll('.quiz-slide__title'),
+        targetBtns = document.getElementsByName('target'),
+        activityBtns = document.querySelectorAll('.quantaty'),
+        exerciceNum = document.querySelectorAll('.exercice-num'),
+        exerciceText = document.querySelectorAll('.exercice-text'),
+        quantatyCheckIcon = document.querySelectorAll('.quantaty-check-icon'),
+        intensity = document.querySelectorAll('.intensity'),
+        age = document.getElementById('age'),
+        weight = document.getElementById('weight'),
+        height = document.getElementById('height'),
+        formField = document.querySelectorAll('.form__field'),
+        inputWrap = document.querySelectorAll('.input-wrap'),
+        calcBtn = document.querySelector('.arrow__right--last');
+    calcBtn.disabled = true; // Данные
+
+    var userSex, userWeight, userHeightMeters, userHeight, userAge, weightIndex, userActivity, dailyCalories, metabolism, target, caloriesDeficiteStart, caloriesDeficiteEnd, weightIndexMessage, normalWeight;
+    userParams(webpSupportCheck());
+    activity();
+    calcBtn.addEventListener("click", function () {
+      if (userSex == undefined || userWeight == undefined || target == undefined || userActivity == undefined || userWeight == undefined || userHeight == undefined || userAge == undefined) {
+        calcBtn.disabled = true;
+        alert('Пожалуйста, введите все необходимые данные!');
+      } else {
+        calcBtn.disabled = false;
+        weightIndexCalc();
+        minCalories();
+        dailyCaloriesCalc();
+        window.location.href = 'program-calc.html';
+      }
+    });
+  }
+});
+"use strict";
+
+(function () {
+  if ($('#circle').length) {
+    var el = document.querySelector('#circle');
+    var myAnimation = new LazyLinePainter(el, {
+      "ease": "easeLinear",
+      "strokeWidth": 6,
+      "strokeOpacity": 1,
+      "strokeColor": "linear-gradient(90deg, #ebb845 0%, #f7c754 100%)",
+      "strokeCap": "square"
+    });
+    myAnimation.paint();
+  }
+})();
+"use strict";
+
+;
+
+(function () {
   if ($('.dieta-choice').length) {
     var dietaTypeChoice = function dietaTypeChoice() {
       dietaItem.forEach(function (el, i) {
@@ -241,6 +626,50 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   ;
   getYear();
+})();
+"use strict";
+
+;
+
+(function () {
+  function getInternetExplorerVersion() {
+    var rv = -1;
+
+    if (navigator.appName == 'Microsoft Internet Explorer') {
+      var ua = navigator.userAgent;
+      var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+      if (re.exec(ua) != null) rv = parseFloat(RegExp.$1);
+    } else if (navigator.appName == 'Netscape') {
+      var _ua = navigator.userAgent;
+
+      var _re = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+
+      if (_re.exec(_ua) != null) rv = parseFloat(RegExp.$1);
+    }
+
+    return rv;
+  }
+
+  function hideSite() {
+    var site = document.querySelector('.container-fluid');
+    var body = document.getElementsByTagName('body')[0];
+    var overlay = document.querySelector('.overlay-ie');
+    var message = document.createElement('div');
+    message.classList.add('ie-text-warning');
+    message.innerHTML = 'К сожалению мы не поддерживаем Internet Explorer!';
+
+    if (getInternetExplorerVersion() !== -1) {
+      overlay.classList.add('overlay-ie--active');
+      overlay.appendChild(message);
+      overlay.appendChild(siteOverlay);
+      body.classList.add('no-scroll');
+      console.log('Это IE');
+    } else {
+      console.log('Это не IE');
+    }
+  }
+
+  hideSite();
 })();
 "use strict";
 
@@ -451,6 +880,132 @@ $(document).ready(function () {
     }
   }
 })();
+"use strict";
+
+$(document).ready(function () {
+  if ($('.personal-profile').length) {
+    var resultShow = function resultShow() {
+      var body_Mass_Index = localStorage.getItem('BMI');
+      var recommendedCaloriesStart = localStorage.getItem('caloriesDeficiteStart');
+      var recommendedCaloriesEnd = localStorage.getItem('caloriesDeficiteEnd');
+      var userMetabolism = localStorage.getItem('metabolism');
+      var BMI_Message = localStorage.getItem('weightIndexMessage');
+      var targetType = localStorage.getItem('target');
+      var targetWeight = localStorage.getItem('target-weight');
+      var weight = localStorage.getItem('weight');
+      console.log(body_Mass_Index);
+      console.log(recommendedCaloriesStart);
+      console.log(recommendedCaloriesEnd);
+      console.log(userMetabolism);
+      console.log(BMI_Message);
+      console.log(targetType);
+      console.log(targetWeight);
+      console.log(weight);
+      userB_M_IResult.innerHTML = body_Mass_Index;
+      caloriesResult.innerHTML = userMetabolism;
+      recommendedCal.innerHTML = "".concat(Math.min(recommendedCaloriesStart, recommendedCaloriesEnd), " - ").concat(Math.max(recommendedCaloriesStart, recommendedCaloriesEnd));
+      userB_M_IMes.innerHTML = BMI_Message;
+      targetMessage.innerHTML = targetType;
+
+      if (targetWeight == 1) {
+        targetWeightResult.innerHTML = '-4кг';
+      } else if (targetWeight == 2) {
+        targetWeightResult.innerHTML = '+2кг';
+      } else if (targetWeight == 3) {
+        targetWeightResult.innerHTML = "".concat(weight, "\u043A\u0433");
+      }
+    };
+
+    var userB_M_IResult = document.querySelector('.result-block__number--bmi'),
+        caloriesResult = document.querySelector('.result-block__number--energy'),
+        recommendedCal = document.querySelector('.result-block__number--loose-weight'),
+        userB_M_IMes = document.querySelector('.result-block__text--bmi'),
+        targetMessage = document.querySelector('.result-block__text--target'),
+        targetWeightResult = document.querySelector('.result-block__number--weight');
+    resultShow();
+  }
+});
+"use strict";
+
+$(document).ready(function () {
+  if ($('.round-text-first').length) {
+    var wrapLettersInSpanFirst = function wrapLettersInSpanFirst(text) {
+      var arr = text.split('');
+
+      for (var i = 0; i < textLength_1; i++) {
+        arr[i] = "<span class='letter letter-first'>" + arr[i] + "</span>";
+      }
+
+      $('.round-text-first').html(arr.join(''));
+    };
+
+    var addTransformCssFirst = function addTransformCssFirst() {
+      var transformStart = -90;
+      var transformStep = 180 / (textLength_1 - 1);
+      $('.letter-first').each(function (i, elem) {
+        $(elem).css({
+          transform: 'rotate(' + transformStart + 'deg)'
+        });
+        transformStart += transformStep;
+      });
+    };
+
+    var wrapLettersInSpanSecond = function wrapLettersInSpanSecond(text) {
+      var arr = text.split('');
+
+      for (var i = 0; i < textLength_2; i++) {
+        arr[i] = "<span class='letter letter-second'>" + arr[i] + "</span>";
+      }
+
+      $('.round-text-second').html(arr.join(''));
+    };
+
+    var addTransformCssSecond = function addTransformCssSecond() {
+      var transformStart = -90;
+      var transformStep = 180 / (textLength_2 - 1);
+      $('.letter-second').each(function (i, elem) {
+        $(elem).css({
+          transform: 'rotate(' + transformStart + 'deg)'
+        });
+        transformStart += transformStep;
+      });
+    };
+
+    var wrapLettersInSpanThird = function wrapLettersInSpanThird(text) {
+      var arr = text.split('');
+
+      for (var i = 0; i < textLength_3; i++) {
+        arr[i] = "<span class='letter letter-third'>" + arr[i] + "</span>";
+      }
+
+      $('.round-text-third').html(arr.join(''));
+    };
+
+    var addTransformCssThird = function addTransformCssThird() {
+      var transformStart = -90;
+      var transformStep = 180 / (textLength_3 - 1);
+      $('.letter-third').each(function (i, elem) {
+        $(elem).css({
+          transform: 'rotate(' + transformStart + 'deg)'
+        });
+        transformStart += transformStep;
+      });
+    };
+
+    var text_1 = $('.round-text-first').html();
+    var textLength_1 = text_1.length;
+    wrapLettersInSpanFirst(text_1);
+    addTransformCssFirst();
+    var text_2 = $('.round-text-second').html();
+    var textLength_2 = text_2.length;
+    wrapLettersInSpanSecond(text_2);
+    addTransformCssSecond();
+    var text_3 = $('.round-text-third').html();
+    var textLength_3 = text_3.length;
+    wrapLettersInSpanThird(text_3);
+    addTransformCssThird();
+  }
+});
 "use strict";
 
 $(document).ready(function () {

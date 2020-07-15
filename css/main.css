@@ -62,7 +62,7 @@ body {
 
 .overlay {
   position: fixed;
-  z-index: 5000;
+  z-index: 15000;
   top: 0;
   bottom: 0;
   left: 0;
@@ -77,6 +77,34 @@ body {
 
 .owl-dots {
   display: none;
+}
+
+.overlay-ie {
+  position: fixed;
+  z-index: 15000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background: #000;
+}
+
+.overlay-ie--active {
+  display: block;
+}
+
+.ie-text-warning {
+  position: absolute;
+  z-index: 11000;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  text-align: center;
+  font-family: 'UniNeueBold';
+  font-size: 1rem;
+  line-height: 2.8125rem;
+  color: red;
 }
 
 /* Box-sizing-model */
@@ -3799,96 +3827,6 @@ template {
   background-position: center !important;
   background-size: cover !important;
   background: url(../img/swipe@2x.png);
-  -webkit-animation: finger-320 3s infinite linear;
-  animation: finger-320 3s infinite linear;
-}
-
-@-webkit-keyframes finger-480 {
-  0% {
-    right: 4.375rem;
-  }
-
-  25% {
-    right: 8.75rem;
-  }
-
-  50% {
-    right: 4.375rem;
-  }
-
-  75% {
-    right: 0;
-  }
-
-  100% {
-    right: 4.375rem;
-  }
-}
-
-@keyframes finger-480 {
-  0% {
-    right: 4.375rem;
-  }
-
-  25% {
-    right: 8.75rem;
-  }
-
-  50% {
-    right: 4.375rem;
-  }
-
-  75% {
-    right: 0;
-  }
-
-  100% {
-    right: 4.375rem;
-  }
-}
-
-@-webkit-keyframes finger-320 {
-  0% {
-    right: 3.125rem;
-  }
-
-  25% {
-    right: 5.625rem;
-  }
-
-  50% {
-    right: 3.125rem;
-  }
-
-  75% {
-    right: 0;
-  }
-
-  100% {
-    right: 3.125rem;
-  }
-}
-
-@keyframes finger-320 {
-  0% {
-    right: 3.125rem;
-  }
-
-  25% {
-    right: 5.625rem;
-  }
-
-  50% {
-    right: 3.125rem;
-  }
-
-  75% {
-    right: 0;
-  }
-
-  100% {
-    right: 3.125rem;
-  }
 }
 
 .reviews-page__slide {
@@ -4499,7 +4437,7 @@ template {
   }
 
   .circle {
-    top: 300px;
+    top: 18.75rem;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 15.625rem;
@@ -5278,11 +5216,6 @@ template {
 
   .reviews-slider {
     margin-bottom: 3.4375rem;
-  }
-
-  .reviews-slider::before {
-    -webkit-animation: finger-480 3s infinite linear;
-    animation: finger-480 3s infinite linear;
   }
 
   .reviews-page__slide {
