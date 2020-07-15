@@ -775,10 +775,16 @@ template {
   color: #2c1d4d;
 }
 
-.instargram-icon {
+.instargram {
+  display: flex;
+  justify-content: center;
+}
+
+.instargram__link,
+.instargram__icon {
+  display: block;
   width: 1.25rem;
   height: 1.25rem;
-  fill: #ebb845;
 }
 
 .content {
@@ -1058,13 +1064,16 @@ template {
   padding: 0.4375rem 2.1875rem 0.4375rem 0.9375rem;
 }
 
-.arrow__right--last a {
+.arrow__right--last button {
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1.5rem;
   color: #3f3113;
+  outline: none;
+  border: none;
+  background: transparent;
 }
 
 .arrow-icon-right {
@@ -1852,6 +1861,11 @@ template {
   border-radius: 50%;
 }
 
+.circle svg {
+  width: 15.625rem;
+  height: 15.625rem;
+}
+
 .progress {
   position: absolute;
   z-index: 2500;
@@ -2284,17 +2298,6 @@ template {
   color: #fad87e;
 }
 
-.get-program__subtitle {
-  text-align: center;
-  margin-bottom: 1.25rem;
-  font-family: "UniNeueRegular";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #a8a1b7;
-}
-
 .get-program-menu {
   width: 16.875rem;
   margin: -5.5rem 0 0.9375rem 0;
@@ -2323,12 +2326,6 @@ template {
   font-size: 0.875rem;
   line-height: 1.333;
   color: #3a4148;
-}
-
-.menu-list .menu__item--light-text {
-  font-family: "UniNeueRegular";
-  font-weight: 400;
-  font-style: normal;
 }
 
 .menu-list .menu__item::before {
@@ -2364,7 +2361,7 @@ template {
 
 .menu-list .menu__item:nth-child(2)::before {
   content: '2';
-  left: -0.8125rem;
+  left: 2.0625rem;
 }
 
 .menu-list .menu__item:nth-child(3) {
@@ -2382,7 +2379,7 @@ template {
 
 .menu-list .menu__item:nth-child(4)::before {
   content: '4';
-  left: -1.5rem;
+  left: -1.0625rem;
 }
 
 .get-program__btn {
@@ -2899,6 +2896,7 @@ template {
 
 .question-mark--payment {
   position: absolute;
+  z-index: 1000;
   top: 1.8125rem;
   right: 1.75rem;
   width: 1.125rem;
@@ -2915,10 +2913,6 @@ template {
   border: 0.0625rem solid #594193;
   border-radius: 50%;
   background: #fff;
-}
-
-.question-mark--payment--active {
-  display: none;
 }
 
 .round-text {
@@ -2992,7 +2986,7 @@ template {
 
 .inform__item:nth-child(1)::before {
   top: 0.6875rem;
-  left: 1rem;
+  left: 2.6875rem;
 }
 
 .inform__item:nth-child(2)::before {
@@ -3048,9 +3042,10 @@ template {
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
+  font-weight: 900;
   font-size: 1.25rem;
   line-height: 1.623;
-  color: #262929;
+  color: #ef4a6a;
 }
 
 .payment__btn {
@@ -3072,7 +3067,7 @@ template {
   z-index: 7000;
   width: 21.25rem;
   height: 115px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   border-radius: 1.25rem;
@@ -3098,9 +3093,12 @@ template {
   border-radius: 50%;
 }
 
+.modal--active {
+  display: flex;
+}
+
 .modal-first {
   left: -22%;
-  display: none;
   padding: 1.75rem 5.875rem 1.75rem 2.5rem;
 }
 
@@ -3121,9 +3119,12 @@ template {
   color: #594192;
 }
 
+.modal-first--active {
+  display: block;
+}
+
 .modal-second {
   right: -24%;
-  display: none;
   padding: 1.75rem 4.0625rem 1.75rem 2.5rem;
 }
 
@@ -4070,7 +4071,8 @@ template {
     line-height: 1.625;
   }
 
-  .instargram-icon {
+  .instargram__link,
+  .instargram__icon {
     width: 1.875rem;
     height: 1.875rem;
   }
@@ -4212,7 +4214,7 @@ template {
     line-height: 1.625rem;
   }
 
-  .arrow__right--last a {
+  .arrow__right--last button {
     font-size: 1rem;
     line-height: 1.625rem;
   }
@@ -4226,6 +4228,10 @@ template {
   .arrow-icon-right {
     width: 0.5rem;
     height: 0.875rem;
+  }
+
+  .arrow-icon-right--form {
+    top: 1.125rem;
   }
 
   .arrow-icon-left {
@@ -4678,13 +4684,8 @@ template {
     font-size: 2rem;
   }
 
-  .get-program__subtitle {
-    font-size: 1.25rem;
-  }
-
   .get-program-menu {
     width: 21.5625rem;
-    height: 16.75rem;
     margin: -7.0625rem 0 0.625rem 0;
     padding: 2rem 1.25rem;
   }
@@ -4713,7 +4714,7 @@ template {
   }
 
   .menu-list .menu__item:nth-child(2)::before {
-    left: -1.1875rem;
+    left: 2.375rem;
   }
 
   .menu-list .menu__item:nth-child(3) {
@@ -4721,7 +4722,7 @@ template {
   }
 
   .menu-list .menu__item:nth-child(3)::before {
-    left: -1.8125rem;
+    left: -2rem;
   }
 
   .menu-list .menu__item:nth-child(4) {
@@ -4729,7 +4730,7 @@ template {
   }
 
   .menu-list .menu__item:nth-child(4)::before {
-    left: -1.8125rem;
+    left: -1.1875rem;
   }
 
   .get-program__btn {
@@ -4941,7 +4942,7 @@ template {
 
   .inform__item:nth-child(1)::before {
     top: 0.9375rem;
-    left: 1.375rem;
+    left: 3.3125rem;
   }
 
   .inform__item:nth-child(2)::before {

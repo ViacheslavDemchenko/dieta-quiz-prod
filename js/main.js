@@ -155,25 +155,69 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 ;
 
 (function () {
-  if ($('.about-list').length) {
-    var accordItems = document.querySelectorAll('.about-item__title'),
-        active = document.getElementsByClassName('about-item__title--active');
-    Array.from(accordItems).forEach(function (item) {
-      item.addEventListener('click', function () {
-        if (active.length > 0 && active[0] !== this) active[0].classList.remove('about-item__title--active');
-        this.classList.toggle('about-item__title--active');
+  if ($('.dieta-choice').length) {
+    var dietaTypeChoice = function dietaTypeChoice() {
+      dietaItem.forEach(function (el, i) {
+        el.addEventListener('click', function (e) {
+          console.log(e.target);
+          dietaBlockTop.forEach(function (el) {
+            el.classList.remove('dieta__item-top--active');
+          });
+          caloriesQuantity.forEach(function (el) {
+            el.classList.remove('calories-quantity--active');
+          });
+          caloriesText.forEach(function (el) {
+            el.classList.remove('calories-text--active');
+          });
+          dietaBlockBottom.forEach(function (el) {
+            el.classList.remove('dieta__item-bottom--active');
+          });
+          dietaBlockTop[i].classList.add('dieta__item-top--active');
+          caloriesQuantity[i].classList.add('calories-quantity--active');
+          caloriesText[i].classList.add('calories-text--active');
+          dietaBlockBottom[i].classList.add('dieta__item-bottom--active');
+        });
       });
-    });
-  }
+    };
 
-  if ($('.faq-list').length) {
-    var _accordItems = document.querySelectorAll('.faq-item__title'),
-        _active = document.getElementsByClassName('faq-item__title--active');
+    var dietaModalOpen = function dietaModalOpen() {
+      modalOpen.forEach(function (el, i) {
+        el.addEventListener('click', function () {
+          overlay.classList.add('overlay--active');
+          body.classList.add('no-scroll');
+          modals[i].classList.add('modal--active');
+        });
+      });
+    };
 
-    Array.from(_accordItems).forEach(function (item) {
-      item.addEventListener('click', function () {
-        if (_active.length > 0 && _active[0] !== this) _active[0].classList.remove('faq-item__title--active');
-        this.classList.toggle('faq-item__title--active');
+    var dietaModalClose = function dietaModalClose() {
+      modalClose.forEach(function (el, i) {
+        el.addEventListener('click', function () {
+          overlay.classList.remove('overlay--active');
+          body.classList.remove('no-scroll');
+          modals[i].classList.remove('modal--active');
+        });
+      });
+    };
+
+    var dietaBlockTop = document.querySelectorAll('.dieta__item-top');
+    var caloriesQuantity = document.querySelectorAll('.calories-quantity');
+    var caloriesText = document.querySelectorAll('.calories-text');
+    var dietaBlockBottom = document.querySelectorAll('.dieta__item-bottom');
+    var dietaItem = document.querySelectorAll('.dieta__item');
+    var modalOpen = document.querySelectorAll('.question-mark--payment');
+    var modalClose = document.querySelectorAll('.modal .close');
+    var modals = document.querySelectorAll('.modal');
+    var overlay = document.querySelector('.overlay');
+    var body = document.getElementsByTagName('body')[0];
+    dietaTypeChoice();
+    dietaModalOpen();
+    dietaModalClose();
+    overlay.addEventListener('click', function () {
+      modals.forEach(function (el) {
+        overlay.classList.remove('overlay--active');
+        body.classList.remove('no-scroll');
+        el.classList.remove('modal--active');
       });
     });
   }

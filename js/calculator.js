@@ -16,6 +16,7 @@ $(document).ready(function () {
         formField = document.querySelectorAll('.form__field'),
         inputWrap = document.querySelectorAll('.input-wrap'),
         calcBtn = document.querySelector('.arrow__right--last');
+    calcBtn.disabled = true;
 
     // Данные
     let userSex,
@@ -359,9 +360,16 @@ $(document).ready(function () {
 
 
     calcBtn.addEventListener("click", () => {
-        weightIndexCalc();
-        minCalories();
-        dailyCaloriesCalc();
+        if (userSex == undefined || userWeight == undefined || target == undefined || userActivity == undefined || userWeight == undefined || userHeight == undefined || userAge == undefined) {
+            calcBtn.disabled = true;
+            alert('Пожалуйста, введите все необходимые данные!');
+        } else {
+            calcBtn.disabled = false;
+            weightIndexCalc();
+            minCalories();
+            dailyCaloriesCalc();
+            window.location.href = 'program-calc.html';
+        }
     });
 
 });
