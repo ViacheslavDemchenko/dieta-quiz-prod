@@ -33,7 +33,6 @@ body {
   text-rendering: optimizelegibility;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
-  background: linear-gradient(60deg, #563e90 0%, #7c64b5 100%);
 }
 
 .container-fluid {
@@ -1969,15 +1968,15 @@ template {
 
 .webp .personal-profile {
   background-repeat: no-repeat !important;
-  background-position: center 11.8125rem !important;
-  background-size: 105% !important;
+  background-position: 100% 100% !important;
+  background-size: 100% !important;
   background: url(../img/personal-profile-bg-480@1x.webp);
 }
 
 .no-webp .personal-profile {
   background-repeat: no-repeat !important;
-  background-position: center 11.8125rem !important;
-  background-size: 105% !important;
+  background-position: 100% 100% !important;
+  background-size: 100% !important;
   background: url(../img/personal-profile-bg-480@1x.jpg);
 }
 
@@ -3931,13 +3930,7 @@ template {
   }
 }
 
-@media screen and (min-width: 375px) {
-  .program-calc__dish {
-    left: 52.3%;
-  }
-}
-
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
@@ -3949,15 +3942,15 @@ template {
   }
 
   .footer {
-    padding: 3.125rem 0 1.875rem 0;
+    padding: 3.0625rem 0 1.875rem 0;
   }
 
   .footer-arc--top {
-    margin-top: -5.875rem;
+    margin-top: -5.3125rem;
   }
 
   .footer-arc--bottom {
-    margin-top: -6.5rem;
+    margin-top: -5.8125rem;
   }
 
   .footer--about,
@@ -3977,7 +3970,7 @@ template {
   .footer--policy .footer-arc--top,
   .footer--form .footer-arc--top,
   .footer--program-calc .footer-arc--top {
-    margin-top: -5.4375rem;
+    margin-top: -5.375rem;
   }
 
   .footer--about .footer-arc--bottom,
@@ -3987,7 +3980,7 @@ template {
   .footer--policy .footer-arc--bottom,
   .footer--form .footer-arc--bottom,
   .footer--program-calc .footer-arc--bottom {
-    margin-top: -6.0625rem;
+    margin-top: -5.875rem;
   }
 
   .nav__link {
@@ -4473,6 +4466,16 @@ template {
 
   .personal-profile__header-content {
     padding: 10.3125rem 0 6.25rem 0;
+  }
+
+  .webp .personal-profile {
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
+  .no-webp .personal-profile {
+    background-position: center !important;
+    background-size: cover !important;
   }
 
   .personal-profile__ready {
@@ -5264,7 +5267,7 @@ template {
 
   .logo {
     top: 1.3125rem;
-    padding: 0.9375rem 1.5625rem;
+    padding: 0.9375rem 1.25rem;
   }
 
   .logo__title {
@@ -5276,9 +5279,15 @@ template {
   }
 }
 
-@media screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 360px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 360px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 360px) and (min-resolution: 192dpi) {
   .no-webp .quiz-slide-fifth {
     background: url(../img/fifth-slide-bg-480@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .program-calc__dish {
+    left: 52.3%;
   }
 }
 
