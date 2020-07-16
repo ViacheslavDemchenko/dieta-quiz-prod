@@ -33,7 +33,7 @@ body {
   text-rendering: optimizelegibility;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
-  background-image: linear-gradient(60deg, #563e90 0%, #7c64b5 100%);
+  background: linear-gradient(60deg, #563e90 0%, #7c64b5 100%);
 }
 
 .container-fluid {
@@ -684,52 +684,54 @@ template {
 /* SECTIONS */
 
 .footer {
-  position: absolute;
-  z-index: 1000;
   width: 100%;
-  padding: 4.375rem 0.625rem 1.5625rem 0.625rem;
-  margin-top: -2.375rem;
+  padding: 1.875rem 0 1.875rem 0;
+  overflow: hidden;
+  background: #7c64b5;
 }
 
 .footer__inner {
   text-align: center;
 }
 
-.webp .footer {
-  background-repeat: no-repeat !important;
-  background-position: top center !important;
-  background-size: 104% 100% !important;
-  background: url(../img/footer-bg-320@1x.webp);
+.footer-arc--top {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  margin-top: -3.6875rem;
 }
 
-.no-webp .footer {
-  background-repeat: no-repeat !important;
-  background-position: top center !important;
-  background-size: 104% 100% !important;
-  background: url(../img/footer-bg-320@1x.png);
+.footer-arc--bottom {
+  position: absolute;
+  z-index: 9000;
+  width: 100%;
+  margin-top: -4.125rem;
 }
 
-.footer--program-calc {
-  position: static;
-  margin-top: -3.5rem;
+.footer--about .footer-arc--top,
+.footer--faq .footer-arc--top,
+.footer--reviews .footer-arc--top,
+.footer--termsofuse .footer-arc--top,
+.footer--policy .footer-arc--top,
+.footer--form .footer-arc--top,
+.footer--program-calc .footer-arc--top {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  margin-top: -3.6875rem;
 }
 
-.footer--form {
-  position: static;
-  margin-top: -1.25rem;
-}
-
-.footer--policy,
-.footer--termsofuse,
-.footer--reviews {
-  position: static;
-  margin-top: -1.875rem;
-}
-
-.footer--about,
-.footer--faq {
-  position: static;
-  margin-top: -1.875rem;
+.footer--about .footer-arc--bottom,
+.footer--faq .footer-arc--bottom,
+.footer--reviews .footer-arc--bottom,
+.footer--termsofuse .footer-arc--bottom,
+.footer--policy .footer-arc--bottom,
+.footer--form .footer-arc--bottom,
+.footer--program-calc .footer-arc--bottom {
+  position: absolute;
+  z-index: 9000;
+  width: 100%;
+  margin-top: -4.125rem;
 }
 
 .nav__link {
@@ -794,7 +796,6 @@ template {
 }
 
 .copyright {
-  margin-bottom: 0.625rem;
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
@@ -806,6 +807,7 @@ template {
 .instargram {
   display: flex;
   justify-content: center;
+  margin-bottom: 0.625rem;
 }
 
 .instargram__link,
@@ -1106,7 +1108,7 @@ template {
 
 .arrow-icon-right {
   position: absolute;
-  top: 52%;
+  top: 1.5625rem;
   right: 1.5rem;
   transform: translateY(-50%);
   width: 0.375rem;
@@ -1356,7 +1358,7 @@ template {
 }
 
 .exercice-num {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.125rem;
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
@@ -2411,6 +2413,7 @@ template {
   outline: none;
   text-align: center;
   padding: 0.75rem 1.375rem;
+  margin-top: 0.75rem;
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
@@ -3010,12 +3013,12 @@ template {
 
 .inform__item:nth-child(1)::before {
   top: 0.6875rem;
-  left: 2.6875rem;
+  left: -1.0625rem;
 }
 
 .inform__item:nth-child(2)::before {
   top: 0.75rem;
-  left: -0.9375rem;
+  left: 0.625rem;
 }
 
 .inform__item:last-child {
@@ -3088,9 +3091,8 @@ template {
 
 .modal {
   position: absolute;
-  z-index: 7000;
-  width: 21.25rem;
-  height: 115px;
+  z-index: 15000;
+  width: 16.875rem;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -3123,7 +3125,7 @@ template {
 
 .modal-first {
   left: -22%;
-  padding: 1.75rem 5.875rem 1.75rem 2.5rem;
+  padding: 1.75rem 2.25rem 1.75rem 1.25rem;
 }
 
 .modal-first__text {
@@ -3149,7 +3151,7 @@ template {
 
 .modal-second {
   right: -24%;
-  padding: 1.75rem 4.0625rem 1.75rem 2.5rem;
+  padding: 1.75rem 0rem 1.75rem 1.25rem;
 }
 
 .modal-second__text {
@@ -3517,51 +3519,51 @@ template {
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--first {
-  height: 9.375rem;
+  height: 12.5rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--second {
-  height: 9.375rem;
+  height: 4.375rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--third {
-  height: 9.375rem;
+  height: 8.125rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--fourth {
-  height: 9.375rem;
+  height: 15.625rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--fifth {
-  height: 9.375rem;
+  height: 12.5rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--sixth {
-  height: 9.375rem;
+  height: 13.75rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--seventh {
-  height: 9.375rem;
+  height: 15rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--eighth {
-  height: 9.375rem;
+  height: 18.75rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--ninth {
-  height: 9.375rem;
+  height: 24.375rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--tenth {
-  height: 9.375rem;
+  height: 6.25rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--eleventh {
-  height: 9.375rem;
+  height: 21.25rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--twelveth {
-  height: 9.375rem;
+  height: 19.375rem;
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--thirteenth {
@@ -3947,41 +3949,45 @@ template {
   }
 
   .footer {
-    margin-top: -3.125rem;
-    padding: 5.625rem 0.625rem 2.5rem 0.625rem;
+    padding: 3.125rem 0 1.875rem 0;
   }
 
-  .webp .footer {
-    background-repeat: no-repeat !important;
-    background-position: top center !important;
-    background-size: 104% 100% !important;
-    background: url(../img/footer-bg-480@1x.webp);
+  .footer-arc--top {
+    margin-top: -5.875rem;
   }
 
-  .no-webp .footer {
-    background-repeat: no-repeat !important;
-    background-position: top center !important;
-    background-size: 104% 100% !important;
-    background: url(../img/footer-bg-480@1x.png);
-  }
-
-  .footer--program-calc {
-    margin-top: -2.8125rem;
-  }
-
-  .footer--form {
-    margin-top: -2.8125rem;
-  }
-
-  .footer--policy,
-  .footer--termsofuse,
-  .footer--reviews {
-    margin-top: -2.8125rem;
+  .footer-arc--bottom {
+    margin-top: -6.5rem;
   }
 
   .footer--about,
-  .footer--faq {
-    margin-top: -2.8125rem;
+  .footer--faq,
+  .footer--reviews,
+  .footer--termsofuse,
+  .footer--policy,
+  .footer--form,
+  .footer--program-calc {
+    padding: 3.125rem 0 1.875rem 0;
+  }
+
+  .footer--about .footer-arc--top,
+  .footer--faq .footer-arc--top,
+  .footer--reviews .footer-arc--top,
+  .footer--termsofuse .footer-arc--top,
+  .footer--policy .footer-arc--top,
+  .footer--form .footer-arc--top,
+  .footer--program-calc .footer-arc--top {
+    margin-top: -5.4375rem;
+  }
+
+  .footer--about .footer-arc--bottom,
+  .footer--faq .footer-arc--bottom,
+  .footer--reviews .footer-arc--bottom,
+  .footer--termsofuse .footer-arc--bottom,
+  .footer--policy .footer-arc--bottom,
+  .footer--form .footer-arc--bottom,
+  .footer--program-calc .footer-arc--bottom {
+    margin-top: -6.0625rem;
   }
 
   .nav__link {
@@ -4000,9 +4006,12 @@ template {
   }
 
   .copyright {
-    margin-bottom: 0.9375rem;
     font-size: 1rem;
     line-height: 1.625;
+  }
+
+  .instargram {
+    margin-bottom: 0.9375rem;
   }
 
   .instargram__link,
@@ -4375,18 +4384,18 @@ template {
   }
 
   .form__group.field .form__label-first {
-    top: 5.25rem;
-    left: 12.9375rem;
+    top: 5.625rem;
+    left: 12.125rem;
   }
 
   .form__group.field .form__label-second {
-    top: 9.125rem;
-    left: 14.625rem;
+    top: 9.625rem;
+    left: 14rem;
   }
 
   .form__group.field .form__label-third {
-    top: 13.0625rem;
-    left: 14.0625rem;
+    top: 13.5625rem;
+    left: 13.5625rem;
   }
 
   .form__group.field .form__field:focus ~ .form__label-first,
@@ -4396,18 +4405,18 @@ template {
   }
 
   .form__group.field .form__field:focus ~ .form__label-first {
-    top: 5.25rem;
-    left: 12.9375rem;
+    top: 5.625rem;
+    left: 12.125rem;
   }
 
   .form__group.field .form__field:focus ~ .form__label-second {
-    top: 9.125rem;
-    left: 14.625rem;
+    top: 9.625rem;
+    left: 14rem;
   }
 
   .form__group.field .form__field:focus ~ .form__label-third {
-    top: 13.0625rem;
-    left: 14.0625rem;
+    top: 13.5625rem;
+    left: 13.5625rem;
   }
 
   .no-webp .quiz-slide-fifth {
@@ -4874,18 +4883,18 @@ template {
   }
 
   .inform__item::before {
-    width: 0.5625rem;
+    width: 0.625rem;
     height: 0.625rem;
   }
 
   .inform__item:nth-child(1)::before {
     top: 0.9375rem;
-    left: 3.3125rem;
+    left: -1.1875rem;
   }
 
   .inform__item:nth-child(2)::before {
     top: 0.9375rem;
-    left: -1.0625rem;
+    left: 0.8125rem;
   }
 
   .inform__item:last-child {
@@ -4920,6 +4929,10 @@ template {
     font-size: 1rem;
   }
 
+  .modal {
+    width: 21.25rem;
+  }
+
   .modal .close {
     top: 0.625rem;
     width: 1.75rem;
@@ -4928,8 +4941,16 @@ template {
     font-size: 1.125rem;
   }
 
+  .modal-first {
+    padding: 1.75rem 5.875rem 1.75rem 2.5rem;
+  }
+
   .modal-first__text {
     font-size: 1.125rem;
+  }
+
+  .modal-second {
+    padding: 1.75rem 4.0625rem 1.75rem 2.5rem;
   }
 
   .modal-second__text {
@@ -5282,6 +5303,12 @@ template {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1.2) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1.2) and (min-resolution: 192dpi) {
+  .arrow-icon-right {
+    top: 1.5rem;
   }
 }
 
