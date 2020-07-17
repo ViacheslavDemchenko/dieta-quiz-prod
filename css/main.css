@@ -1403,7 +1403,7 @@ template {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 21.25rem;
+  width: 18.125rem;
   overflow: hidden;
   display: none;
   background: #f8fefe;
@@ -1418,12 +1418,15 @@ template {
   position: absolute;
   top: 1rem;
   right: 1.0625rem;
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
   padding-bottom: 0.25rem;
   border: 0.125rem solid #594193;
   border-radius: 50%;
@@ -1468,8 +1471,8 @@ template {
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
-  font-size: 2.125rem;
-  line-height: 1.625rem;
+  font-size: 1.75rem;
+  line-height: 1.25rem;
   color: #664e9d;
   background: #ebe8f3;
 }
@@ -1497,8 +1500,8 @@ template {
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #3a4148;
   background: #f8fefe;
 }
@@ -2453,7 +2456,7 @@ template {
 
 .result-block-modal {
   position: absolute;
-  z-index: 7000;
+  z-index: 16000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -3090,7 +3093,7 @@ template {
 
 .modal {
   position: absolute;
-  z-index: 15000;
+  z-index: 16000;
   width: 16.875rem;
   display: none;
   flex-direction: column;
@@ -3838,6 +3841,9 @@ template {
   width: 1.875rem;
   height: 1.875rem;
   margin-right: 0.625rem;
+}
+
+.reviews-page__slide .review__photo img {
   border-radius: 50%;
 }
 
@@ -4253,6 +4259,26 @@ template {
   }
 
   .intensity {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+
+  .quiz-slide-third-modal {
+    width: 21.25rem;
+  }
+
+  .quiz-slide-third-modal .close {
+    width: 1.875rem;
+    height: 1.875rem;
+    font-size: 1.25rem;
+  }
+
+  .quiz-slide-third-modal .exercice-quantaty {
+    font-size: 2.125rem;
+    line-height: 1.625rem;
+  }
+
+  .quiz-slide-third-modal .exercice-description {
     font-size: 1rem;
     line-height: 1.375rem;
   }
