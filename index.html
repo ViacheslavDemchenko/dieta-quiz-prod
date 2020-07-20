@@ -241,8 +241,9 @@
                     <use xlink:href="img/icons/sprite.svg#check-yellow"></use>
                   </svg>
                   <div class="form__group field">
-                    <input class="form__field" type="input" placeholder="Ваш возраст*" name="age" id="age" pattern="^[0-9]+$" required>
+                    <input class="form__field" type="number" min="18" max="70" placeholder="Ваш возраст*" name="age" id="age" pattern="^[0-9]+$" required>
                     <label class="form__label form__label-first" for="age">Ваш возраст*</label>
+                    <p class="form__field-warning-text">Введите возраст от 18 до 70</p>
                   </div>
                 </div>
                 <div class="input-wrap">

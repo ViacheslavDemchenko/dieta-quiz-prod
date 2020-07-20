@@ -195,6 +195,20 @@ $(document).ready(function () {
       });
       return webp;
     };
+    /* ФУНКЦИЯ ВЫВОДА ПРЕДУПРЕЖДЕНИЯ О ВВОДЕ НЕВЕРНЫХ ДАННЫХ (ВОЗРАСТ, РОСТ, ВЕС) */
+    // function formFieldWarningAdd(text, index) {
+    //     let warning = document.createElement('p');
+    //     warning.classList.add('form__field-warning-text');
+    //     warning.textContent = text;
+    //     formGroup[index].appendChild(warning);
+    // }
+    // function formFieldWarningRemove(text, index) {
+    //     let warning = document.createElement('p');
+    //     warning.classList.add('form__field-warning-text');
+    //     warning.textContent = text;
+    //     formGroup[index].appendChild(warning);
+    // }
+
     /* ФУНКЦИИ ДЛЯ РАСЧЕТОВ */
 
 
@@ -282,8 +296,20 @@ $(document).ready(function () {
       age.addEventListener('keyup', function () {
         age.value = age.value.replace(/[^0-9]/g, '');
         userAge = Number(age.value);
-        console.log("Возраст: ");
-        console.log(userAge);
+
+        if (userAge >= 18 && userAge <= 70) {
+          console.log(userAge);
+          warningMesssage.style.display = 'none';
+          formField[0].classList.remove('form__field--warning');
+          inputWrap[0].classList.add('input-wrap--active');
+        } else {
+          warningMesssage.style.display = 'block';
+          formField[0].classList.add('form__field--warning');
+          inputWrap[0].classList.remove('input-wrap--active');
+        } // console.log("Возраст: ");
+        // console.log(userAge);
+
+
         return userAge;
       });
       weight.addEventListener('keyup', function () {
@@ -300,16 +326,15 @@ $(document).ready(function () {
         console.log("Рост: ");
         console.log(userHeight);
         return userHeight;
-      });
-      formField.forEach(function (input, i) {
-        input.addEventListener('change', function () {
-          if (input.value != '') {
-            inputWrap[i].classList.add('input-wrap--active');
-          } else {
-            inputWrap[i].classList.remove('input-wrap--active');
-          }
-        });
-      });
+      }); // formField.forEach((input, i) => {
+      //     input.addEventListener('change', () => {
+      //         if (input.value != '') {
+      //             inputWrap[i].classList.add('input-wrap--active');
+      //         } else {
+      //             inputWrap[i].classList.remove('input-wrap--active');
+      //         }
+      //     });
+      // });
     };
 
     var activity = function activity() {
@@ -499,8 +524,10 @@ $(document).ready(function () {
         weight = document.getElementById('weight'),
         height = document.getElementById('height'),
         formField = document.querySelectorAll('.form__field'),
+        warningMesssage = document.querySelector('.form__field-warning-text'),
         inputWrap = document.querySelectorAll('.input-wrap'),
-        calcBtn = document.querySelector('.arrow__right--last');
+        calcBtn = document.querySelector('.arrow__right--last'); // formGroup = document.querySelectorAll('.form__group');
+
     calcBtn.disabled = true; // Данные
 
     var userSex, userWeight, userHeightMeters, userHeight, userAge, weightIndex, userActivity, dailyCalories, metabolism, target, caloriesDeficiteStart, caloriesDeficiteEnd, weightIndexMessage, normalWeight;
@@ -667,6 +694,22 @@ $(document).ready(function () {
   }
 
   hideSite();
+})();
+"use strict";
+
+(function () {
+  var iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
+  var arrowIconRight = document.querySelector('.arrow-icon-right');
+  console.log(arrowIconRight);
+
+  if (iOS) {
+    arrowIconRight.style.transform = 'translateY(-50%)';
+    arrowIconRight.style.top = '1.5625rem';
+    arrowIconRight.style.right = '1.5rem';
+    console.log('iOS');
+  } else {
+    console.log('no iOS');
+  }
 })();
 "use strict";
 
