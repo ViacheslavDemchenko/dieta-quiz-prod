@@ -195,20 +195,6 @@ $(document).ready(function () {
       });
       return webp;
     };
-    /* ФУНКЦИЯ ВЫВОДА ПРЕДУПРЕЖДЕНИЯ О ВВОДЕ НЕВЕРНЫХ ДАННЫХ (ВОЗРАСТ, РОСТ, ВЕС) */
-    // function formFieldWarningAdd(text, index) {
-    //     let warning = document.createElement('p');
-    //     warning.classList.add('form__field-warning-text');
-    //     warning.textContent = text;
-    //     formGroup[index].appendChild(warning);
-    // }
-    // function formFieldWarningRemove(text, index) {
-    //     let warning = document.createElement('p');
-    //     warning.classList.add('form__field-warning-text');
-    //     warning.textContent = text;
-    //     formGroup[index].appendChild(warning);
-    // }
-
     /* ФУНКЦИИ ДЛЯ РАСЧЕТОВ */
 
 
@@ -298,23 +284,37 @@ $(document).ready(function () {
         userAge = Number(age.value);
 
         if (userAge >= 18 && userAge <= 70) {
-          console.log(userAge);
-          warningMesssage.style.display = 'none';
           formField[0].classList.remove('form__field--warning');
           inputWrap[0].classList.add('input-wrap--active');
+          formLabel[0].textContent = 'Ваш возраст*';
+          formLabel[0].style.color = '#3a4148';
         } else {
-          warningMesssage.style.display = 'block';
           formField[0].classList.add('form__field--warning');
           inputWrap[0].classList.remove('input-wrap--active');
-        } // console.log("Возраст: ");
-        // console.log(userAge);
+          formLabel[0].textContent = 'от 18 до 70 лет';
+          formLabel[0].style.color = 'red';
+        }
 
-
+        console.log("Возраст: ");
+        console.log(userAge);
         return userAge;
       });
       weight.addEventListener('keyup', function () {
         weight.value = weight.value.replace(/[^0-9]/g, '');
         userWeight = Number(weight.value);
+
+        if (userWeight >= 40 && userWeight <= 150) {
+          formField[1].classList.remove('form__field--warning');
+          inputWrap[1].classList.add('input-wrap--active');
+          formLabel[1].textContent = 'Ваш вес*';
+          formLabel[1].style.color = '#3a4148';
+        } else {
+          formField[1].classList.add('form__field--warning');
+          inputWrap[1].classList.remove('input-wrap--active');
+          formLabel[1].textContent = 'от 40 до 150 кг';
+          formLabel[1].style.color = 'red';
+        }
+
         console.log("Вес: ");
         console.log(userWeight);
         localStorage.setItem('weight', userWeight);
@@ -323,6 +323,19 @@ $(document).ready(function () {
       height.addEventListener('keyup', function () {
         height.value = height.value.replace(/[^0-9]/g, '');
         userHeight = Number(height.value);
+
+        if (userHeight >= 150 && userHeight <= 200) {
+          formField[2].classList.remove('form__field--warning');
+          inputWrap[2].classList.add('input-wrap--active');
+          formLabel[2].textContent = 'Ваш рост*';
+          formLabel[2].style.color = '#3a4148';
+        } else {
+          formField[2].classList.add('form__field--warning');
+          inputWrap[2].classList.remove('input-wrap--active');
+          formLabel[2].textContent = 'от 150 до 200 см';
+          formLabel[2].style.color = 'red';
+        }
+
         console.log("Рост: ");
         console.log(userHeight);
         return userHeight;
@@ -524,10 +537,9 @@ $(document).ready(function () {
         weight = document.getElementById('weight'),
         height = document.getElementById('height'),
         formField = document.querySelectorAll('.form__field'),
-        warningMesssage = document.querySelector('.form__field-warning-text'),
         inputWrap = document.querySelectorAll('.input-wrap'),
-        calcBtn = document.querySelector('.arrow__right--last'); // formGroup = document.querySelectorAll('.form__group');
-
+        calcBtn = document.querySelector('.arrow__right--last'),
+        formLabel = document.querySelectorAll('.form__label');
     calcBtn.disabled = true; // Данные
 
     var userSex, userWeight, userHeightMeters, userHeight, userAge, weightIndex, userActivity, dailyCalories, metabolism, target, caloriesDeficiteStart, caloriesDeficiteEnd, weightIndexMessage, normalWeight;
@@ -546,6 +558,16 @@ $(document).ready(function () {
       }
     });
   }
+
+  function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -80);
+      setTimeout(backToTop, 0);
+    }
+  }
+
+  var goTopBtn = document.querySelector('.arrow__right--to-top');
+  goTopBtn.addEventListener('click', backToTop);
 });
 "use strict";
 

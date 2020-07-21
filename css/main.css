@@ -1539,7 +1539,7 @@ template {
 }
 
 .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(1) .check-yellow {
-  top: 5.1875rem;
+  top: 5.125rem;
   left: 2.625rem;
 }
 
@@ -1554,17 +1554,17 @@ template {
 }
 
 .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(2)::after {
-  top: 8.25rem;
+  top: 8.1875rem;
   left: 2.1875rem;
 }
 
 .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(3) .check-yellow {
-  top: 12.1875rem;
+  top: 12.3125rem;
   left: 2.625rem;
 }
 
 .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(3)::after {
-  top: 11.6875rem;
+  top: 11.75rem;
   left: 2.1875rem;
 }
 
@@ -1588,35 +1588,20 @@ template {
 
 .form__group.field .form__field {
   width: 100%;
+  padding: 0.625rem 0.625rem 0.625rem 3.4375rem;
+  border: 0.0625rem solid #9faab4;
+  outline: none;
+  border-radius: 1.625rem;
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
   font-size: 1rem;
   line-height: 1.3;
   color: #3a4148;
-  outline: none;
-  padding: 0.625rem 0.625rem 0.625rem 3.4375rem;
-  border: 0.0625rem solid #9faab4;
-  border-radius: 1.625rem;
 }
 
 .form__group.field .form__field--warning {
   border: 0.0625rem solid rgba(255, 0, 0, 0.7);
-}
-
-.form__group.field .form__field-warning-text {
-  display: none;
-  transform: translate(0.625rem, -0.8125rem);
-  font-family: "UniNeueBold";
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.3;
-  color: rgba(255, 0, 0, 0.7);
-}
-
-.form__group.field .form__field-warning-text--active {
-  display: block;
 }
 
 .form__group.field .form__field:not(:last-child) {
@@ -1694,32 +1679,32 @@ template {
 }
 
 .form__group.field .form__field:-moz-placeholder-shown ~ .form__label-second {
-  top: 8.25rem;
+  top: 8.3125rem;
   left: 5rem;
 }
 
 .form__group.field .form__field:-ms-input-placeholder ~ .form__label-second {
-  top: 8.25rem;
+  top: 8.3125rem;
   left: 5rem;
 }
 
 .form__group.field .form__field:placeholder-shown ~ .form__label-second {
-  top: 8.25rem;
+  top: 8.3125rem;
   left: 5rem;
 }
 
 .form__group.field .form__field:-moz-placeholder-shown ~ .form__label-third {
-  top: 11.8125rem;
+  top: 11.875rem;
   left: 5rem;
 }
 
 .form__group.field .form__field:-ms-input-placeholder ~ .form__label-third {
-  top: 11.8125rem;
+  top: 11.875rem;
   left: 5rem;
 }
 
 .form__group.field .form__field:placeholder-shown ~ .form__label-third {
-  top: 11.8125rem;
+  top: 11.875rem;
   left: 5rem;
 }
 
@@ -1737,17 +1722,17 @@ template {
 
 .form__group.field .form__label-first {
   top: 4.3125rem;
-  left: 10rem;
+  left: 9.25rem;
 }
 
 .form__group.field .form__label-second {
   top: 7.875rem;
-  left: 11.5625rem;
+  left: 9.25rem;
 }
 
 .form__group.field .form__label-third {
   top: 11.375rem;
-  left: 11.0625rem;
+  left: 9.25rem;
 }
 
 .form__group.field .form__field:focus ~ .form__label-first,
@@ -1766,17 +1751,17 @@ template {
 
 .form__group.field .form__field:focus ~ .form__label-first {
   top: 4.3125rem;
-  left: 10rem;
+  left: 9.25rem;
 }
 
 .form__group.field .form__field:focus ~ .form__label-second {
   top: 7.875rem;
-  left: 11.5625rem;
+  left: 9.25rem;
 }
 
 .form__group.field .form__field:focus ~ .form__label-third {
   top: 11.375rem;
-  left: 11.0625rem;
+  left: 9.25rem;
 }
 
 .webp .quiz-slide-fifth {
@@ -4328,22 +4313,22 @@ template {
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(2) .check-yellow {
-    top: 10.25rem;
+    top: 10.3125rem;
     left: 3.5rem;
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(2)::after {
-    top: 9.625rem;
+    top: 9.6875rem;
     left: 3rem;
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(3) .check-yellow {
-    top: 14.1875rem;
+    top: 14.25rem;
     left: 3.5rem;
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(3)::after {
-    top: 13.5625rem;
+    top: 13.625rem;
     left: 3rem;
   }
 
@@ -4427,13 +4412,13 @@ template {
   }
 
   .form__group.field .form__label-second {
-    top: 9.625rem;
-    left: 14rem;
+    top: 9.5rem;
+    left: 12.125rem;
   }
 
   .form__group.field .form__label-third {
-    top: 13.5625rem;
-    left: 13.5625rem;
+    top: 13.375rem;
+    left: 12.125rem;
   }
 
   .form__group.field .form__field:focus ~ .form__label-first,
@@ -4448,13 +4433,13 @@ template {
   }
 
   .form__group.field .form__field:focus ~ .form__label-second {
-    top: 9.625rem;
-    left: 14rem;
+    top: 9.5rem;
+    left: 12.125rem;
   }
 
   .form__group.field .form__field:focus ~ .form__label-third {
-    top: 13.5625rem;
-    left: 13.5625rem;
+    top: 13.375rem;
+    left: 12.125rem;
   }
 
   .no-webp .quiz-slide-fifth {
