@@ -559,15 +559,19 @@ $(document).ready(function () {
     });
   }
 
-  function backToTop() {
-    if (window.pageYOffset > 0) {
-      window.scrollBy(0, -80);
-      setTimeout(backToTop, 0);
-    }
-  }
+  if ($('.arrow__right').length) {
+    var backToTop = function backToTop() {
+      if (window.pageYOffset > 0) {
+        window.scrollBy(0, -80);
+        setTimeout(backToTop, 0);
+      }
+    };
 
-  var goTopBtn = document.querySelector('.arrow__right--to-top');
-  goTopBtn.addEventListener('click', backToTop);
+    var goTopBtns = document.querySelectorAll('.arrow__right');
+    goTopBtns.forEach(function (btn) {
+      btn.addEventListener('click', backToTop);
+    });
+  }
 });
 "use strict";
 
