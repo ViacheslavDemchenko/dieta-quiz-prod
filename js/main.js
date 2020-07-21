@@ -720,17 +720,18 @@ $(document).ready(function () {
 "use strict";
 
 (function () {
-  var iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
-  var arrowIconRight = document.querySelector('.arrow-icon-right');
-  console.log(arrowIconRight);
+  if ($('.arrow-icon-right').length) {
+    var iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
+    var arrowIconRight = document.querySelector('.arrow-icon-right');
 
-  if (iOS) {
-    arrowIconRight.style.transform = 'translateY(-50%)';
-    arrowIconRight.style.top = '1.5625rem';
-    arrowIconRight.style.right = '1.5rem';
-    console.log('iOS');
-  } else {
-    console.log('no iOS');
+    if (iOS) {
+      arrowIconRight.style.transform = 'translateY(-50%)';
+      arrowIconRight.style.top = '1.5625rem';
+      arrowIconRight.style.right = '1.5rem';
+      console.log('iOS');
+    } else {
+      console.log('no iOS');
+    }
   }
 })();
 "use strict";
