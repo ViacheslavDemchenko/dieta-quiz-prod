@@ -539,18 +539,30 @@ $(document).ready(function () {
         formField = document.querySelectorAll('.form__field'),
         inputWrap = document.querySelectorAll('.input-wrap'),
         calcBtn = document.querySelector('.arrow__right--last'),
-        formLabel = document.querySelectorAll('.form__label');
-    calcBtn.disabled = true; // Данные
+        formLabel = document.querySelectorAll('.form__label'); // calcBtn.disabled = true;
+    // Данные
 
-    var userSex, userWeight, userHeightMeters, userHeight, userAge, weightIndex, userActivity, dailyCalories, metabolism, target, caloriesDeficiteStart, caloriesDeficiteEnd, weightIndexMessage, normalWeight;
+    var userSex = 'female',
+        userWeight,
+        userHeightMeters,
+        userHeight,
+        userAge,
+        weightIndex,
+        userActivity,
+        dailyCalories,
+        metabolism,
+        target,
+        caloriesDeficiteStart,
+        caloriesDeficiteEnd,
+        weightIndexMessage,
+        normalWeight;
     userParams(webpSupportCheck());
     activity();
-    calcBtn.addEventListener("click", function () {
+    calcBtn.addEventListener("click", function (e) {
       if (userSex == undefined || userWeight == undefined || target == undefined || userActivity == undefined || userWeight == undefined || userHeight == undefined || userAge == undefined) {
-        calcBtn.disabled = true;
+        e.preventDefault();
         alert('Пожалуйста, введите все необходимые данные!');
       } else {
-        calcBtn.disabled = false;
         weightIndexCalc();
         minCalories();
         dailyCaloriesCalc();
@@ -594,6 +606,19 @@ $(document).ready(function () {
 
 (function () {
   if ($('.dieta-choice').length) {
+    var dietaTypeTextModals = function dietaTypeTextModals() {
+      if (targetUser == 'Похудеть') {
+        modalFirstText.textContent = 'Рацион для тех, кто хочет худеть быстрее';
+        modalSecondtText.textContent = 'Рацион для тех, кто хочет питаться сытно и худеть медленно, но верно';
+      } else if (targetUser == 'Удержать вес') {
+        modalFirstText.textContent = 'Рацион для тех, кто боится поправиться и не любит переедать';
+        modalSecondtText.textContent = 'Рацион для тех, кто предпочитает питаться сытно';
+      } else if (targetUser == 'Набрать вес') {
+        modalFirstText.textContent = 'Рацион для тех, кто хочет набирать вес медленно и не любит переедать';
+        modalSecondtText.textContent = 'Рацион для тех, кто хочет набирать вес быстрее';
+      }
+    };
+
     var dietaTypeChoice = function dietaTypeChoice() {
       dietaItem.forEach(function (el, i) {
         el.addEventListener('click', function (e) {
@@ -624,6 +649,7 @@ $(document).ready(function () {
           overlay.classList.add('overlay--active');
           body.classList.add('no-scroll');
           modals[i].classList.add('modal--active');
+          dietaTypeTextModals();
         });
       });
     };
@@ -648,16 +674,86 @@ $(document).ready(function () {
     var modals = document.querySelectorAll('.modal');
     var overlay = document.querySelector('.overlay');
     var body = document.getElementsByTagName('body')[0];
+    var modalFirstText = document.querySelector('.modal-first__text');
+    var modalSecondtText = document.querySelector('.modal-second__text');
+    var targetUser = localStorage.getItem('target');
     dietaTypeChoice();
     dietaModalOpen();
-    dietaModalClose();
-    overlay.addEventListener('click', function () {
-      modals.forEach(function (el) {
-        overlay.classList.remove('overlay--active');
-        body.classList.remove('no-scroll');
-        el.classList.remove('modal--active');
+    dietaModalClose(); // overlay.addEventListener('click', () => {
+    //     modals.forEach(el => {
+    //         overlay.classList.remove('overlay--active');
+    //         body.classList.remove('no-scroll');
+    //         el.classList.remove('modal--active');
+    //     });
+    // });
+  }
+
+  if ($('.payment-page').length) {
+    var caloriesRound = function caloriesRound() {
+      var num = +firstDieta.substr(2, 2);
+
+      if (num >= 70) {
+        dietaCal = (+firstDieta.substr(0, 2) + 1) * 100;
+        secondDieta = dietaCal + 100;
+        thirdDieta = dietaCal + 200;
+      } else {
+        dietaCal = +firstDieta.substr(0, 2) * 100;
+        secondDieta = dietaCal + 100;
+        thirdDieta = dietaCal + 200;
+      }
+
+      _caloriesQuantity.forEach(function (cal, i) {
+        if (i == 0) {
+          cal.textContent = dietaCal;
+        }
+
+        if (i == 1) {
+          cal.textContent = secondDieta;
+        }
+
+        if (i == 2) {
+          cal.textContent = thirdDieta;
+        }
       });
-    });
+    };
+
+    var firstDieta = localStorage.getItem('caloriesDeficiteEnd');
+    var dietaCal;
+    var secondDieta;
+    var thirdDieta;
+
+    var _caloriesQuantity = document.querySelectorAll('.calories-quantity');
+
+    caloriesRound();
+  }
+})();
+"use strict";
+
+;
+
+(function () {
+  if ($('.form-page').length) {
+    var validateEmail = function validateEmail(email) {
+      var re = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+      return re.test(email);
+    };
+
+    var validate = function validate() {
+      var email = $("#email").val();
+
+      if (validateEmail(email)) {
+        $('.form__label-email').css('color', 'rgb(58, 65, 72)');
+        $('.form__label-email').css('left', '180px');
+        $('.form__label-email').text('Ваш email*');
+      } else {
+        $('.form__label-email').css('color', 'red');
+        $('.form__label-email').text('неверный формат');
+      }
+
+      return false;
+    };
+
+    $('#form-email').on('keyup', validate);
   }
 })();
 "use strict";

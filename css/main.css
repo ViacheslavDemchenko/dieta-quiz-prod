@@ -1074,6 +1074,7 @@ template {
 
 .arrow__right {
   position: relative;
+  display: inline-block;
   padding: 0.5rem 2.5rem 0.5rem 1.25rem;
   text-align: center;
   font-family: "UniNeueBold";
@@ -1082,15 +1083,16 @@ template {
   font-size: 0.875rem;
   line-height: 1.5rem;
   color: #3f3113;
+  border: none;
+  outline: none;
   border-radius: 1.4375rem;
   background: linear-gradient(90deg, #ebb845 0%, #f7c754 100%);
 }
 
 .arrow__right--last {
+  position: absolute;
+  left: 5.625rem;
   padding: 0.4375rem 2.1875rem 0.4375rem 0.9375rem;
-}
-
-.arrow__right--last button {
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
@@ -1099,7 +1101,12 @@ template {
   color: #3f3113;
   outline: none;
   border: none;
-  background: transparent;
+  background: linear-gradient(90deg, #ebb845 0%, #f7c754 100%);
+}
+
+.arrow__right--last + .arrow-icon-right {
+  top: 1.25rem;
+  right: -9.375rem;
 }
 
 .arrow-icon-right {
@@ -1221,14 +1228,14 @@ template {
   background-repeat: no-repeat !important;
   background-position: top center !important;
   background-size: cover !important;
-  background: url(../img/first-slide-bg-initial@1x.webp);
+  background: url(../img/first-slide-bg-0-480@1x.webp);
 }
 
 .no-webp .quiz-slide-first {
   background-repeat: no-repeat !important;
   background-position: top center !important;
   background-size: cover !important;
-  background: url(../img/first-slide-bg-initial@1x.jpg);
+  background: url(../img/first-slide-bg-0-480@1x.jpg);
 }
 
 .webp .quiz-slide-second {
@@ -2463,6 +2470,7 @@ template {
   transform: translate(-50%, -50%);
   width: 100%;
   display: none;
+  text-align: left;
   border-radius: 1.25rem;
   background: #f4fafa;
 }
@@ -2635,45 +2643,114 @@ template {
   background: linear-gradient(90deg, #e7b03d 0%, #fdd05b 100%);
 }
 
-.email-input::-moz-placeholder {
-  font-family: "UniNeueRegular";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.444;
-  color: rgba(186, 198, 198, 0.8);
-}
-
-.email-input:-ms-input-placeholder {
-  font-family: "UniNeueRegular";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.444;
-  color: rgba(186, 198, 198, 0.8);
-}
-
-.email-input::-ms-input-placeholder {
-  font-family: "UniNeueRegular";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.444;
-  color: rgba(186, 198, 198, 0.8);
-}
-
-.email-input::placeholder {
-  font-family: "UniNeueRegular";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.444;
-  color: rgba(186, 198, 198, 0.8);
-}
-
 .form-input-wrap {
   position: relative;
   margin-bottom: 0.625rem;
+}
+
+.form-input-wrap .email-input {
+  width: 13.75rem;
+  padding: 0.75rem 0.3125rem 0.75rem 2.8125rem;
+  border: none;
+  outline: none;
+  border-radius: 1.625rem;
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #3a4148;
+}
+
+.form-input-wrap .email-input--warning {
+  border: 0.0625rem solid rgba(255, 0, 0, 0.7);
+}
+
+.form-input-wrap .email-input:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.form-input-wrap .email-input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-input-wrap .email-input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-input-wrap .email-input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-input-wrap .email-input::placeholder {
+  color: transparent;
+}
+
+.form-input-wrap .email-input:-moz-placeholder-shown ~ .form__label-email {
+  position: absolute;
+  top: 0.6875rem;
+  left: 3.25rem;
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.444;
+  color: #cacaca;
+  cursor: text;
+}
+
+.form-input-wrap .email-input:-ms-input-placeholder ~ .form__label-email {
+  position: absolute;
+  top: 0.6875rem;
+  left: 3.25rem;
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.444;
+  color: #cacaca;
+  cursor: text;
+}
+
+.form-input-wrap .email-input:placeholder-shown ~ .form__label-email {
+  position: absolute;
+  top: 0.6875rem;
+  left: 3.25rem;
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.444;
+  color: #cacaca;
+  cursor: text;
+}
+
+.form-input-wrap .form__label-email {
+  position: absolute;
+  top: 0.1875rem;
+  left: 9rem;
+  display: block;
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  color: #3a4148;
+  font-size: 0.75rem;
+  line-height: 1.444;
+  transition: 0.2s;
+}
+
+.form-input-wrap .email-input:focus ~ .form__label-email {
+  position: absolute;
+  top: 0.1875rem;
+  left: 9rem;
+  display: block;
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.75rem !important;
+  line-height: 1.444;
+  color: #3a4148;
+  transition: 0.2s;
 }
 
 .form-input-wrap--policy {
@@ -2768,7 +2845,7 @@ template {
 
 .envelope-icon-wrap {
   position: absolute;
-  top: 0.75rem;
+  top: 0.5625rem;
   left: 0.5rem;
   width: 1.625rem;
   height: 1.625rem;
@@ -3957,11 +4034,11 @@ template {
   }
 
   .footer-arc--top {
-    margin-top: -5.3125rem;
+    margin-top: -6rem;
   }
 
   .footer-arc--bottom {
-    margin-top: -5.75rem;
+    margin-top: -6.4375rem;
   }
 
   .footer--about,
@@ -4161,13 +4238,15 @@ template {
     line-height: 1.625rem;
   }
 
-  .arrow__right--last button {
+  .arrow__right--last {
+    margin-left: 1.75rem;
     font-size: 1rem;
     line-height: 1.625rem;
   }
 
-  .arrow__right--last {
-    padding: 0.625rem 3.125rem 0.625rem 1.5rem;
+  .arrow__right--last + .arrow-icon-right {
+    top: 1.5rem;
+    right: -11.875rem;
   }
 
   .arrow-icon-right {
@@ -4748,7 +4827,7 @@ template {
   }
 
   .result-block-modal--result {
-    padding: 2.5rem 2.5rem 2.1875rem 1.25rem;
+    padding: 2.5rem 1.125rem 2.1875rem 1.25rem;
   }
 
   .quiz-slide__content--form {
@@ -4776,28 +4855,42 @@ template {
     font-size: 1rem;
   }
 
-  .email-input::-moz-placeholder {
+  .form-input-wrap .email-input {
     width: 16.8125rem;
-    padding: 0.875rem 1.25rem 0.875rem 3.75rem;
-    font-size: 1.125rem;
+    padding: 0.875rem 1.25rem 0.875rem 3.125rem;
   }
 
-  .email-input:-ms-input-placeholder {
-    width: 16.8125rem;
-    padding: 0.875rem 1.25rem 0.875rem 3.75rem;
+  .form-input-wrap .email-input:-moz-placeholder-shown ~ .form__label-email {
+    top: 0.75rem;
+    left: 3.75rem;
     font-size: 1.125rem;
+    line-height: 1.444;
   }
 
-  .email-input::-ms-input-placeholder {
-    width: 16.8125rem;
-    padding: 0.875rem 1.25rem 0.875rem 3.75rem;
+  .form-input-wrap .email-input:-ms-input-placeholder ~ .form__label-email {
+    top: 0.75rem;
+    left: 3.75rem;
     font-size: 1.125rem;
+    line-height: 1.444;
   }
 
-  .email-input::placeholder {
-    width: 16.8125rem;
-    padding: 0.875rem 1.25rem 0.875rem 3.75rem;
+  .form-input-wrap .email-input:placeholder-shown ~ .form__label-email {
+    top: 0.75rem;
+    left: 3.75rem;
     font-size: 1.125rem;
+    line-height: 1.444;
+  }
+
+  .form-input-wrap .form__label-email {
+    top: 0.3125rem;
+    left: 8.75rem;
+    font-size: 0.875rem;
+  }
+
+  .form-input-wrap .email-input:focus ~ .form__label-email {
+    top: 0.3125rem;
+    left: 8.75rem;
+    font-size: 0.875rem !important;
   }
 
   .form-input-wrap--policy label {
@@ -4826,7 +4919,7 @@ template {
   }
 
   .envelope-icon-wrap {
-    top: 0.625rem;
+    top: 0.375rem;
     width: 2.1875rem;
     height: 2.1875rem;
   }
@@ -5358,11 +5451,11 @@ template {
 
 @media (-webkit-min-device-pixel-ratio: 1.2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .webp .quiz-slide-first {
-    background: url(../img/first-slide-bg-initial@2x.webp);
+    background: url(../img/first-slide-bg-0-480@2x.webp);
   }
 
   .no-webp .quiz-slide-first {
-    background: url(../img/first-slide-bg-initial@2x.jpg);
+    background: url(../img/first-slide-bg-0-480@2x.jpg);
   }
 
   .webp .quiz-slide-second {

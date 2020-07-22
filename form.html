@@ -24,12 +24,13 @@
         <div class="quiz-slide__content quiz-slide__content--form">
           <div class="quiz-slide__content-title">Куда отправить?</div>
         </div>
-        <form class="form" action="#" method="post">
+        <form class="form" id="form-email" action="#" method="post">
           <div class="form__title">Введите свой e-mail, 
             <p class="form__title--light">чтобы получить программу</p>
           </div>
           <div class="form-input-wrap">
-            <input class="email-input" type="email" name="email" id="email" placeholder="Ваш email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required>
+            <input class="email-input" type="email" name="email" id="email" placeholder="Ваш email*" required>
+            <label class="form__label form__label-email" for="email">Ваш email*</label>
             <div class="envelope-icon-wrap">
               <svg class="envelope-icon" width="19" height="15">
                 <use xlink:href="img/icons/sprite.svg#envelope"></use>

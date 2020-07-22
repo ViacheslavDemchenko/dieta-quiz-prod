@@ -32,11 +32,11 @@
               <div class="quiz-slide__percent quiz-slide__percent--first">20%</div>
               <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--border"></span><span class="range-line range-line--border"></span><span class="range-line range-line--border"></span><span class="range-line"></span></div>
               <div class="quiz-slide-icons">
-                <button class="female sex" value="female">
+                <button class="female sex sex--active" value="female">
                   <svg class="quiz-slide-icon female-icon" width="47" height="67">
                     <use xlink:href="img/icons/sprite.svg#woman"></use>
                   </svg>
-                  <svg class="check-icon" width="15" height="11">
+                  <svg class="check-icon check-icon--active" width="15" height="11">
                     <use xlink:href="img/icons/sprite.svg#check"></use>
                   </svg>
                 </button>
@@ -50,16 +50,16 @@
                 </button>
               </div>
               <div class="quiz-slide-titles">
-                <div class="quiz-slide__title">Женский</div>
+                <div class="quiz-slide__title quiz-slide__title--active">Женский</div>
                 <div class="quiz-slide__title">Мужской</div>
               </div>
             </div>
             <div class="quiz-arrows quiz-arrows--first">
-              <div class="arrow__right">Далее
+              <button class="arrow__right">Далее
                 <svg class="arrow-icon-right" width="8" height="14">
                   <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
           <div class="quiz-slide quiz-slide-second">
@@ -90,11 +90,11 @@
                   <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
                 </svg>
               </div>
-              <div class="arrow__right">Далее
+              <button class="arrow__right">Далее
                 <svg class="arrow-icon-right" width="8" height="14">
                   <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
           <div class="quiz-slide quiz-slide-third">
@@ -221,11 +221,11 @@
                   <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
                 </svg>
               </div>
-              <div class="arrow__right">Далее
+              <button class="arrow__right">Далее
                 <svg class="arrow-icon-right" width="8" height="14">
                   <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
           <div class="quiz-slide quiz-slide-fourth">
@@ -271,11 +271,11 @@
                   <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
                 </svg>
               </div>
-              <div class="arrow__right">Далее
+              <button class="arrow__right">Далее
                 <svg class="arrow-icon-right" width="8" height="14">
                   <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
           <div class="quiz-slide quiz-slide-fifth">
@@ -294,10 +294,7 @@
               <div class="arrow__left">
                 <svg class="arrow-icon-left" width="11" height="18">
                   <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
-                </svg>
-              </div>
-              <div class="arrow__right arrow__right--last">
-                <button href="program-calc.html">Составить</button>
+                </svg><a class="arrow__right arrow__right--last" href="program-calc.html">Составить</a>
                 <svg class="arrow-icon-right" width="8" height="14">
                   <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
                 </svg>
@@ -339,6 +336,6 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
