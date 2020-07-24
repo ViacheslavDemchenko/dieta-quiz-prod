@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     const dietaBlockTop = document.querySelectorAll('.dieta__item-top');
     const caloriesQuantity = document.querySelectorAll('.calories-quantity');
@@ -17,21 +17,20 @@ $(document).ready(function () {
 
     function dietaTypeTextModals() {
         if (targetUser == 'Похудеть') {
-            modalFirstText.textContent = 'Рацион для тех, кто хочет худеть быстрее';
-            modalSecondtText.textContent = 'Рацион для тех, кто хочет питаться сытно и худеть медленно, но верно';
+            modalFirstText.innerHTML = `Рацион для тех, кто хочет <span class="modal-first__text--bold">худеть быстрее</span>`;
+            modalSecondtText.innerHTML = `Рацион для тех, кто хочет <span class="modal-first__text--bold">питаться сытно и худеть медленно, но верно</span>`;
         } else if (targetUser == 'Удержать вес') {
-            modalFirstText.textContent = 'Рацион для тех, кто боится поправиться и не любит переедать';
-            modalSecondtText.textContent = 'Рацион для тех, кто предпочитает питаться сытно';
+            modalFirstText.innerHTML = `Рацион для тех, кто боится <span class="modal-first__text--bold">поправиться и не любит переедать</span>`;
+            modalSecondtText.innerHTML = `Рацион для тех, кто предпочитает <span class="modal-first__text--bold">питаться сытно</span>`;
         } else if (targetUser == 'Набрать вес') {
-            modalFirstText.textContent = 'Рацион для тех, кто хочет набирать вес медленно и не любит переедать';
-            modalSecondtText.textContent = 'Рацион для тех, кто хочет набирать вес быстрее';
+            modalFirstText.innerHTML = `Рацион для тех, кто хочет <span class="modal-first__text--bold">набирать вес медленно и не любит переедать</span>`;
+            modalSecondtText.innerHTML = `Рацион для тех, кто хочет <span class="modal-first__text--bold">набирать вес быстрее</span>`;
         }
     }
 
     function dietaTypeChoice() {
         dietaItem.forEach((el, i) => {
             el.addEventListener('click', (e) => {
-                console.log(e.target);
                 dietaBlockTop.forEach(el => {
                     el.classList.remove('dieta__item-top--active');
                 });
@@ -109,4 +108,5 @@ $(document).ready(function () {
         });
     }
     caloriesRound();
+
 });

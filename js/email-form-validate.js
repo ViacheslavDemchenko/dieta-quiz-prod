@@ -1,7 +1,4 @@
-;
-(function () {
-
-
+$(document).ready(function () {
 
     function validateEmail(email) {
         const re = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
@@ -24,5 +21,4 @@
 
     $('#form-email').on('keyup', validate);
 
-
-})();
+});

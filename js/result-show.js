@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     const userB_M_IResult = document.querySelector('.result-block__number--bmi'),
         caloriesResult = document.querySelector('.result-block__number--energy'),
