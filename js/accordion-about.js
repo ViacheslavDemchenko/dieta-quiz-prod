@@ -12,4 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    /* КОРРЕКТИРОВКА ПОД АЙФОНЫ */
+
+    const iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
+    const titles = document.querySelector('.about-item__title');
+    const arrowDown = document.querySelector('.arrow-down');
+
+    if (iOS) {
+        titles.classList.add('about-item__title--ios');
+        arrowDown.classList.add('arrow-down--ios');
+        console.log('iOS');
+    } else {
+        console.log('no iOS');
+    }
+
 });

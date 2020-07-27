@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     resultShow();
 
-
-
     const body = document.getElementsByTagName('body')[0];
     const overlay = document.querySelector('.overlay');
     const resultBlockModalBMI = document.querySelector('.result-block-modal--bmi');
@@ -121,6 +119,20 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.classList.remove('overlay--active');
         resultBlockModalResult.classList.remove('result-block-modal--result--active');
         body.classList.remove('no-scroll');
+    }
+
+    /* КОРРЕКТИРОВКА БОРДЕРА ВОКРУГ КНОПКИ НА АЙФОНАХ */
+
+    const iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
+    const btnProgram = document.querySelector('.personal-profile__get-program');
+    const menuItem = document.querySelector('.menu-list .menu__item');
+
+    if (iOS) {
+        btnProgram.classList.add('personal-profile__get-program--ios');
+        menuItem.classList.add('menu__item--ios');
+        console.log('iOS');
+    } else {
+        console.log('no iOS');
     }
 
 });

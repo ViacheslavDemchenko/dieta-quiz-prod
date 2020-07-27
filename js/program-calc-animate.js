@@ -12,17 +12,6 @@ $(document).ready(function () {
     //     myAnimation.paint();
     // }
 
-    function webpSupportCheck() {
-        let webp = true;
-        Modernizr.on('webp', (result) => {
-            if (result) {
-                webp = true;
-            } else {
-                webp = false;
-            }
-        });
-        return webp;
-    }
 
     const dish = document.querySelector('.program-calc__dish');
     let src = './img/dish-';
@@ -32,35 +21,11 @@ $(document).ready(function () {
     function bgImageChange() {
         let screenWidth = window.screen.width;
 
-        if (webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio == 1) {
-            // console.log('WEBP');
-            // console.log('< 481');
-            // console.log('window.devicePixelRatio 1');
-            // src = './img/dish-';
-            imgType = '-480@1x.webp';
-        }
-
-        if (webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio > 1) {
-            // console.log('WEBP');
-            // console.log('< 481');
-            // console.log('window.devicePixelRatio > 1');
-            // src = './img/dish-';
-            imgType = '-480@2x.webp';
-        }
-
-        if (!webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio == 1) {
-            // console.log('jpg');
-            // console.log('< 481');
-            // console.log('window.devicePixelRatio 1');
-            // src = './img/dish-';
+        if (screenWidth <= 480 && window.devicePixelRatio == 1) {
             imgType = '-480@1x.jpg';
         }
 
-        if (!webpSupportCheck() && screenWidth < 481 && window.devicePixelRatio > 1) {
-            // console.log('jpg');
-            // console.log('< 481');
-            // console.log('window.devicePixelRatio > 1');
-            // src = './img/dish-';
+        if (screenWidth <= 480 && window.devicePixelRatio > 1) {
             imgType = '-480@2x.jpg';
         }
     }
