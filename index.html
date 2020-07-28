@@ -65,35 +65,42 @@
             <div class="quiz-slide__content quiz-slide__content-second">
               <div class="quiz-slide__content-title">Ваша цель</div>
             </div>
-            <div class="quiz-slide__choice">
-              <div class="quiz-slide__percent quiz-slide__percent--second">40%</div>
-              <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span><span class="range-line"></span><span class="range-line"></span></div>
-              <div class="quiz-slide-checkbox">
-                <div class="checkbox-block">
-                  <input type="radio" id="lose-weight" name="target" value="1">
-                  <label for="lose-weight">Похудеть</label>
+            <div class="quiz-slide-wrap">
+              <div class="quiz-slide-wrap__leftcol">
+                <div class="quiz-slide__choice quiz-slide__choice-second">
+                  <div class="quiz-slide__percent quiz-slide__percent--second">40%</div>
+                  <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span><span class="range-line"></span><span class="range-line"></span></div>
+                  <div class="quiz-slide-checkbox">
+                    <div class="checkbox-block">
+                      <input type="radio" id="lose-weight" name="target" value="1">
+                      <label for="lose-weight">Похудеть</label>
+                    </div>
+                    <div class="checkbox-block">
+                      <input type="radio" id="gain-weight" name="target" value="2">
+                      <label for="gain-weight">Набрать вес</label>
+                    </div>
+                    <div class="checkbox-block">
+                      <input type="radio" id="save-weight" name="target" value="3">
+                      <label for="save-weight">Удержать вес</label>
+                    </div>
+                  </div>
                 </div>
-                <div class="checkbox-block">
-                  <input type="radio" id="gain-weight" name="target" value="2">
-                  <label for="gain-weight">Набрать вес</label>
-                </div>
-                <div class="checkbox-block">
-                  <input type="radio" id="save-weight" name="target" value="3">
-                  <label for="save-weight">Удержать вес</label>
+                <div class="quiz-arrows">
+                  <div class="arrow__left">
+                    <svg class="arrow-icon-left" width="11" height="18">
+                      <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
+                    </svg>
+                  </div>
+                  <button class="arrow__right">Далее
+                    <svg class="arrow-icon-right" width="8" height="14">
+                      <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
-            </div>
-            <div class="quiz-arrows">
-              <div class="arrow__left">
-                <svg class="arrow-icon-left" width="11" height="18">
-                  <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
-                </svg>
+              <div class="quiz-slide-wrap__rightcol">
+                <div class="quiz-slide__img quiz-slide__img-second"></div>
               </div>
-              <button class="arrow__right">Далее
-                <svg class="arrow-icon-right" width="8" height="14">
-                  <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
-                </svg>
-              </button>
             </div>
           </div>
           <div class="quiz-slide quiz-slide-third">
@@ -102,202 +109,223 @@
                 <p>нагрузки в неделю</p>
               </div>
             </div>
-            <div class="quiz-slide__choice quiz-slide__choice-third">
-              <div class="question-mark">?</div>
-              <div class="quiz-slide__percent quiz-slide__percent--third">60%</div>
-              <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span><span class="range-line"></span></div>
-              <div class="exercices">
-                <div class="exercice-block">
-                  <div class="quantaty">
-                    <div class="exercice-num">0</div>
-                    <div class="exercice-text">раз</div>
-                    <svg class="quantaty-check-icon" width="15" height="11">
-                      <use xlink:href="img/icons/sprite.svg#check"></use>
-                    </svg>
+            <div class="quiz-slide-wrap">
+              <div class="quiz-slide-wrap__leftcol">
+                <div class="quiz-slide__choice quiz-slide__choice-third">
+                  <div class="question-mark">?</div>
+                  <div class="quiz-slide__percent quiz-slide__percent--third">60%</div>
+                  <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span><span class="range-line"></span></div>
+                  <div class="exercices">
+                    <div class="exercice-block">
+                      <div class="quantaty">
+                        <div class="exercice-num">0</div>
+                        <div class="exercice-text">раз</div>
+                        <svg class="quantaty-check-icon" width="15" height="11">
+                          <use xlink:href="img/icons/sprite.svg#check"></use>
+                        </svg>
+                      </div>
+                      <div class="intensity">Минимум</div>
+                    </div>
+                    <div class="exercice-block">
+                      <div class="quantaty">
+                        <div class="exercice-num">1-3</div>
+                        <div class="exercice-text">раза</div>
+                        <svg class="quantaty-check-icon" width="15" height="11">
+                          <use xlink:href="img/icons/sprite.svg#check"></use>
+                        </svg>
+                      </div>
+                      <div class="intensity">Небольшие</div>
+                    </div>
+                    <div class="exercice-block">
+                      <div class="quantaty">
+                        <div class="exercice-num">3-5</div>
+                        <div class="exercice-text">раз</div>
+                        <svg class="quantaty-check-icon" width="15" height="11">
+                          <use xlink:href="img/icons/sprite.svg#check"></use>
+                        </svg>
+                      </div>
+                      <div class="intensity">Средние</div>
+                    </div>
+                    <div class="exercice-block">
+                      <div class="quantaty">
+                        <div class="exercice-num">5</div>
+                        <div class="exercice-text">раз</div>
+                        <svg class="quantaty-check-icon" width="15" height="11">
+                          <use xlink:href="img/icons/sprite.svg#check"></use>
+                        </svg>
+                      </div>
+                      <div class="intensity">Интенсивные</div>
+                    </div>
+                    <div class="exercice-block">
+                      <div class="quantaty">
+                        <div class="exercice-num">7</div>
+                        <div class="exercice-text">раз</div>
+                        <svg class="quantaty-check-icon" width="15" height="11">
+                          <use xlink:href="img/icons/sprite.svg#check"></use>
+                        </svg>
+                      </div>
+                      <div class="intensity">Ежедневные</div>
+                    </div>
+                    <div class="exercice-block">
+                      <div class="quantaty">
+                        <div class="exercice-num">7+</div>
+                        <div class="exercice-text">раз</div>
+                        <svg class="quantaty-check-icon" width="15" height="11">
+                          <use xlink:href="img/icons/sprite.svg#check"></use>
+                        </svg>
+                      </div>
+                      <div class="intensity">Ежедневные интенсивные</div>
+                    </div>
                   </div>
-                  <div class="intensity">Минимум</div>
                 </div>
-                <div class="exercice-block">
-                  <div class="quantaty">
-                    <div class="exercice-num">1-3</div>
-                    <div class="exercice-text">раза</div>
-                    <svg class="quantaty-check-icon" width="15" height="11">
-                      <use xlink:href="img/icons/sprite.svg#check"></use>
-                    </svg>
+                <div class="overlay">
+                  <div class="quiz-slide-third-modal">
+                    <div class="close third-slide-modal">x</div>
+                    <div class="exercice-wrap">
+                      <div class="exercice-quantaty"></div>
+                      <div class="exercice-description"></div>
+                    </div>
+                    <div class="exercice-wrap">
+                      <div class="exercice-quantaty">0 </div>
+                      <div class="exercice-description">мало двигаетесь, 
+                        <p>сидячая работа</p>
+                      </div>
+                    </div>
+                    <div class="exercice-wrap">
+                      <div class="exercice-quantaty">1-3 </div>
+                      <div class="exercice-description">легкие тренировки 2-3 раза 
+                        <p>в неделю, ежедневные прогулки</p>
+                      </div>
+                    </div>
+                    <div class="exercice-wrap">
+                      <div class="exercice-quantaty">3-5</div>
+                      <div class="exercice-description">тренировки 5 раз в неделю, 
+                        <p>либо физическая работа</p>
+                      </div>
+                    </div>
+                    <div class="exercice-wrap">
+                      <div class="exercice-quantaty">5 </div>
+                      <div class="exercice-description">интенсивные тренировки 
+                        <p>5 раз в неделю</p>
+                      </div>
+                    </div>
+                    <div class="exercice-wrap">
+                      <div class="exercice-quantaty">7</div>
+                      <div class="exercice-description">ежедневные тренировки</div>
+                    </div>
+                    <div class="exercice-wrap">
+                      <div class="exercice-quantaty"> 
+                        <p>7+</p>
+                      </div>
+                      <div class="exercice-description">тяжелая физическая работа или интенсивные тренировки 2 раза 
+                        <p>в день</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="intensity">Небольшие</div>
                 </div>
-                <div class="exercice-block">
-                  <div class="quantaty">
-                    <div class="exercice-num">3-5</div>
-                    <div class="exercice-text">раз</div>
-                    <svg class="quantaty-check-icon" width="15" height="11">
-                      <use xlink:href="img/icons/sprite.svg#check"></use>
+                <div class="quiz-arrows">
+                  <div class="arrow__left">
+                    <svg class="arrow-icon-left" width="11" height="18">
+                      <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
                     </svg>
                   </div>
-                  <div class="intensity">Средние</div>
-                </div>
-                <div class="exercice-block">
-                  <div class="quantaty">
-                    <div class="exercice-num">5</div>
-                    <div class="exercice-text">раз</div>
-                    <svg class="quantaty-check-icon" width="15" height="11">
-                      <use xlink:href="img/icons/sprite.svg#check"></use>
+                  <button class="arrow__right">Далее
+                    <svg class="arrow-icon-right" width="8" height="14">
+                      <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
                     </svg>
-                  </div>
-                  <div class="intensity">Интенсивные</div>
-                </div>
-                <div class="exercice-block">
-                  <div class="quantaty">
-                    <div class="exercice-num">7</div>
-                    <div class="exercice-text">раз</div>
-                    <svg class="quantaty-check-icon" width="15" height="11">
-                      <use xlink:href="img/icons/sprite.svg#check"></use>
-                    </svg>
-                  </div>
-                  <div class="intensity">Ежедневные</div>
-                </div>
-                <div class="exercice-block">
-                  <div class="quantaty">
-                    <div class="exercice-num">7+</div>
-                    <div class="exercice-text">раз</div>
-                    <svg class="quantaty-check-icon" width="15" height="11">
-                      <use xlink:href="img/icons/sprite.svg#check"></use>
-                    </svg>
-                  </div>
-                  <div class="intensity">Ежедневные интенсивные</div>
+                  </button>
                 </div>
               </div>
-            </div>
-            <div class="overlay">
-              <div class="quiz-slide-third-modal">
-                <div class="close third-slide-modal">x</div>
-                <div class="exercice-wrap">
-                  <div class="exercice-quantaty"></div>
-                  <div class="exercice-description"></div>
-                </div>
-                <div class="exercice-wrap">
-                  <div class="exercice-quantaty">0 </div>
-                  <div class="exercice-description">мало двигаетесь, 
-                    <p>сидячая работа</p>
-                  </div>
-                </div>
-                <div class="exercice-wrap">
-                  <div class="exercice-quantaty">1-3 </div>
-                  <div class="exercice-description">легкие тренировки 2-3 раза 
-                    <p>в неделю, ежедневные прогулки</p>
-                  </div>
-                </div>
-                <div class="exercice-wrap">
-                  <div class="exercice-quantaty">3-5</div>
-                  <div class="exercice-description">тренировки 5 раз в неделю, 
-                    <p>либо физическая работа</p>
-                  </div>
-                </div>
-                <div class="exercice-wrap">
-                  <div class="exercice-quantaty">5 </div>
-                  <div class="exercice-description">интенсивные тренировки 
-                    <p>5 раз в неделю</p>
-                  </div>
-                </div>
-                <div class="exercice-wrap">
-                  <div class="exercice-quantaty">7</div>
-                  <div class="exercice-description">ежедневные тренировки</div>
-                </div>
-                <div class="exercice-wrap">
-                  <div class="exercice-quantaty"> 
-                    <p>7+</p>
-                  </div>
-                  <div class="exercice-description">тяжелая физическая работа или интенсивные тренировки 2 раза 
-                    <p>в день</p>
-                  </div>
-                </div>
+              <div class="quiz-slide-wrap__rightcol">
+                <div class="quiz-slide__img quiz-slide__img-third"></div>
               </div>
-            </div>
-            <div class="quiz-arrows">
-              <div class="arrow__left">
-                <svg class="arrow-icon-left" width="11" height="18">
-                  <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
-                </svg>
-              </div>
-              <button class="arrow__right">Далее
-                <svg class="arrow-icon-right" width="8" height="14">
-                  <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
-                </svg>
-              </button>
             </div>
           </div>
           <div class="quiz-slide quiz-slide-fourth">
             <div class="quiz-slide__content quiz-slide__content-fourth">
               <div class="quiz-slide__content-title">Измерения</div>
             </div>
-            <div class="quiz-slide__choice">
-              <div class="quiz-slide__percent quiz-slide__percent--fourth">80%</div>
-              <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span></div>
-              <div class="quiz-slide-measure">
-                <div class="input-wrap">
-                  <svg class="check-yellow" width="15" height="11">
-                    <use xlink:href="img/icons/sprite.svg#check-yellow"></use>
-                  </svg>
-                  <div class="form__group field">
-                    <input class="form__field form__field--active" type="number" min="18" max="70" placeholder="Ваш возраст*" name="age" id="age" pattern="^[0-9]+$" required>
-                    <label class="form__label form__label-first" for="age">Ваш возраст*</label>
+            <div class="quiz-slide-wrap">
+              <div class="quiz-slide-wrap__leftcol">   
+                <div class="quiz-slide__choice quiz-slide__choice-fourth">
+                  <div class="quiz-slide__percent quiz-slide__percent--fourth">80%</div>
+                  <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line"></span></div>
+                  <div class="quiz-slide-measure">
+                    <div class="input-wrap">
+                      <svg class="check-yellow" width="15" height="11">
+                        <use xlink:href="img/icons/sprite.svg#check-yellow"></use>
+                      </svg>
+                      <div class="form__group field">
+                        <input class="form__field form__field--active" type="number" min="18" max="70" placeholder="Ваш возраст*" name="age" id="age" pattern="^[0-9]+$" required>
+                        <label class="form__label form__label-first" for="age">Ваш возраст*</label>
+                      </div>
+                    </div>
+                    <div class="input-wrap">
+                      <svg class="check-yellow" width="15" height="11">
+                        <use xlink:href="img/icons/sprite.svg#check-yellow"></use>
+                      </svg>
+                      <div class="form__group field">
+                        <input class="form__field" type="number" placeholder=" Ваш вес*" name="weight" id="weight" required>
+                        <label class="form__label form__label-second" for="weight">Ваш вес*</label>
+                      </div>
+                    </div>
+                    <div class="input-wrap">
+                      <svg class="check-yellow" width="15" height="11">
+                        <use xlink:href="img/icons/sprite.svg#check-yellow"></use>
+                      </svg>
+                      <div class="form__group field">
+                        <input class="form__field" type="number" placeholder="Ваш рост*" name="height" id="height" required>
+                        <label class="form__label form__label-third" for="height">Ваш рост*</label>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="input-wrap">
-                  <svg class="check-yellow" width="15" height="11">
-                    <use xlink:href="img/icons/sprite.svg#check-yellow"></use>
-                  </svg>
-                  <div class="form__group field">
-                    <input class="form__field" type="number" placeholder=" Ваш вес*" name="weight" id="weight" required>
-                    <label class="form__label form__label-second" for="weight">Ваш вес*</label>
+                <div class="quiz-arrows">
+                  <div class="arrow__left">
+                    <svg class="arrow-icon-left" width="11" height="18">
+                      <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
+                    </svg>
                   </div>
-                </div>
-                <div class="input-wrap">
-                  <svg class="check-yellow" width="15" height="11">
-                    <use xlink:href="img/icons/sprite.svg#check-yellow"></use>
-                  </svg>
-                  <div class="form__group field">
-                    <input class="form__field" type="number" placeholder="Ваш рост*" name="height" id="height" required>
-                    <label class="form__label form__label-third" for="height">Ваш рост*</label>
-                  </div>
+                  <button class="arrow__right">Далее
+                    <svg class="arrow-icon-right" width="8" height="14">
+                      <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
-            </div>
-            <div class="quiz-arrows">
-              <div class="arrow__left">
-                <svg class="arrow-icon-left" width="11" height="18">
-                  <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
-                </svg>
+              <div class="quiz-slide-wrap__rightcol">
+                <div class="quiz-slide__img quiz-slide__img-fourth"></div>
               </div>
-              <button class="arrow__right">Далее
-                <svg class="arrow-icon-right" width="8" height="14">
-                  <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
-                </svg>
-              </button>
             </div>
           </div>
           <div class="quiz-slide quiz-slide-fifth">
             <div class="quiz-slide__content quiz-slide__content-fifth">
               <div class="quiz-slide__content-title">Данные собраны</div>
             </div>
-            <div class="quiz-slide__choice">
-              <div class="quiz-slide__percent quiz-slide__percent--fifth">100%</div>
-              <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span></div>
-              <div class="quiz-slide__dieta-type">
-                <div class="dieta-type"></div>
+            <div class="quiz-slide-wrap">
+              <div class="quiz-slide-wrap__leftcol"> 
+                <div class="quiz-slide__choice quiz-slide__choice-fifth">
+                  <div class="quiz-slide__percent quiz-slide__percent--fifth">100%</div>
+                  <div class="quiz-slide__range"><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span><span class="range-line range-line--active"></span></div>
+                  <div class="quiz-slide__dieta-type">
+                    <div class="dieta-type"></div>
+                  </div>
+                  <p class="dieta-type__text">Программа на 4 недели</p>
+                </div>
+                <div class="quiz-arrows">
+                  <div class="arrow__left">
+                    <svg class="arrow-icon-left" width="11" height="18">
+                      <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
+                    </svg>
+                  </div><a class="arrow__right arrow__right--last" href="#">Составить
+                    <svg class="arrow-icon-right" width="8" height="14">
+                      <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
+                    </svg></a>
+                </div>
               </div>
-              <p class="dieta-type__text">Программа на 4 недели</p>
-            </div>
-            <div class="quiz-arrows">
-              <div class="arrow__left">
-                <svg class="arrow-icon-left" width="11" height="18">
-                  <use xlink:href="img/icons/sprite.svg#arrow-left"></use>
-                </svg>
-              </div><a class="arrow__right arrow__right--last" href="#">Составить
-                <svg class="arrow-icon-right" width="8" height="14">
-                  <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
-                </svg></a>
+              <div class="quiz-slide-wrap__rightcol">
+                <div class="quiz-slide__img quiz-slide__img-fifth"></div>
+              </div>
             </div>
           </div>
         </div>
