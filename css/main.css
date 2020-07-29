@@ -2536,12 +2536,17 @@ template {
   margin: 10.1875rem 0 0.625rem 0;
 }
 
+.form-wrap {
+  display: flex;
+}
+
 .form {
   width: 16.875rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.25rem 1.5625rem 2.1875rem 1.5625rem;
+  border: 0.125rem solid #f4bb40;
   border-top-left-radius: 3.125rem;
   border-top-right-radius: 3.125rem;
   background-color: #f8fefe;
@@ -2592,6 +2597,10 @@ template {
   border: none;
   border-radius: 1.25rem;
   background: linear-gradient(90deg, #e7b03d 0%, #fdd05b 100%);
+}
+
+.form-img {
+  display: none;
 }
 
 .form-input-wrap {
@@ -2781,6 +2790,10 @@ template {
   color: #a8a1b7;
 }
 
+.dieta-choice-wrap {
+  display: flex;
+}
+
 .dieta-choice {
   width: 16.875rem;
   display: flex;
@@ -2790,6 +2803,14 @@ template {
   border-top-left-radius: 3.125rem;
   border-top-right-radius: 3.125rem;
   background-color: #f8fefe;
+}
+
+.dieta-choice__title {
+  display: none;
+}
+
+.dieta-choice-img {
+  display: none;
 }
 
 .dieta-list {
@@ -2980,6 +3001,18 @@ template {
   left: 1.0625rem;
 }
 
+.price-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.price-block::before {
+  display: none;
+}
+
 .price-wrap {
   width: 11.25rem;
   margin-bottom: 0.625rem;
@@ -3020,6 +3053,7 @@ template {
 }
 
 .payment__btn {
+  position: relative;
   font-family: "UniNeueBold";
   font-weight: 700;
   font-style: normal;
@@ -3031,6 +3065,7 @@ template {
   padding: 0.8125rem 1.875rem;
   border-radius: 3.125rem;
   background: linear-gradient(90deg, #e8b240 0%, #fdd05b 100%);
+  cursor: pointer;
 }
 
 .modal {
@@ -3141,6 +3176,10 @@ template {
 .quiz-slide__content--gratitude {
   margin: 5.9375rem 0 0.625rem 0;
   padding: 1.25rem 1.3125rem;
+}
+
+.gratitude__img {
+  display: none;
 }
 
 .gratitude__text {
@@ -3348,6 +3387,7 @@ template {
   opacity: 0.98;
   padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
   margin-bottom: 0.625rem;
+  margin: 0 auto;
   background-color: #fefefe;
   border-radius: 3.125rem;
 }
@@ -5528,6 +5568,10 @@ template {
     margin-right: -0.25rem;
   }
 
+  .arrow-icon-right--form {
+    right: 1.4375rem;
+  }
+
   .quiz-slide-checkbox {
     width: 24.75rem;
     margin: 0 auto;
@@ -5877,6 +5921,367 @@ template {
     bottom: -2.75rem;
   }
 
+  .form-page {
+    min-height: 100vh;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .form {
+    width: 30.9375rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 3.125rem;
+  }
+
+  .form__title {
+    margin-bottom: 2.5rem;
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+
+  .form-img {
+    display: block;
+    width: 21.25rem;
+    height: 27.8125rem;
+    border: 0.125rem solid #f4bb40;
+    border-left: 0;
+    border-top-right-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/form-halfform-1920@1x.jpg);
+  }
+
+  .form-input-wrap {
+    width: 21.875rem;
+  }
+
+  .form-input-wrap--submit {
+    width: 9.6875rem;
+  }
+
+  .form-input-wrap--submit .form__submit {
+    width: 100%;
+  }
+
+  .form-input-wrap .email-input {
+    width: 100%;
+    height: 3.75rem;
+    padding: 0.875rem 1.25rem 0.875rem 4.1875rem;
+    border-radius: 2.1875rem;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+  .policy {
+    margin-left: -3.125rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .envelope-icon-wrap {
+    top: 0.625rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .envelope-icon {
+    top: 0.75rem;
+    left: 0.625rem;
+  }
+
+  .payment-page {
+    min-height: 100vh;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .book {
+    display: none;
+  }
+
+  .quiz-slide__content--payment {
+    margin: 13.875rem 0 1.25rem 0;
+  }
+
+  .payment-plan {
+    display: none;
+  }
+
+  .dieta-choice {
+    width: 37.5rem;
+    padding: 2.8125rem 1.5625rem 1.125rem 1.5625rem;
+    border: 0.125rem solid #ffc343;
+    border-top-left-radius: 3.125rem;
+    border-bottom-left-radius: 3.125rem;
+    border-top-right-radius: 0;
+    border-right: 0;
+  }
+
+  .dieta-choice__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5625rem;
+    font-family: "UniNeueBold";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.625rem;
+    line-height: 1.462;
+    color: #272f35;
+  }
+
+  .dieta-choice-img {
+    display: block;
+    width: 21.25rem;
+    height: 34.375rem;
+    border: 0.125rem solid #ffc343;
+    border-top-right-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/payment-halfform-1920@1x.jpg);
+  }
+
+  .dieta__item-top {
+    width: 7.25rem;
+    height: 5.625rem;
+  }
+
+  .dieta__item-top--active {
+    border: 0.125rem dashed #614098;
+    border-bottom: none;
+  }
+
+  .dieta__item-bottom {
+    width: 7.25rem;
+    height: 5.625rem;
+  }
+
+  .dieta__item-bottom--active {
+    background: linear-gradient(90deg, #8463b8 0%, #614098 100%);
+  }
+
+  .round-text {
+    top: 1.5rem;
+    left: 3.3125rem;
+  }
+
+  .letter {
+    font-size: 0.875rem;
+    line-height: 0.5625rem;
+  }
+
+  .inform-list {
+    text-align: left;
+    margin: 0 5.125rem 1rem 0;
+  }
+
+  .inform__item:nth-child(2)::before {
+    top: 0.9375rem;
+    left: -1.1875rem;
+  }
+
+  .inform__item:last-child {
+    width: auto;
+    line-height: 1.9;
+  }
+
+  .inform__item:last-child::before {
+    top: 0.9375rem;
+    left: -1.1875rem;
+  }
+
+  .price-block {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateX(1.25rem);
+  }
+
+  .price-block::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    display: block;
+    width: 25rem;
+    height: 4.0625rem;
+    border-radius: 2.1875rem;
+    border: 0.0625rem solid #ffc343;
+  }
+
+  .price-wrap {
+    margin: 0 2.8125rem 0 0;
+  }
+
+  .old-price {
+    font-size: 2.375rem;
+    line-height: 2.5625rem;
+  }
+
+  .new-price {
+    font-size: 1.8125rem;
+    line-height: 2.5625rem;
+  }
+
+  .payment__btn {
+    padding: 1.3125rem 1.875rem;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+
+  .gratitude {
+    min-height: 100vh;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .gratitude__content {
+    width: 37.5rem;
+    height: 28.375rem;
+    padding: 0;
+    border-bottom-left-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
+  }
+
+  .quiz-slide__content--gratitude {
+    margin: 11.625rem 0 0.625rem 0;
+  }
+
+  .quiz-slide__content--gratitude .quiz-slide__content-title {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+
+  .gratitude__img {
+    display: block;
+    width: 37.25rem;
+    height: 15.625rem;
+    border-top-left-radius: 3.125rem;
+    border-top-right-radius: 3.125rem;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/gratitude-halfform-1920@1x.jpg);
+  }
+
+  .gratitude__text {
+    margin-top: 2.1875rem;
+  }
+
+  .about-page {
+    min-height: 100vh;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .about-page-content {
+    width: 35.1875rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .quiz-slide__content--about-page {
+    margin: 12.625rem 0 0.625rem 0;
+  }
+
+  .about-item__title {
+    padding: 1.375rem 0;
+    font-size: 1.375rem;
+    line-height: 2.5625rem;
+  }
+
+  .about-item__title::after {
+    width: 2.3125rem;
+    height: 2.3125rem;
+  }
+
+  .about-item__text {
+    font-size: 1.125rem;
+  }
+
+  .about-item__title--active .arrow-down {
+    top: 2.0625rem;
+  }
+
+  .arrow-down {
+    top: 2.125rem;
+    right: 0.875rem;
+    width: 1.25rem;
+    height: 0.9375rem;
+  }
+
+  .btn-wrap {
+    margin-right: 13.75rem;
+  }
+
+  .faq-page {
+    min-height: 100vh;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .faq-page-content {
+    padding: 0;
+    width: 95%;
+    height: 30.25rem;
+    margin-bottom: 0;
+    border-radius: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .faq-page-wrap {
+    display: block;
+    width: 36.875rem;
+    overflow: hidden;
+    border-radius: 3.125rem;
+    background: #fff;
+  }
+
+  .faq-list {
+    width: 31.25rem;
+    margin: 0 auto;
+  }
+
+  .faq-item__title {
+    max-width: 26.25rem;
+    padding: 1.6875rem 0;
+    font-size: 1.25rem;
+    line-height: 2.5625rem;
+  }
+
+  .faq-item__title::after,
+  .faq-item__title::before {
+    top: 50%;
+  }
+
+  .faq-item__text {
+    max-width: 25.375rem;
+    font-size: 1.125rem;
+  }
+
+  .faq-item__title-round {
+    top: 50%;
+  }
+
+  .btn-wrap {
+    margin-top: 0.625rem;
+  }
+
   .logo {
     padding: 2.0625rem 2.625rem;
     border-radius: 4.0625rem;
@@ -5917,6 +6322,38 @@ template {
 
   .personal-profile__header {
     background: url(../img/personal-profile-header-bg-1920@2x.jpg);
+  }
+
+  .form-page {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
+  }
+
+  .form-img {
+    background: url(../img/form-halfform-1920@2x.jpg);
+  }
+
+  .payment-page {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
+  }
+
+  .dieta-choice-img {
+    background: url(../img/payment-halfform-1920@2x.jpg);
+  }
+
+  .gratitude {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
+  }
+
+  .gratitude__img {
+    background: url(../img/gratitude-halfform-1920@2x.jpg);
+  }
+
+  .about-page {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
+  }
+
+  .faq-page {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
   }
 }
 
