@@ -1386,12 +1386,33 @@ template {
   color: #3a4148;
 }
 
-.quiz-slide-third-modal {
+.quiz-slide-third-modal-wrap {
   position: fixed;
   z-index: 1000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.quiz-slide__img-modal {
+  display: none;
+}
+
+.quiz-slide__img-modal::after {
+  position: absolute;
+  content: '';
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom-right-radius: 3.125rem;
+  border-top-right-radius: 3.125rem;
+  background: rgba(52, 63, 71, 0.8);
+}
+
+.quiz-slide-third-modal {
   width: 18.125rem;
   overflow: hidden;
   display: none;
@@ -1431,10 +1452,6 @@ template {
 
 .quiz-slide-third-modal .exercice-wrap:nth-child(odd) .exercice-description {
   background: #eff8f8;
-}
-
-.quiz-slide-third-modal .exercice-wrap:first-child {
-  height: 3.8125rem;
 }
 
 .quiz-slide-third-modal .exercice-wrap:last-child .exercice-quantaty {
@@ -1493,6 +1510,26 @@ template {
   line-height: 1.25rem;
   color: #3a4148;
   background: #f8fefe;
+}
+
+.quiz-slide-third-modal .exercice-description--first {
+  padding-right: 4.375rem;
+}
+
+.quiz-slide-third-modal .exercice-description--third {
+  padding-right: 2.5rem;
+}
+
+.quiz-slide-third-modal .exercice-description--fourth {
+  padding-right: 3.75rem;
+}
+
+.quiz-slide-third-modal .exercice-description--sixth {
+  padding-right: 0.625rem;
+}
+
+.quiz-slide-fourth .quiz-slide-measure {
+  width: 16.875rem;
 }
 
 .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(1) .check-yellow,
@@ -1816,9 +1853,27 @@ template {
   background: url(../img/program-calc-bg-mobile-480@1x.jpg);
 }
 
-.program-calc-content {
+.program-calc-mobile {
   position: absolute;
   bottom: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.program-calc-desktop {
+  display: none;
+}
+
+.program-calc-desktop .progress {
+  top: 12.75rem;
+}
+
+.program-calc-desktop .program-calc-content {
+  position: absolute;
+  bottom: 3.75rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1901,19 +1956,7 @@ template {
   background: url(../img/personal-profile-header-bg-480@1x.jpg);
 }
 
-.personal-profile__header::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(27, 19, 45, 0.75);
-}
-
 .personal-profile__header-content {
-  position: relative;
-  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4205,11 +4248,6 @@ template {
     min-height: 42.9375rem;
   }
 
-  .quiz-slide-fourth .quiz-slide-measure {
-    width: 24.75rem;
-    margin: 0 auto;
-  }
-
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(1)::after,
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(2)::after,
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(3)::after {
@@ -4371,7 +4409,7 @@ template {
     font-size: 1rem;
   }
 
-  .program-calc-content {
+  .program-calc-mobile {
     bottom: 3.75rem;
   }
 
@@ -5575,6 +5613,60 @@ template {
     font-size: 1.125rem;
   }
 
+  .quiz-slide-third-modal-wrap {
+    width: 61rem;
+    height: 34.4375rem;
+  }
+
+  .quiz-slide__img-modal {
+    position: relative;
+    display: block;
+    width: 21.25rem;
+    height: 34.4375rem;
+    border: 0.125rem solid #ffc343;
+    border-left: 0;
+    border-bottom-right-radius: 3.125rem;
+    border-top-right-radius: 3.125rem;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-halfform-1920@1x.jpg);
+  }
+
+  .quiz-slide-third-modal {
+    width: 39.75rem;
+    height: 34.4375rem;
+    border: 0.125rem solid #ffc343;
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .quiz-slide-third-modal .close {
+    right: 22.1875rem;
+  }
+
+  .quiz-slide-third-modal .exercice-wrap:last-child .exercice-quantaty {
+    height: 10.125rem;
+  }
+
+  .quiz-slide-third-modal .exercice-wrap:last-child .exercice-description {
+    padding-right: 9.375rem;
+  }
+
+  .quiz-slide-third-modal .exercice-quantaty {
+    width: 5rem;
+  }
+
+  .quiz-slide-third-modal .exercice-description {
+    width: 100%;
+  }
+
+  .quiz-slide-fourth .quiz-slide-measure {
+    width: 24.75rem;
+    margin: 0 auto;
+  }
+
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(1)::after,
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(2)::after,
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(3)::after {
@@ -5715,6 +5807,76 @@ template {
     font-size: 1.25rem;
   }
 
+  .program-calc {
+    min-height: 100vh;
+  }
+
+  .program-calc {
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .program-calc-mobile {
+    display: none;
+  }
+
+  .program-calc-desktop {
+    position: relative;
+    display: block;
+    margin-top: 16.4375rem;
+    width: 45.4375rem;
+    height: 34.5rem;
+    border: 0.0625rem solid #ffc343;
+    border-radius: 3.125rem;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/program-calc-bg-1920@1x.jpg);
+  }
+
+  .dieta-icon {
+    width: 3.875rem;
+    height: 4rem;
+    margin-bottom: 0;
+  }
+
+  .program-calc__text {
+    font-size: 1.25rem;
+  }
+
+  .personal-profile__header {
+    min-height: 100vh;
+    background: url(../img/personal-profile-header-bg-1920@1x.jpg);
+  }
+
+  .personal-profile__ready {
+    margin: 5.625rem 0 4.875rem 0;
+    font-size: 1.375rem;
+    line-height: 2.25rem;
+  }
+
+  .personal-profile__text {
+    max-width: 43.75rem;
+    margin-bottom: 7.5rem;
+    font-size: 4rem;
+    line-height: 4.9375rem;
+  }
+
+  .personal-profile__get-program {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .personal-profile__get-program::after {
+    width: 16.75rem;
+  }
+
+  .personal-profile__elipse {
+    bottom: -2.75rem;
+  }
+
   .logo {
     padding: 2.0625rem 2.625rem;
     border-radius: 4.0625rem;
@@ -5737,8 +5899,24 @@ template {
     background: url(../img/first-slide-bg-0-1920@2x.jpg);
   }
 
+  .quiz-slide__img-modal {
+    background: url(../img/third-slide-halfform-1920@1x.jpg);
+  }
+
   .dieta-type {
     background: url(../img/dieta-type-1920@2x.png);
+  }
+
+  .program-calc {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
+  }
+
+  .program-calc-desktop {
+    background: url(../img/program-calc-bg-1920@2x.jpg);
+  }
+
+  .personal-profile__header {
+    background: url(../img/personal-profile-header-bg-1920@2x.jpg);
   }
 }
 
