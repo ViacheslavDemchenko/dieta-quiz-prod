@@ -46,8 +46,10 @@ $(document).ready(function () {
     height = document.getElementById('height'),
     formField = document.querySelectorAll('.form__field'),
     inputWrap = document.querySelectorAll('.input-wrap'),
+    checkMark = document.querySelectorAll('.check-mark'),
     calcBtn = document.querySelector('.arrow__right--last'),
     formLabel = document.querySelectorAll('.form__label');
+  let screenWidth = window.screen.width;
 
   let userSex = 'female',
     userWeight,
@@ -72,12 +74,20 @@ $(document).ready(function () {
     let src = './img/first-slide-bg-';
     let imgType;
 
-    if (window.devicePixelRatio == 1) {
+    if (window.devicePixelRatio == 1 && screenWidth <= 480) {
       imgType = '-480@1x.jpg';
     }
 
-    if (window.devicePixelRatio > 1) {
+    if (window.devicePixelRatio > 1 && screenWidth <= 480) {
       imgType = '-480@2x.jpg';
+    }
+
+    if (window.devicePixelRatio == 1 && screenWidth > 1024) {
+      imgType = '-1920@1x.jpg';
+    }
+
+    if (window.devicePixelRatio > 1 && screenWidth > 1024) {
+      imgType = '-1920@2x.jpg';
     }
 
     femaleBtns.forEach((btn, i) => {
@@ -126,11 +136,13 @@ $(document).ready(function () {
       if (userAge >= 18 && userAge <= 70) {
         formField[0].classList.remove('form__field--warning');
         inputWrap[0].classList.add('input-wrap--active');
+        checkMark[0].classList.add('check-mark--active');
         formLabel[0].textContent = 'Ваш возраст*';
         formLabel[0].style.color = '#3a4148';
       } else {
         formField[0].classList.add('form__field--warning');
         inputWrap[0].classList.remove('input-wrap--active');
+        checkMark[0].classList.remove('check-mark--active');
         formLabel[0].textContent = 'от 18 до 70 лет';
         formLabel[0].style.color = 'red';
       }
