@@ -1861,6 +1861,17 @@ template {
   align-items: center;
 }
 
+.program-calc-mobile .program-calc-content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .program-calc-desktop {
   display: none;
 }
@@ -3387,9 +3398,38 @@ template {
   opacity: 0.98;
   padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
   margin-bottom: 0.625rem;
-  margin: 0 auto;
   background-color: #fefefe;
   border-radius: 3.125rem;
+}
+
+.faq-page-content::-webkit-scrollbar {
+  width: 0.375rem;
+  height: 5.125rem;
+  border-radius: 0.625rem;
+  background-color: rgba(217, 212, 230, 0.7);
+}
+
+.faq-page-content::-webkit-scrollbar-thumb {
+  background-color: #5a4294;
+  border-radius: 0.625rem;
+}
+
+.faq-page-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(90, 66, 148, 0.7);
+}
+
+.faq-page-content::-webkit-scrollbar-button:horizontal:start:decrement {
+  background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+.faq-page-content::-webkit-scrollbar-button:horizontal:end:increment {
+  background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+.faq-page-wrap {
+  display: none;
 }
 
 .quiz-slide__content--faq-page {
@@ -3589,6 +3629,32 @@ template {
   border-radius: 3.125rem;
 }
 
+.policy-page-content::-webkit-scrollbar {
+  width: 0.375rem;
+  height: 5.125rem;
+  border-radius: 0.625rem;
+  background-color: rgba(217, 212, 230, 0.7);
+}
+
+.policy-page-content::-webkit-scrollbar-thumb {
+  background-color: #5a4294;
+  border-radius: 0.625rem;
+}
+
+.policy-page-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(90, 66, 148, 0.7);
+}
+
+.policy-page-content::-webkit-scrollbar-button:horizontal:start:decrement {
+  background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+.policy-page-content::-webkit-scrollbar-button:horizontal:end:increment {
+  background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
 .policy-page__subtitle {
   margin: -0.625rem 0 0.625rem 0;
   font-family: "UniNeueBold";
@@ -3597,6 +3663,10 @@ template {
   font-size: 0.75rem;
   line-height: 1.606;
   color: #a8a1b7;
+}
+
+.policy-page-wrap {
+  display: none;
 }
 
 .quiz-slide__content--policy-page {
@@ -3617,6 +3687,12 @@ template {
 
 .policy-page-content .content__list .content__item:not(:last-child) {
   margin-bottom: 0.9375rem;
+}
+
+.policy-page-content .content__list .content__item--bold {
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
 }
 
 .policy-page-content .content__list .content__item-title {
@@ -3660,6 +3736,36 @@ template {
   margin-bottom: 0.625rem;
   background-color: #fefefe;
   border-radius: 3.125rem;
+}
+
+.termsofuse-page-content::-webkit-scrollbar {
+  width: 0.375rem;
+  height: 5.125rem;
+  border-radius: 0.625rem;
+  background-color: rgba(217, 212, 230, 0.7);
+}
+
+.termsofuse-page-content::-webkit-scrollbar-thumb {
+  background-color: #5a4294;
+  border-radius: 0.625rem;
+}
+
+.termsofuse-page-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(90, 66, 148, 0.7);
+}
+
+.termsofuse-page-content::-webkit-scrollbar-button:horizontal:start:decrement {
+  background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+.termsofuse-page-content::-webkit-scrollbar-button:horizontal:end:increment {
+  background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+.termsofuse-page-wrap {
+  display: none;
 }
 
 .quiz-slide__content--termsofuse-page {
@@ -3981,7 +4087,7 @@ template {
   .footer--policy .footer-arc--top,
   .footer--form .footer-arc--top,
   .footer--program-calc .footer-arc--top {
-    margin-top: -5.375rem;
+    margin-top: -5.4375rem;
   }
 
   .footer--about .footer-arc--bottom,
@@ -3991,7 +4097,7 @@ template {
   .footer--policy .footer-arc--bottom,
   .footer--form .footer-arc--bottom,
   .footer--program-calc .footer-arc--bottom {
-    margin-top: -5.875rem;
+    margin-top: -6.0625rem;
   }
 
   .nav__link {
@@ -4464,7 +4570,7 @@ template {
   .progress {
     top: 49.5%;
     left: 51%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -16.875rem);
     font-size: 1.25rem;
   }
 
@@ -6236,9 +6342,9 @@ template {
 
   .faq-page-content {
     padding: 0;
-    width: 95%;
-    height: 30.25rem;
-    margin-bottom: 0;
+    width: 90%;
+    height: 27.125rem;
+    margin: 0 auto;
     border-radius: 0;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -6250,6 +6356,7 @@ template {
     overflow: hidden;
     border-radius: 3.125rem;
     background: #fff;
+    padding: 1.5625rem 0;
   }
 
   .faq-list {
@@ -6259,7 +6366,7 @@ template {
 
   .faq-item__title {
     max-width: 26.25rem;
-    padding: 1.6875rem 0;
+    padding: 1.375rem 0;
     font-size: 1.25rem;
     line-height: 2.5625rem;
   }
@@ -6272,6 +6379,7 @@ template {
   .faq-item__text {
     max-width: 25.375rem;
     font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 
   .faq-item__title-round {
@@ -6280,6 +6388,119 @@ template {
 
   .btn-wrap {
     margin-top: 0.625rem;
+  }
+
+  .back-btn {
+    padding: 1rem 2.0625rem;
+    border-radius: 1.875rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .policy-page {
+    min-height: 100vh;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .policy-page-content {
+    padding: 0;
+    width: 90%;
+    height: 27.125rem;
+    margin: 0 auto;
+    border-radius: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .policy-page__subtitle {
+    margin: 1.25rem 0;
+    font-size: 1.25rem;
+    line-height: 1.4375rem;
+  }
+
+  .policy-page-wrap {
+    display: block;
+    width: 36.875rem;
+    overflow: hidden;
+    border-radius: 3.125rem;
+    background: #fff;
+    padding: 1.5625rem 0;
+  }
+
+  .policy-page-wrap .content__list {
+    width: 31.25rem;
+    margin: 0 auto;
+  }
+
+  .quiz-slide__content--policy-page {
+    max-width: inherit;
+    margin-bottom: 0;
+  }
+
+  .policy-page-content .content__list .content__item {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  .policy-page-content .content__list .content__item-title {
+    font-size: 1.25rem;
+    line-height: 2.5625rem;
+  }
+
+  .termsofuse-page {
+    min-height: 100vh;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .termsofuse-page-content {
+    padding: 0;
+    width: 90%;
+    height: 27.125rem;
+    margin: 0 auto;
+    border-radius: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .termsofuse-page-wrap {
+    display: block;
+    width: 36.875rem;
+    overflow: hidden;
+    border-radius: 3.125rem;
+    background: #fff;
+    padding: 1.5625rem 0;
+  }
+
+  .terms__list {
+    width: 31.25rem;
+    margin: 0 auto;
+  }
+
+  .quiz-slide__content--termsofuse-page {
+    max-width: inherit;
+    margin: 12.3125rem 0 0.625rem 0;
+  }
+
+  .termsofuse-page-content .terms__list .terms__item {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  .termsofuse-page-content .terms__list .terms__item-title {
+    font-size: 1.25rem;
+    line-height: 2.5625rem;
+  }
+
+  .termsofuse-page-content .terms__list .blog-link,
+  .termsofuse-page-content .terms__list .mail-link {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 
   .logo {
@@ -6353,6 +6574,14 @@ template {
   }
 
   .faq-page {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
+  }
+
+  .policy-page {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
+  }
+
+  .termsofuse-page {
     background: url(../img/third-slide-bg-1920@2x.jpg);
   }
 }
