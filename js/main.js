@@ -18,12 +18,13 @@
       desktopMenu.classList.remove('desktop-menu--show', 'desktop-menu--active');
       desktopMenuLine.classList.remove('desktop-menu-line--active');
     } else {
-      desktopMenu.classList.add('desktop-menu--show');
+      // desktopMenu.classList.add('desktop-menu--show');
       desktopMenuLine.classList.add('desktop-menu-line--active');
     }
   });
   desktopMenuLine.addEventListener('click', function () {
     desktopMenu.classList.toggle('desktop-menu--active');
+    desktopMenuLine.classList.add('desktop-menu-line--active');
   });
 })();
 "use strict";

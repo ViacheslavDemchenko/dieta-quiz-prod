@@ -3980,8 +3980,9 @@ template {
   z-index: 7000;
   top: 0;
   right: 0;
+  transform: translateX(1.6875rem);
   height: 100%;
-  width: 1.0625rem;
+  width: 3.125rem;
   background: #805eb5;
 }
 
@@ -3995,22 +3996,24 @@ template {
 
 .desktop-menu-line::before {
   z-index: 8000;
-  right: 0.8125rem;
-  width: 1.8125rem;
+  right: 2.1875rem;
+  width: 3.125rem;
   height: 21.125rem;
   background: #805eb5;
   border-top-left-radius: 2.0625rem;
   border-bottom-left-radius: 2.0625rem;
+  transition: transform 2s linear;
   cursor: pointer;
 }
 
 .desktop-menu-line::after {
   z-index: 9000;
-  right: 1.25rem;
+  right: 3.3125rem;
   width: 0.25rem;
   height: 3.9375rem;
   background: #f3f6f8;
   border-radius: 1.875rem;
+  transition: transform 2s linear;
 }
 
 @-webkit-keyframes menu {
@@ -6717,18 +6720,19 @@ template {
     height: 100%;
     padding: 5.3125rem 1.25rem 5.625rem 1.25rem;
     background: #805eb5;
-    transition: transform 1s ease-out;
+    transition: transform 2s linear;
     -webkit-animation: menu 1s linear;
     animation: menu 1s linear;
   }
 
   .desktop-menu--show {
-    transform: translateX(90%);
-    transition: transform 1s ease-out;
+    transform: translateX(93%);
+    transition: transform 1s linear;
   }
 
   .desktop-menu--active {
     transform: translateX(0);
+    transition: transform 2s linear;
   }
 
   .desktop-menu-line--active {
@@ -6736,7 +6740,14 @@ template {
   }
 
   .desktop-menu-line--active::before {
+    transform: translate(-0.9375rem, -50%);
+    transition: transform 2s linear;
     background: #69469d;
+  }
+
+  .desktop-menu-line--active::after {
+    transform: translate(-1.125rem, -50%);
+    transition: transform 2s linear;
   }
 }
 
