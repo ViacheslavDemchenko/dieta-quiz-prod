@@ -4002,7 +4002,7 @@ template {
   background: #805eb5;
   border-top-left-radius: 2.0625rem;
   border-bottom-left-radius: 2.0625rem;
-  transition: transform 2s linear;
+  transition: transform 1s linear;
   cursor: pointer;
 }
 
@@ -4013,7 +4013,7 @@ template {
   height: 3.9375rem;
   background: #f3f6f8;
   border-radius: 1.875rem;
-  transition: transform 2s linear;
+  transition: transform 1s linear;
 }
 
 @-webkit-keyframes menu {
@@ -6720,7 +6720,7 @@ template {
     height: 100%;
     padding: 5.3125rem 1.25rem 5.625rem 1.25rem;
     background: #805eb5;
-    transition: transform 2s linear;
+    transition: transform 1s linear;
     -webkit-animation: menu 1s linear;
     animation: menu 1s linear;
   }
@@ -6732,7 +6732,7 @@ template {
 
   .desktop-menu--active {
     transform: translateX(0);
-    transition: transform 2s linear;
+    transition: transform 1s linear;
   }
 
   .desktop-menu-line--active {
