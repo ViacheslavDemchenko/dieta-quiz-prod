@@ -3970,6 +3970,21 @@ template {
   color: #fefefe;
 }
 
+.overlay-menu {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: rgba(27, 19, 45, 0.7);
+}
+
+.overlay-menu--active {
+  display: block;
+}
+
 .desktop-menu {
   position: relative;
   display: none;
@@ -6740,13 +6755,13 @@ template {
   }
 
   .desktop-menu-line--active::before {
-    transform: translate(-0.9375rem, -50%);
+    transform: translate(-0.3125rem, -50%);
     transition: transform 2s linear;
     background: #69469d;
   }
 
   .desktop-menu-line--active::after {
-    transform: translate(-1.125rem, -50%);
+    transform: translate(-0.5rem, -50%);
     transition: transform 2s linear;
   }
 }
