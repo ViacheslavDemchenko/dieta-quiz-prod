@@ -3,6 +3,34 @@
 ;
 
 (function () {
+  var container = document.querySelector('.container-fluid'),
+      desktopMenu = document.querySelector('.desktop-menu'),
+      desktopMenuLine = document.querySelector('.desktop-menu-line');
+  container.addEventListener('mousemove', function (e) {
+    var share = container.offsetWidth / 4;
+    var target = container.getBoundingClientRect();
+    var x = e.clientX - target.left;
+
+    if (x >= 0 && x <= share) {
+      desktopMenu.classList.remove('desktop-menu--show', 'desktop-menu--active');
+      desktopMenuLine.classList.remove('desktop-menu-line--active');
+    } else if (x > share && x <= container.offsetWidth - share) {
+      desktopMenu.classList.remove('desktop-menu--show', 'desktop-menu--active');
+      desktopMenuLine.classList.remove('desktop-menu-line--active');
+    } else {
+      desktopMenu.classList.add('desktop-menu--show');
+      desktopMenuLine.classList.add('desktop-menu-line--active');
+    }
+  });
+  desktopMenuLine.addEventListener('click', function () {
+    desktopMenu.classList.toggle('desktop-menu--active');
+  });
+})();
+"use strict";
+
+;
+
+(function () {
   function getYear() {
     var date = new Date(),
         currentYear = date.getFullYear(),

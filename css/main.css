@@ -3970,6 +3970,174 @@ template {
   color: #fefefe;
 }
 
+.desktop-menu {
+  position: relative;
+  display: none;
+}
+
+.desktop-menu-line {
+  position: absolute;
+  z-index: 7000;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1.0625rem;
+  background: #805eb5;
+}
+
+.desktop-menu-line::before,
+.desktop-menu-line::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.desktop-menu-line::before {
+  z-index: 8000;
+  right: 0.8125rem;
+  width: 1.8125rem;
+  height: 21.125rem;
+  background: #805eb5;
+  border-top-left-radius: 2.0625rem;
+  border-bottom-left-radius: 2.0625rem;
+  cursor: pointer;
+}
+
+.desktop-menu-line::after {
+  z-index: 9000;
+  right: 1.25rem;
+  width: 0.25rem;
+  height: 3.9375rem;
+  background: #f3f6f8;
+  border-radius: 1.875rem;
+}
+
+@-webkit-keyframes menu {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(20%);
+  }
+
+  40% {
+    transform: translateX(40%);
+  }
+
+  60% {
+    transform: translateX(60%);
+  }
+
+  80% {
+    transform: translateX(80%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes menu {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(20%);
+  }
+
+  40% {
+    transform: translateX(40%);
+  }
+
+  60% {
+    transform: translateX(60%);
+  }
+
+  80% {
+    transform: translateX(80%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.desktop-menu-inner {
+  text-align: center;
+}
+
+.desktop-menu-inner .desktop__menu-list {
+  margin-bottom: 14.0625rem;
+}
+
+.desktop-menu-inner .desktop__menu-item .menu__link {
+  display: block;
+  margin-bottom: 2.6875rem;
+  font-family: "UniNeueRegular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+  color: #fefefe;
+}
+
+.desktop-menu-inner .desktop__menu-item .menu__link--btn {
+  position: relative;
+  margin-bottom: 2.6875rem;
+  padding: 1.5rem 3.4375rem 1.5rem 1.875rem;
+  border: 0.0625rem solid #fbfbfb;
+  border-radius: 3.125rem;
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.desktop-menu-inner .right-arrow {
+  position: absolute;
+  z-index: 6000;
+  top: calc(50% - 8px);
+  right: 1.8125rem;
+  width: 1.375rem;
+  height: 1.125rem;
+  fill: #fefefe;
+}
+
+.desktop-menu-inner .email-link {
+  position: relative;
+  display: block;
+  margin-bottom: 2.1875rem;
+  font-family: "UniNeueRegular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  color: #ffd150;
+}
+
+.desktop-menu-inner .email-link .envelope {
+  position: absolute;
+  z-index: 6000;
+  top: calc(50% - 6px);
+  left: -1.5625rem;
+  width: 1.25rem;
+  height: 1.0625rem;
+  fill: #ffd150;
+}
+
+.copyright {
+  font-family: "UniNeueBold";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #2c174d;
+}
+
 @media (min-width: 0) {
   .quiz-slide-first {
     background-repeat: no-repeat !important;
@@ -5442,6 +5610,7 @@ template {
 
   .content {
     min-height: 100vh;
+    overflow: hidden;
   }
 
   .quiz {
@@ -6533,6 +6702,41 @@ template {
   .logo__text {
     font-size: 1rem;
     line-height: 1.625rem;
+  }
+
+  .desktop-menu {
+    position: absolute;
+    z-index: 5000;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    width: 23.28%;
+    max-width: 29.8125rem;
+    height: 100%;
+    padding: 5.3125rem 1.25rem 5.625rem 1.25rem;
+    background: #805eb5;
+    transition: transform 1s ease-out;
+    -webkit-animation: menu 1s linear;
+    animation: menu 1s linear;
+  }
+
+  .desktop-menu--show {
+    transform: translateX(90%);
+    transition: transform 1s ease-out;
+  }
+
+  .desktop-menu--active {
+    transform: translateX(0);
+  }
+
+  .desktop-menu-line--active {
+    background: #69469d;
+  }
+
+  .desktop-menu-line--active::before {
+    background: #69469d;
   }
 }
 
