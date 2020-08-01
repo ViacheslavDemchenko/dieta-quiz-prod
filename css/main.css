@@ -1947,10 +1947,6 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-repeat: no-repeat !important;
-  background-position: 100% 100% !important;
-  background-size: 100% !important;
-  background: url(../img/personal-profile-bg-480@1x.jpg);
 }
 
 .personal-profile__header {
@@ -2038,6 +2034,7 @@ template {
 
 .personal-profile__elipse {
   position: absolute;
+  z-index: 500;
   bottom: -1.625rem;
   width: 3.4375rem;
   height: 3.4375rem;
@@ -2056,15 +2053,129 @@ template {
 }
 
 .personal-profile__body {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 3.125rem;
+  background-repeat: no-repeat !important;
+  background-position: 100% 100% !important;
+  background-size: 100% !important;
+  background: url(../img/personal-profile-bg-480@1x.jpg);
+}
+
+.result-block-wrap--first {
+  position: relative;
+  z-index: 5;
+}
+
+.result-block-wrap--first::before,
+.result-block-wrap--first::after {
+  position: absolute;
+  content: '';
+  z-index: 0;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.result-block-wrap--first::before {
+  top: 3.75rem;
+  left: -3.25rem;
+  width: 5.4375rem;
+  height: 6.5625rem;
+  background-size: 65% !important;
+  background: url(../img/leaf-first-left-1920@1x.png);
+}
+
+.result-block-wrap--first::after {
+  top: 7.5rem;
+  right: -2.1875rem;
+  width: 3.625rem;
+  height: 3.875rem;
+  background-size: 90% !important;
+  background: url(../img/leaf-first-right-1920@1x.png);
+}
+
+.result-block-wrap--second {
+  position: relative;
+  z-index: 5;
+}
+
+.result-block-wrap--second::before,
+.result-block-wrap--second::after {
+  position: absolute;
+  content: '';
+  z-index: 0;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.result-block-wrap--second::before {
+  top: 2.5rem;
+  left: -3rem;
+  width: 4.5rem;
+  height: 4.6875rem;
+  background-size: 50% !important;
+  background: url(../img/leaf-second-left-1920@1x.png);
+}
+
+.result-block-wrap--third {
+  position: relative;
+  z-index: 5;
+}
+
+.result-block-wrap--third::before,
+.result-block-wrap--third::after {
+  position: absolute;
+  content: '';
+  z-index: 0;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.result-block-wrap--third::after {
+  top: 2.625rem;
+  right: -3.125rem;
+  width: 5rem;
+  height: 5rem;
+  background-size: 84% !important;
+  background: url(../img/leaf-second-right-1920@1x.png);
+}
+
+.result-block-wrap--fourth {
+  position: relative;
+  z-index: 5;
+}
+
+.result-block-wrap--fourth::before,
+.result-block-wrap--fourth::after {
+  position: absolute;
+  content: '';
+  z-index: 0;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.result-block-wrap--fourth::before {
+  top: 4.5rem;
+  left: -2.375rem;
+  width: 4.1875rem;
+  height: 5.8125rem;
+  background-size: 90% !important;
+  background: url(../img/leaf-first-left-1920@1x.png);
+}
+
+.result-block-wrap--fourth::after {
+  top: 0.0625rem;
+  right: -2.1875rem;
+  width: 4rem;
+  height: 3.6875rem;
+  background-size: 80% !important;
+  background: url(../img/leaf-first-right-1920@1x.png);
 }
 
 .result-block {
   position: relative;
+  z-index: 1;
   width: 13.75rem;
   height: 12.5rem;
   overflow: hidden;
@@ -2174,6 +2285,7 @@ template {
 
 .data-block {
   position: relative;
+  z-index: 1;
   width: 13.125rem;
   height: 11.875rem;
   margin: auto;
@@ -2275,6 +2387,10 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-repeat: no-repeat !important;
+  background-position: 100% 0 !important;
+  background-size: cover !important;
+  background: url(../img/get-program-bg-480@1x.jpg);
 }
 
 .get-program-content {
@@ -2299,6 +2415,16 @@ template {
   color: #fad87e;
 }
 
+.get-program__subtitle {
+  margin: 0 0 0.625rem 0;
+  font-family: "UniNeueRegular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  color: #aca3b9;
+}
+
 .get-program-menu {
   width: 16.875rem;
   margin: -5.5rem 0 0.9375rem 0;
@@ -2310,6 +2436,10 @@ template {
 .get-program-smuzi {
   width: 12.5rem;
   height: 12.5rem;
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/smuzi-480@1x.png);
 }
 
 .menu-list {
@@ -2403,6 +2533,7 @@ template {
 }
 
 .get-program__btn {
+  display: block;
   border: none;
   outline: none;
   text-align: center;
@@ -2416,20 +2547,6 @@ template {
   color: #3f3113;
   border-radius: 3.125rem;
   background: linear-gradient(90deg, #e7b03d 0%, #fcce59 100%);
-}
-
-.get-program-smuzi {
-  background-repeat: no-repeat !important;
-  background-position: top center !important;
-  background-size: cover !important;
-  background: url(../img/smuzi-480@1x.png);
-}
-
-.get-program {
-  background-repeat: no-repeat !important;
-  background-position: 100% 5px !important;
-  background-size: cover !important;
-  background: url(../img/get-program-bg-480@1x.jpg);
 }
 
 .result-block-modal {
@@ -3991,44 +4108,11 @@ template {
 }
 
 .desktop-menu-line {
-  position: absolute;
-  z-index: 7000;
-  top: 0;
-  right: 0;
-  transform: translateX(1.6875rem);
-  height: 100%;
-  width: 3.125rem;
-  background: #805eb5;
+  display: none;
 }
 
-.desktop-menu-line::before,
-.desktop-menu-line::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.desktop-menu-line::before {
-  z-index: 8000;
-  right: 2.1875rem;
-  width: 3.125rem;
-  height: 21.125rem;
-  background: #805eb5;
-  border-top-left-radius: 2.0625rem;
-  border-bottom-left-radius: 2.0625rem;
-  transition: transform 1s linear;
-  cursor: pointer;
-}
-
-.desktop-menu-line::after {
-  z-index: 9000;
-  right: 3.3125rem;
-  width: 0.25rem;
-  height: 3.9375rem;
-  background: #f3f6f8;
-  border-radius: 1.875rem;
-  transition: transform 1s linear;
+.desktop-menu--profile {
+  position: fixed;
 }
 
 @-webkit-keyframes menu {
@@ -4829,6 +4913,63 @@ template {
 
   .personal-profile__body {
     padding-top: 4.25rem;
+    background-position: 100% 100% !important;
+  }
+
+  .personal-profile-blocks {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 55rem;
+  }
+
+  .result-block-wrap--first::before {
+    top: 0;
+    left: -3.5rem;
+    width: 5.4375rem;
+    height: 6.5625rem;
+    background-size: cover !important;
+  }
+
+  .result-block-wrap--first::after {
+    top: 12.375rem;
+    right: -2.375rem;
+    width: 3.625rem;
+    height: 3.875rem;
+    background-size: cover !important;
+  }
+
+  .result-block-wrap--second::before {
+    top: 1.4375rem;
+    left: -2.5625rem;
+    width: 4.5rem;
+    height: 4.6875rem;
+    background-size: cover !important;
+  }
+
+  .result-block-wrap--third::after {
+    top: 2.625rem;
+    right: -3.125rem;
+    width: 5rem;
+    height: 5rem;
+    background-size: cover !important;
+  }
+
+  .result-block-wrap--fourth::before {
+    top: 9.125rem;
+    left: -2.8125rem;
+    width: 4.1875rem;
+    height: 5.8125rem;
+    background-size: cover !important;
+  }
+
+  .result-block-wrap--fourth::after {
+    top: -1.5rem;
+    right: -2rem;
+    width: 4rem;
+    height: 3.6875rem;
+    background-size: cover !important;
   }
 
   .result-block {
@@ -4886,7 +5027,7 @@ template {
 
   .data-block {
     width: 20rem;
-    min-height: 17.5rem;
+    height: 17.5rem;
     padding: 1.0625rem 0.625rem 0.3125rem 0.625rem;
   }
 
@@ -4941,12 +5082,18 @@ template {
   .get-program {
     padding-top: 2.8125rem;
     padding: 1.5625rem 0 2.125rem 0;
+    background-position: 100% 100% !important;
   }
 
   .get-program__title {
     width: 23.4375rem;
     margin-bottom: 0.375rem;
     font-size: 2rem;
+  }
+
+  .get-program__subtitle {
+    margin: 0.625rem 0 1.25rem 0;
+    font-size: 1.25rem;
   }
 
   .get-program-menu {
@@ -5599,6 +5746,13 @@ template {
   }
 }
 
+@media screen and (min-width: 480px) and (min-width: 1025px) {
+  .personal-profile-blocks {
+    flex-direction: row;
+    margin-bottom: 10.625rem;
+  }
+}
+
 @media screen and (min-width: 481px) {
   .container-fluid {
     padding-left: 10px;
@@ -6198,6 +6352,10 @@ template {
     font-size: 1.25rem;
   }
 
+  .personal-profile {
+    min-height: 100vh;
+  }
+
   .personal-profile__header {
     min-height: 100vh;
     background: url(../img/personal-profile-header-bg-1920@1x.jpg);
@@ -6226,7 +6384,192 @@ template {
   }
 
   .personal-profile__elipse {
-    bottom: -2.75rem;
+    bottom: -2.375rem;
+  }
+
+  .personal-profile__body {
+    padding-bottom: 8.375rem;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/personal-profile-bg-1920@1x.jpg);
+  }
+
+  .result-block-wrap--first::before {
+    top: 0;
+    left: -3.5rem;
+    width: 5.4375rem;
+    height: 6.5625rem;
+  }
+
+  .result-block-wrap--first::after {
+    top: 12.375rem;
+    right: -2.375rem;
+    width: 3.625rem;
+    height: 3.875rem;
+  }
+
+  .result-block-wrap--second::before {
+    top: 1.4375rem;
+    left: -2.5625rem;
+    width: 4.5rem;
+    height: 4.6875rem;
+  }
+
+  .result-block-wrap--second::after {
+    top: 5.4375rem;
+    right: -2.6875rem;
+    width: 4rem;
+    height: 4.8125rem;
+    background: url(../img/leaf-second-right-1920@1x.png);
+  }
+
+  .result-block-wrap--third::before {
+    top: 10.375rem;
+    left: -3.125rem;
+    width: 5.25rem;
+    height: 4.75rem;
+    background-size: cover !important;
+    background: url(../img/leaf-second-left-1920@1x.png);
+  }
+
+  .result-block-wrap--third::after {
+    top: 2.625rem;
+    right: -3.125rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .result-block-wrap--fourth::before {
+    top: 9.125rem;
+    left: -2.8125rem;
+    width: 4.1875rem;
+    height: 5.8125rem;
+  }
+
+  .result-block-wrap--fourth::after {
+    top: -1.5rem;
+    right: -2rem;
+    width: 4rem;
+    height: 3.6875rem;
+  }
+
+  .result-block {
+    width: 22.9375rem;
+    height: 20rem;
+    margin: 0;
+    padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
+  }
+
+  .result-block--bmi {
+    margin-bottom: 5rem;
+  }
+
+  .result-block--loose-weight .result-block__icon {
+    transform: translateY(-0.625rem);
+  }
+
+  .data-block {
+    margin: 0;
+    width: 22.9375rem;
+    height: 20rem;
+  }
+
+  .data-block--energy {
+    margin-bottom: 5rem;
+  }
+
+  .get-program {
+    position: relative;
+    max-width: 57.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: none;
+  }
+
+  .get-program-content {
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .get-program__title {
+    width: 31.25rem;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 3.375rem;
+    line-height: 3.75rem;
+  }
+
+  .get-program__subtitle {
+    margin: 1.875rem 0;
+    font-size: 1.625rem;
+  }
+
+  .get-program-menu {
+    width: 34.25rem;
+    border-radius: 1.25rem;
+    margin: 0 0 0.625rem 0;
+    padding: 3.125rem 1.25rem 2.6875rem 6.5625rem;
+  }
+
+  .get-program-smuzi {
+    position: absolute;
+    right: -22.5rem;
+    width: 27.9375rem;
+    height: 37rem;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/blocknote@1x.png);
+  }
+
+  .menu-list .menu__item {
+    width: auto !important;
+    text-align: left;
+  }
+
+  .menu-list .menu__item:not(:last-child) {
+    margin-bottom: 2.9375rem;
+  }
+
+  .menu-list .menu__item:nth-child(1)::before {
+    left: -2.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-list .menu__item:nth-child(2)::before {
+    left: -2.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-list .menu__item:nth-child(3)::before {
+    left: -2.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-list .menu__item:nth-child(4)::before {
+    left: -2.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .get-program__btn {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 8.625rem;
+    transform: rotate(10deg);
+    padding: 1.5625rem 1.875rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .form-page {
@@ -6732,12 +7075,54 @@ template {
     justify-content: center;
     width: 23.28%;
     max-width: 29.8125rem;
-    height: 100%;
+    height: 100vh;
     padding: 5.3125rem 1.25rem 5.625rem 1.25rem;
     background: #805eb5;
     transition: transform 1s linear;
     -webkit-animation: menu 1s linear;
     animation: menu 1s linear;
+  }
+
+  .desktop-menu-line {
+    position: absolute;
+    z-index: 7000;
+    top: 0;
+    right: 0;
+    transform: translateX(1.6875rem);
+    display: block;
+    height: 100vh;
+    width: 3.125rem;
+    background: #805eb5;
+  }
+
+  .desktop-menu-line::before,
+  .desktop-menu-line::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .desktop-menu-line::before {
+    z-index: 8000;
+    right: 2.1875rem;
+    width: 3.125rem;
+    height: 21.125rem;
+    background: #805eb5;
+    border-top-left-radius: 2.0625rem;
+    border-bottom-left-radius: 2.0625rem;
+    transition: transform 1s linear;
+    cursor: pointer;
+  }
+
+  .desktop-menu-line::after {
+    z-index: 9000;
+    right: 3.3125rem;
+    width: 0.25rem;
+    height: 3.9375rem;
+    background: #f3f6f8;
+    border-radius: 1.875rem;
+    transition: transform 1s linear;
   }
 
   .desktop-menu--show {
@@ -6791,6 +7176,22 @@ template {
     background: url(../img/personal-profile-header-bg-1920@2x.jpg);
   }
 
+  .personal-profile__body {
+    background: url(../img/personal-profile-bg-1920@2x.jpg);
+  }
+
+  .result-block-wrap--second::after {
+    background: url(../img/leaf-second-right-1920@2x.png);
+  }
+
+  .result-block-wrap--third::before {
+    background: url(../img/leaf-second-left-1920@2x.png);
+  }
+
+  .get-program-smuzi {
+    background: url(../img/blocknote@2x.png);
+  }
+
   .form-page {
     background: url(../img/third-slide-bg-1920@2x.jpg);
   }
@@ -6832,6 +7233,20 @@ template {
   }
 }
 
+@media screen and (min-width: 1025px) and (min-width: 1025px) {
+  .get-program__btn::after {
+    position: absolute;
+    content: '';
+    top: -0.5rem;
+    left: -0.5rem;
+    width: 16.875rem;
+    height: 5.9375rem;
+    border-radius: 3.125rem;
+    border: 0.0625rem solid #fad87e;
+    background: transparent;
+  }
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .quiz-slide-wrap .quiz-slide__img-second {
     background: url(../img/second-slide-halfform-1920@1x.jpg);
@@ -6861,12 +7276,36 @@ template {
     background: url(../img/program-calc-bg-mobile-480@2x.jpg);
   }
 
-  .personal-profile {
+  .personal-profile__header {
+    background: url(../img/personal-profile-header-bg-480@2x.jpg);
+  }
+
+  .personal-profile__body {
     background: url(../img/personal-profile-bg-480@2x.jpg);
   }
 
-  .personal-profile__header {
-    background: url(../img/personal-profile-header-bg-480@2x.jpg);
+  .result-block-wrap--first::before {
+    background: url(../img/leaf-first-left-1920@2x.png);
+  }
+
+  .result-block-wrap--first::after {
+    background: url(../img/leaf-first-left-1920@2x.png);
+  }
+
+  .result-block-wrap--second::before {
+    background: url(../img/leaf-second-left-1920@2x.png);
+  }
+
+  .result-block-wrap--third::after {
+    background: url(../img/leaf-second-right-1920@2x.png);
+  }
+
+  .result-block-wrap--fourth::before {
+    background: url(../img/leaf-second-left-1920@2x.png);
+  }
+
+  .result-block-wrap--fourth::after {
+    background: url(../img/leaf-second-right-1920@2x.png);
   }
 
   .result-block--bmi {
@@ -6877,12 +7316,12 @@ template {
     background: url(../img/result-block-480-2@2x.png), #cbdcea;
   }
 
-  .get-program-smuzi {
-    background: url(../img/smuzi-480@2x.png);
-  }
-
   .get-program {
     background: url(../img/get-program-bg-480@2x.jpg);
+  }
+
+  .get-program-smuzi {
+    background: url(../img/smuzi-480@2x.png);
   }
 
   .form-page {
