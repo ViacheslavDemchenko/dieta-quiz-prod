@@ -4820,7 +4820,7 @@ template {
   }
 
   .progress {
-    left: 13.5rem;
+    left: calc(50vw - 22px);
     font-size: 1.25rem;
   }
 
@@ -6332,8 +6332,8 @@ template {
   }
 
   .progress {
-    top: 29.125rem;
-    left: 22.6875rem;
+    top: 12.625rem;
+    left: calc(24vw - 18px);
   }
 
   .dieta-icon {
