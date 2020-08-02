@@ -6333,7 +6333,7 @@ template {
 
   .progress {
     top: 12.625rem;
-    left: calc(24vw - 18px);
+    left: calc(18.5vw - 18px);
   }
 
   .dieta-icon {
