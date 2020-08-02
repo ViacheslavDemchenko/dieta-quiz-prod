@@ -62,7 +62,7 @@ $(document).ready(function () {
             this.innerHTML = (num + 0).toFixed(0) + '%';
             if (this.innerHTML == '100%') {
                 clearInterval(timer);
-                // window.location.href = 'personal-profile.html';
+                window.location.href = 'personal-profile.html';
             }
         }
     });
