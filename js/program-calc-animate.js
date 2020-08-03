@@ -1,17 +1,41 @@
 $(document).ready(function () {
 
-    if ($('#circle').length) {
-        let el = document.querySelector('#circle');
-        let myAnimation = new LazyLinePainter(el, {
-            "ease": "easeLinear",
-            "strokeWidth": 6,
-            "strokeOpacity": 1,
-            "strokeColor": "linear-gradient(90deg, #ebb845 0%, #f7c754 100%)",
-            "strokeCap": "square"
-        });
-        myAnimation.paint();
-    }
+    // if ($('#circle').length) {
+    //     let el = document.querySelector('#circle');
+    //     let myAnimation = new LazyLinePainter(el, {
+    //         "ease": "easeLinear",
+    //         "strokeWidth": 6,
+    //         "strokeOpacity": 1,
+    //         "strokeColor": "linear-gradient(90deg, #ebb845 0%, #f7c754 100%)",
+    //         "strokeCap": "square"
+    //     });
+    //     myAnimation.paint();
+    // }
 
+    (function () {
+
+        document.onreadystatechange = () => {
+
+            if (document.readyState === 'complete') {
+
+                /**
+                 * Setup your Lazy Line element.
+                 * see README file for more settings
+                 */
+
+                let el = document.querySelector('#circle');
+                let myAnimation = new LazyLinePainter(el, {
+                    "ease": "easeLinear",
+                    "strokeWidth": 6,
+                    "strokeOpacity": 1,
+                    "strokeColor": "#222F3D",
+                    "strokeCap": "square"
+                });
+                myAnimation.paint();
+            }
+        }
+
+    })();
 
     const dish = document.querySelector('.program-calc__dish');
     let src = './img/dish-';
@@ -23,17 +47,11 @@ $(document).ready(function () {
 
         if (screenWidth <= 480 && window.devicePixelRatio == 1) {
             imgType = '-480@1x.png';
-        }
-
-        if (screenWidth <= 480 && window.devicePixelRatio > 1) {
+        } else if (screenWidth <= 480 && window.devicePixelRatio > 1) {
             imgType = '-480@2x.png';
-        }
-
-        if (screenWidth > 480 && window.devicePixelRatio == 1) {
+        } else if (screenWidth > 480 && window.devicePixelRatio == 1) {
             imgType = '-1920@1x.png';
-        }
-
-        if (screenWidth > 480 && window.devicePixelRatio > 1) {
+        } else if (screenWidth > 480 && window.devicePixelRatio > 1) {
             imgType = '-1920@2x.png';
         }
     }
@@ -53,7 +71,6 @@ $(document).ready(function () {
     }
     bgImgChange();
 
-    // const percentage = document.querySelector('.progress');
     $('.progress').animate({
         num: 100 - 0
     }, {
@@ -62,7 +79,7 @@ $(document).ready(function () {
             this.innerHTML = (num + 0).toFixed(0) + '%';
             if (this.innerHTML == '100%') {
                 clearInterval(timer);
-                window.location.href = 'personal-profile.html';
+                // window.location.href = 'personal-profile.html';
             }
         }
     });
