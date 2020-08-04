@@ -910,6 +910,13 @@ template {
   border-radius: 3.125rem;
 }
 
+.quiz-slide__choice-first {
+  border-top-left-radius: 3.125rem;
+  border-top-right-radius: 3.125rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .quiz-slide__choice-third {
   padding: 1.875rem 1.25rem 1.25rem 1.25rem;
 }
@@ -4025,12 +4032,12 @@ template {
   border-radius: 1.0625rem 1.875rem;
 }
 
-.reviews-slider {
+.reviews-slider.owl-carousel {
   position: relative;
   margin-bottom: 2.1875rem;
 }
 
-.reviews-slider::before {
+.reviews-slider.owl-carousel::before {
   position: absolute;
   content: "";
   top: -2.125rem;
@@ -4041,6 +4048,24 @@ template {
   background-position: center !important;
   background-size: cover !important;
   background: url(../img/swipe@2x.png);
+}
+
+.reviews-slider-wrap-mobile {
+  display: flex;
+}
+
+.reviews-slider-wrap-desktop {
+  display: none;
+}
+
+.review__desktop {
+  width: 15.625rem;
+  height: 37.1875rem;
+}
+
+.review__desktop img {
+  width: 15.625rem;
+  height: 37.1875rem;
 }
 
 .reviews-page__slide {
@@ -5729,7 +5754,7 @@ template {
     border-radius: 1.0625rem 1.875rem;
   }
 
-  .reviews-slider {
+  .reviews-slider.owl-carousel {
     margin-bottom: 3.4375rem;
   }
 
@@ -5981,12 +6006,29 @@ template {
     display: none;
   }
 
-  .quiz-slide__content {
-    margin-bottom: 0.5rem;
+  .quiz-slide__choice-second,
+  .quiz-slide__choice-third,
+  .quiz-slide__choice-fourth,
+  .quiz-slide__choice-fifth {
+    width: 40rem;
+    height: 26.4375rem;
+    border-top-left-radius: 3.125rem;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  .quiz-slide__choice {
-    padding: 0.9375rem 2.1875rem 0.9375rem 2.1875rem;
+  .quiz-slide__percent--second {
+    transform: translateX(11.0625rem);
+  }
+
+  .quiz-slide__range {
+    margin-bottom: 6.25rem;
+  }
+
+  .quiz-slide-checkbox {
+    width: 24.75rem;
+    margin: 0 auto;
   }
 
   .question-mark {
@@ -6393,6 +6435,28 @@ template {
     line-height: 1.375rem;
   }
 
+  .reviews-page {
+    padding-bottom: 2.5rem;
+  }
+
+  .reviews-slider.owl-carousel {
+    width: 20.125rem;
+    height: 39.875rem;
+    overflow: hidden;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: 332px 638px !important;
+    background: url(../img/phone@1x.png);
+  }
+
+  .reviews-slider-wrap-mobile {
+    display: none;
+  }
+
+  .reviews-slider-wrap-desktop {
+    display: flex;
+  }
+
   .desktop-menu {
     z-index: 5000;
     top: 0;
@@ -6522,6 +6586,10 @@ template {
   .termsofuse-page {
     background: url(../img/third-slide-bg-1024@2x.jpg);
   }
+
+  .reviews-slider.owl-carousel {
+    background: url(../img/phone@2x.png);
+  }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 1920px) {
@@ -6532,6 +6600,59 @@ template {
 
   .desktop-menu-line::after {
     height: 3.9375rem;
+  }
+}
+
+@media screen and (min-width: 1365px) {
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .quiz-slide__content {
+    margin-bottom: 0.5rem;
+    padding: 1.4375rem 2.8125rem 1.4375rem 2.8125rem;
+    border-radius: 1.25rem 2.8125rem;
+  }
+
+  .quiz-slide__choice {
+    width: 40rem;
+    min-height: 23.4375rem;
+    padding: 2.625rem 4.375rem 2.1875rem 4.375rem;
+    border: 0.125rem solid #ffc343;
+    border-bottom: none;
+  }
+
+  .quiz-slide-wrap .quiz-slide__img {
+    display: block;
+    width: 21.25rem;
+    height: 34.625rem;
+    border: 0.125rem solid #ffc343;
+    border-left: none;
+    border-top-right-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
+  }
+
+  .quiz-arrows--first {
+    border-bottom-right-radius: 3.125rem !important;
+  }
+
+  .quiz-arrows {
+    width: 40rem;
+    min-height: 8.1875rem;
+    align-items: center;
+    padding: 0 4.375rem 0 7.1875rem;
+    margin-top: 0;
+    background: #f4f6f8;
+    border: 0.125rem solid #ffc343;
+    border-top: none;
+    border-bottom-left-radius: 3.125rem;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -6546,46 +6667,13 @@ template {
     padding-right: 10px;
   }
 
-  .quiz-slide__content {
-    padding: 1.4375rem 2.8125rem 1.4375rem 2.8125rem;
-    border-radius: 1.25rem 2.8125rem;
-  }
-
   .quiz-slide__content-title {
     font-size: 2.375rem;
     line-height: 2.75rem;
   }
 
-  .quiz-slide__choice {
-    width: 40rem;
-    min-height: 23.4375rem;
-    padding: 2.625rem 4.375rem 2.1875rem 4.375rem;
-    border: 0.125rem solid #ffc343;
-    border-bottom: none;
-    border-top-left-radius: 3.125rem;
-    border-top-right-radius: 3.125rem;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .quiz-slide__choice-second,
-  .quiz-slide__choice-third,
-  .quiz-slide__choice-fourth,
-  .quiz-slide__choice-fifth {
-    width: 40rem;
-    height: 26.4375rem;
-    border-top-left-radius: 3.125rem;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
   .quiz-slide__percent--first {
     transform: translateX(2.375rem);
-  }
-
-  .quiz-slide__percent--second {
-    transform: translateX(8.3125rem);
   }
 
   .quiz-slide__percent--third {
@@ -6598,20 +6686,6 @@ template {
 
   .quiz-slide__percent--fifth {
     transform: translateX(26.75rem);
-  }
-
-  .quiz-slide__range {
-    margin-bottom: 3.75rem;
-  }
-
-  .quiz-slide-wrap .quiz-slide__img {
-    display: block;
-    width: 21.25rem;
-    height: 34.625rem;
-    border: 0.125rem solid #ffc343;
-    border-left: none;
-    border-top-right-radius: 3.125rem;
-    border-bottom-right-radius: 3.125rem;
   }
 
   .range-line {
@@ -6650,23 +6724,6 @@ template {
     font-size: 1.125rem;
   }
 
-  .quiz-arrows--first {
-    border-bottom-right-radius: 3.125rem !important;
-  }
-
-  .quiz-arrows {
-    width: 40rem;
-    min-height: 8.1875rem;
-    align-items: center;
-    padding: 0 4.375rem 0 7.1875rem;
-    margin-top: 0;
-    background: #f4f6f8;
-    border: 0.125rem solid #ffc343;
-    border-top: none;
-    border-bottom-left-radius: 3.125rem;
-    border-bottom-right-radius: 0;
-  }
-
   .arrow__left {
     width: 3.5625rem;
     height: 3.5625rem;
@@ -6702,11 +6759,6 @@ template {
     right: calc(50% + 6px);
     width: 1.875rem;
     height: 1.25rem;
-  }
-
-  .quiz-slide-checkbox {
-    width: 24.75rem;
-    margin: 0 auto;
   }
 
   .quiz-slide-checkbox input,

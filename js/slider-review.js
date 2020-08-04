@@ -5,9 +5,16 @@ $(document).ready(function () {
     owl.owlCarousel({
         items: 1,
         autoWidth: true,
-        margin: 5,
         nav: false,
-        center: true
+        center: true,
+        responsive: {
+            0: {
+                margin: 5
+            },
+            1365: {
+                margin: 0
+            },
+        }
     });
 
 });
