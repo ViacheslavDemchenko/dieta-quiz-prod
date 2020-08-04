@@ -1,179 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Be in Shape - программы питания</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./fonts/fonts.css">
-    <link rel="icon" href="#!" type="image/x-icon">
-    <link rel="shortcut icon" href="#!" type="image/x-icon">
-    <link rel="apple-touch-icon" href="#!"><!--[if lte IE 10]>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Be in Shape - программы питания</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/main.min.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="icon" href="#!" type="image/x-icon">
+  <link rel="shortcut icon" href="#!" type="image/x-icon">
+  <link rel="apple-touch-icon" href="#!">
+  <!--[if lte IE 10]>
     <p class="browser-upgrade">Вы используете устаревшую версию браузера. Пожалуйста </p><a class="browser-upgrade__link" href="http://browsehappy.com/">обновите свой браузер</a><![endif]-->
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="personal-profile">
-        <div class="logo">
-          <div class="logo__title logo__title--violet">Be <span class="logo__title--white">in Shape</span></div>
-          <div class="logo__text">Программы питания</div>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="personal-profile">
+      <div class="logo">
+        <div class="logo__title logo__title--violet">Be <span class="logo__title--white">in Shape</span></div>
+        <div class="logo__text">Программы питания</div>
+      </div>
+      <div class="personal-profile__header">
+        <div class="personal-profile__header-content">
+          <div class="personal-profile__ready">Готово</div>
+          <div class="personal-profile__text">Посмотрите ваш персональный профиль</div><a
+            class="personal-profile__get-program" href="form.html">Получить программу</a>
+          <div class="personal-profile__elipse">
+            <svg class="arrow-icon-down" width="15" height="21">
+              <use xlink:href="img/icons/sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
         </div>
-        <div class="personal-profile__header">
-          <div class="personal-profile__header-content">
-            <div class="personal-profile__ready">Готово</div>
-            <div class="personal-profile__text">Посмотрите ваш персональный профиль</div><a class="personal-profile__get-program" href="form.html">Получить программу</a>
-            <div class="personal-profile__elipse">
-              <svg class="arrow-icon-down" width="15" height="21">
-                <use xlink:href="img/icons/sprite.svg#arrow-down"></use>
+      </div>
+    </div>
+    <div class="personal-profile__body">
+      <div class="personal-profile-blocks">
+        <div class="result-block-wrap--first">
+          <div class="result-block result-block--bmi">
+            <div class="question-mark question-mark--yellow question-mark--bmi">?</div>
+            <div class="result-block__title">Ваш ИМТ:</div>
+            <div class="result-block__text result-block__text--bmi">Нормальный</div>
+            <div class="result-block__icon">
+              <svg class="libra-icon" width="150" height="150">
+                <use xlink:href="img/icons/sprite.svg#libra"></use>
               </svg>
             </div>
+            <div class="result-block__number result-block__number--bmi"> </div>
+            <div class="result-block__footnote">Индекс массы тела*</div>
+            <div class="result-block-modal result-block-modal--bmi">
+              <div class="close close-modal--bmi">x</div>
+              <div class="result-block-modal__text">ИМТ <span class="result-block-modal__text--black">- величина,
+                  позволяющая оценить степень соответствия массы человека и его роста и тем самым косвенно судить о том,
+                  является ли масса недостаточной, нормальной или избыточной</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="result-block-wrap--second">
+          <div class="data-block data-block--energy">
+            <div class="question-mark question-mark--yellow question-mark--energy">?</div>
+            <div class="result-block__title">Норма в сутки:</div>
+            <div class="result-block__text result-block__text--energy">Минимум энергии</div>
+            <div class="result-block__icon">
+              <svg class="battery-icon" width="250" height="90">
+                <use xlink:href="img/icons/sprite.svg#battery"></use>
+              </svg>
+            </div>
+            <div class="result-block__number result-block__number--energy"> </div>
+            <div class="result-block__footnote">Базовый метаболизм*</div>
+            <div class="result-block-modal result-block-modal--energy">
+              <div class="close close-modal--energy">x</div>
+              <div class="result-block-modal__text">Основной обмен <span class="result-block-modal__text--black">– это
+                  минимальное количество энергии, необходимое для обеспечения нормальной жизнедеятельности организма в
+                  условиях покоя. Ниже этой калорийности опускаться нельзя!</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="result-block-wrap--third">
+          <div class="result-block result-block--loose-weight">
+            <div class="question-mark question-mark--yellow question-mark--weight">?</div>
+            <div class="result-block__title">Норма калорий в день:</div>
+            <div class="result-block__text result-block__text--target">Похудеть</div>
+            <div class="result-block__icon">
+              <svg class="dish-icon" width="150" height="150">
+                <use xlink:href="img/icons/sprite.svg#dish"></use>
+              </svg>
+            </div>
+            <div class="result-block__number result-block__number--loose-weight"></div>
+            <div class="result-block-modal result-block-modal--loose-weight">
+              <div class="close close-modal--weight">x</div>
+              <div class="result-block-modal__text--black">Именно <span class="result-block-modal__text">столько
+                </span><span class="result-block-modal__text--black">вам нужно употреблять в среднем калорий в день для
+                  достижения результата</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="result-block-wrap--fourth">
+          <div class="data-block data-block--result">
+            <div class="question-mark question-mark--yellow question-mark--result">?</div>
+            <div class="result-block__title">С использованием программ Be In Shape:</div>
+            <div class="result-block__text">Результат за 30 дней</div>
+            <div class="result-block__icon result-block__icon--weight"><span></span><span></span></div>
+            <div class="result-block__number result-block__number--weight">-4кг</div>
+            <div class="result-block__footnote">Прогнозируемый результат через 30 дней*</div>
+            <div class="result-block-modal result-block-modal--result">
+              <div class="close close-modal--result">x</div>
+              <div class="result-block-modal__text">Ваш результат<span class="result-block-modal__text--black">, через
+                  30 дней, который вы можете получить, следуя нашему плану питания и не подвергая риску свое здоровье.
+                  Итоги могут отличаться в зависимости от большого количества факторов.</span></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="personal-profile__body">
-        <div class="personal-profile-blocks">
-          <div class="result-block-wrap--first">
-            <div class="result-block result-block--bmi">
-              <div class="question-mark question-mark--yellow question-mark--bmi">?</div>
-              <div class="result-block__title">Ваш ИМТ:</div>
-              <div class="result-block__text result-block__text--bmi">Нормальный</div>
-              <div class="result-block__icon">
-                <svg class="libra-icon" width="150" height="150">
-                  <use xlink:href="img/icons/sprite.svg#libra"></use>
-                </svg>
-              </div>
-              <div class="result-block__number result-block__number--bmi"> </div>
-              <div class="result-block__footnote">Индекс массы тела*</div>
-              <div class="result-block-modal result-block-modal--bmi">
-                <div class="close close-modal--bmi">x</div>
-                <div class="result-block-modal__text">ИМТ <span class="result-block-modal__text--black">- величина, позволяющая  оценить степень соответствия массы человека и его роста и тем самым косвенно судить о том, является ли масса недостаточной, нормальной или избыточной</span></div>
-              </div>
+      <div class="get-program">
+        <div class="get-program-content">
+          <div class="get-program__title">Получите <span class="get-program__title--yellow">свою</span><span
+              class="get-program__title"> программу питания </span></div>
+          <div class="get-program__subtitle">чтобы добиться желаемого результата</div>
+          <div class="get-program-smuzi"></div>
+          <div class="get-program-menu">
+            <div class="menu-list">
+              <div class="menu__item">Доступные продукты</div>
+              <div class="menu__item">Простые рецепты </div>
+              <div class="menu__item">Руководство по рациону</div>
+              <div class="menu__item">Список продуктов</div>
             </div>
           </div>
-          <div class="result-block-wrap--second">
-            <div class="data-block data-block--energy">
-              <div class="question-mark question-mark--yellow question-mark--energy">?</div>
-              <div class="result-block__title">Норма в сутки:</div>
-              <div class="result-block__text result-block__text--energy">Минимум энергии</div>
-              <div class="result-block__icon">
-                <svg class="battery-icon" width="250" height="90">
-                  <use xlink:href="img/icons/sprite.svg#battery"></use>
-                </svg>
-              </div>
-              <div class="result-block__number result-block__number--energy"> </div>
-              <div class="result-block__footnote">Базовый метаболизм*</div>
-              <div class="result-block-modal result-block-modal--energy">
-                <div class="close close-modal--energy">x</div>
-                <div class="result-block-modal__text">Основной обмен <span class="result-block-modal__text--black">– это минимальное количество энергии, необходимое для обеспечения нормальной жизнедеятельности организма в условиях покоя. Ниже этой калорийности опускаться нельзя!</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="result-block-wrap--third">
-            <div class="result-block result-block--loose-weight">
-              <div class="question-mark question-mark--yellow question-mark--weight">?</div>
-              <div class="result-block__title">Норма калорий в день:</div>
-              <div class="result-block__text result-block__text--target">Похудеть</div>
-              <div class="result-block__icon">
-                <svg class="dish-icon" width="150" height="150">
-                  <use xlink:href="img/icons/sprite.svg#dish"></use>
-                </svg>
-              </div>
-              <div class="result-block__number result-block__number--loose-weight"></div>
-              <div class="result-block-modal result-block-modal--loose-weight">
-                <div class="close close-modal--weight">x</div>
-                <div class="result-block-modal__text--black">Именно <span class="result-block-modal__text">столько </span><span class="result-block-modal__text--black">вам нужно употреблять в среднем калорий в день для достижения результата</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="result-block-wrap--fourth">
-            <div class="data-block data-block--result">
-              <div class="question-mark question-mark--yellow question-mark--result">?</div>
-              <div class="result-block__title">С использованием  программ Be In Shape:</div>
-              <div class="result-block__text">Результат за 30 дней</div>
-              <div class="result-block__icon result-block__icon--weight"><span></span><span></span></div>
-              <div class="result-block__number result-block__number--weight">-4кг</div>
-              <div class="result-block__footnote">Прогнозируемый результат через 30 дней*</div>
-              <div class="result-block-modal result-block-modal--result">
-                <div class="close close-modal--result">x</div>
-                <div class="result-block-modal__text">Ваш результат<span class="result-block-modal__text--black">, через 30 дней, который вы можете получить, следуя нашему плану питания и не подвергая риску свое здоровье. Итоги могут отличаться в зависимости от большого количества факторов.</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="get-program">
-          <div class="get-program-content">
-            <div class="get-program__title">Получите <span class="get-program__title--yellow">свою</span><span class="get-program__title"> программу питания </span></div>
-            <div class="get-program__subtitle">чтобы добиться желаемого результата</div>
-            <div class="get-program-smuzi"></div>
-            <div class="get-program-menu">
-              <div class="menu-list">
-                <div class="menu__item">Доступные продукты</div>
-                <div class="menu__item">Простые рецепты </div>
-                <div class="menu__item">Руководство по рациону</div>
-                <div class="menu__item">Список продуктов</div>
-              </div>
-            </div>
-          </div><a class="get-program__btn" href="form.html">Получить программу</a>
-        </div>
+        </div><a class="get-program__btn" href="form.html">Получить программу</a>
       </div>
-      <footer class="footer footer--program-calc">
-        <svg class="footer-arc--top" viewBox="0 0 500 50" preserveAspectRatio="none">
-          <path d="M-3.10,19.23 C249.15,44.89 249.15,45.88 500.27,19.23 L501.41,153.45 L0.00,150.00 Z" style="stroke: none; fill: #7c64b5;"></path>
-        </svg>
-        <svg class="footer-arc--bottom" viewBox="0 0 500 50" preserveAspectRatio="none">
-          <path d="M-3.10,19.23 C249.15,44.89 249.15,45.88 500.27,19.23 L501.41,153.45 L0.00,150.00 Z" style="stroke: none; fill: #664e9d;"></path>
-        </svg>
-        <div class="container">
-          <div class="footer__inner">
-            <nav class="nav">
-              <ul class="nav-list">
-                <li class="nav__item"><a class="nav__link footer-logo footer-logo--yellow" href="index.html">Be <span class="footer-logo--white">in Shape</span></a></li>
-                <li class="nav__item"><a class="nav__link site-link" href="https://beinshape.ru/">Перейти на сайт</a></li>
-                <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
-                <li class="nav__item"><a class="nav__link" href="faq.html">Ответы на вопросы</a></li>
-                <li class="nav__item"><a class="nav__link" href="reviews.html">Отзывы</a></li>
-                <li class="nav__item"><a class="nav__link" href="terms-of-use.html">Оферта</a></li>
-                <li class="nav__item"><a class="nav__link" href="#!">Контакты</a></li>
-                <li class="nav__item"><a class="nav__link footer-mail" href="mailto:support@beinshape.ru">support@beinshape.ru
-                    <svg class="pochta_pole" xmlns="http://www.w3.org/2000/svg">
-                      <use xlink:href="img/icons/sprite.svg#pochta_pole"></use>
-                    </svg></a></li>
-              </ul>
-            </nav>
-            <div class="instargram"><a class="instargram__link" href="https://www.instagram.com/lena_manilovka/" aria-label="Ссылка на инстаграм автора программ питания" target="_blank" rel="noopener nofollow noreferrer"><img class="instargram__icon" src="img/icons/instagram.svg"></a></div>
-            <div class="copyright">© 2020</div>
-          </div>
-        </div>
-      </footer>
-      <div class="overlay-menu"></div>
-      <div class="desktop-menu-line"></div>
-      <div class="desktop-menu">
-        <div class="desktop-menu-inner">
-          <ul class="desktop__menu-list">
-            <li class="desktop__menu-item"><a class="menu__link menu__link--btn" a href="https://beinshape.ru/">Перейти на сайт
-                <svg class="right-arrow" width="22" height="18">
-                  <use xlink:href="img/icons/sprite.svg#right-arrow"></use>
-                </svg></a></li>
-            <li class="desktop__menu-item"><a class="menu__link" a href="about.html">О нас</a></li>
-            <li class="desktop__menu-item"><a class="menu__link" a href="faq.html">Ответы на вопросы</a></li>
-            <li class="desktop__menu-item"><a class="menu__link" a href="reviews.html">Отзывы</a></li>
-            <li class="desktop__menu-item"><a class="menu__link" a href="#!">Контакты</a></li>
-            <li class="desktop__menu-item"><a class="menu__link" a href="terms-of-use.html">Оферта</a></li>
-            <li class="desktop__menu-item"><a class="menu__link" a href="policy.html">Политика</a></li>
-          </ul><a class="email-link" href="mailto:support@beinshape.ru">support@beinshape.ru
-            <svg class="envelope" width="20" height="16">
-              <use xlink:href="img/icons/sprite.svg#envelope"></use>
-            </svg></a>
-          <div class="copyright">Be In Shape © 2020</div>
-        </div>
-      </div>
-      <div class="overlay"></div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/result-show.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+    <footer class="footer footer--program-calc">
+      <svg class="footer-arc--top" viewBox="0 0 500 70" preserveAspectRatio="none">
+        <path d="M-3.10,19.23 C249.15,44.89 249.15,45.88 500.27,19.23 L501.41,153.45 L0.00,150.00 Z"
+          style="stroke: none; fill: #7c64b5;"></path>
+      </svg>
+      <svg class="footer-arc--bottom" viewBox="0 0 500 70" preserveAspectRatio="none">
+        <path d="M-3.10,19.23 C249.15,44.89 249.15,45.88 500.27,19.23 L501.41,153.45 L0.00,150.00 Z"
+          style="stroke: none; fill: #664e9d;"></path>
+      </svg>
+      <div class="container">
+        <div class="footer__inner">
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav__item"><a class="nav__link footer-logo footer-logo--yellow" href="index.html">Be <span
+                    class="footer-logo--white">in Shape</span></a></li>
+              <li class="nav__item"><a class="nav__link site-link" href="https://beinshape.ru/">Перейти на сайт</a></li>
+              <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
+              <li class="nav__item"><a class="nav__link" href="faq.html">Ответы на вопросы</a></li>
+              <li class="nav__item"><a class="nav__link" href="reviews.html">Отзывы</a></li>
+              <li class="nav__item"><a class="nav__link" href="terms-of-use.html">Оферта</a></li>
+              <li class="nav__item"><a class="nav__link" href="#!">Контакты</a></li>
+              <li class="nav__item"><a class="nav__link footer-mail"
+                  href="mailto:support@beinshape.ru">support@beinshape.ru
+                  <svg class="pochta_pole" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/icons/sprite.svg#pochta_pole"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+          <div class="instargram"><a class="instargram__link" href="https://www.instagram.com/lena_manilovka/"
+              aria-label="Ссылка на инстаграм автора программ питания" target="_blank"
+              rel="noopener nofollow noreferrer"><img class="instargram__icon" src="img/icons/instagram.svg"></a></div>
+          <div class="copyright">© 2020</div>
+        </div>
+      </div>
+    </footer>
+    <div class="overlay-menu"></div>
+    <div class="desktop-menu-line"></div>
+    <div class="desktop-menu">
+      <div class="desktop-menu-inner">
+        <ul class="desktop__menu-list">
+          <li class="desktop__menu-item"><a class="menu__link menu__link--btn" a href="https://beinshape.ru/">Перейти на
+              сайт
+              <svg class="right-arrow" width="22" height="18">
+                <use xlink:href="img/icons/sprite.svg#right-arrow"></use>
+              </svg></a></li>
+          <li class="desktop__menu-item"><a class="menu__link" a href="about.html">О нас</a></li>
+          <li class="desktop__menu-item"><a class="menu__link" a href="faq.html">Ответы на вопросы</a></li>
+          <li class="desktop__menu-item"><a class="menu__link" a href="reviews.html">Отзывы</a></li>
+          <li class="desktop__menu-item"><a class="menu__link" a href="#!">Контакты</a></li>
+          <li class="desktop__menu-item"><a class="menu__link" a href="terms-of-use.html">Оферта</a></li>
+          <li class="desktop__menu-item"><a class="menu__link" a href="policy.html">Политика</a></li>
+        </ul><a class="email-link" href="mailto:support@beinshape.ru">support@beinshape.ru
+          <svg class="envelope" width="20" height="16">
+            <use xlink:href="img/icons/sprite.svg#envelope"></use>
+          </svg></a>
+        <div class="copyright">Be In Shape © 2020</div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/result-show.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>

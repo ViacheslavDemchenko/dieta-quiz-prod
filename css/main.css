@@ -731,7 +731,6 @@ template {
   margin-top: -5.125rem;
 }
 
-.footer--program-calc .footer-arc--top,
 .footer--form .footer-arc--top {
   position: absolute;
   z-index: 10000;
@@ -739,12 +738,25 @@ template {
   margin-top: -3.75rem;
 }
 
-.footer--program-calc .footer-arc--bottom,
 .footer--form .footer-arc--bottom {
   position: absolute;
   z-index: 9000;
   width: 100%;
   margin-top: -4.1875rem;
+}
+
+.footer--program-calc .footer-arc--top {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  margin-top: -4.625rem;
+}
+
+.footer--program-calc .footer-arc--bottom {
+  position: absolute;
+  z-index: 9000;
+  width: 100%;
+  margin-top: -5.0625rem;
 }
 
 .nav__link {
@@ -863,7 +875,19 @@ template {
 }
 
 .quiz-slide__content-first {
-  margin: 0 0 0.5rem 0;
+  margin: 2.5rem 0 0.5rem 0;
+}
+
+.quiz-slide__content-second {
+  margin: 5.4375rem 0 0.5rem 0;
+}
+
+.quiz-slide__content-fourth {
+  margin: 2.5rem 0 0.5rem 0;
+}
+
+.quiz-slide__content-fifth {
+  margin: 2.5rem 0 0.5rem 0;
 }
 
 .quiz-slide__content-title {
@@ -1343,7 +1367,7 @@ template {
   align-items: center;
   max-width: 6.25rem;
   width: 50%;
-  margin-bottom: 1.3125rem;
+  margin-bottom: 0.3125rem;
 }
 
 .exercice-num {
@@ -1863,18 +1887,21 @@ template {
 
 .circle {
   position: absolute;
-  z-index: 20000;
-  top: 20.875rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 15.625rem;
-  height: 15.625rem;
+  z-index: 2500;
+  top: 18.125rem;
+  left: calc(50vw - 22px);
+  width: 12.5rem;
+  height: 15.1875rem;
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
+  background: url(../img/circle-480@1x.png);
 }
 
 .progress {
   position: absolute;
   z-index: 2500;
-  top: 18.125rem;
+  top: 18.375rem;
   left: calc(50vw - 22px);
   font-family: "UniNeueBold";
   font-weight: 700;
@@ -1882,20 +1909,6 @@ template {
   font-size: 1.125rem;
   line-height: 0.715;
   color: #140d23;
-}
-
-.progress::after {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  top: -2rem;
-  left: -1.125rem;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  -webkit-filter: blur(0.3125rem);
-  filter: blur(0.3125rem);
-  background: #fff;
 }
 
 .circle-icon {
@@ -4314,6 +4327,7 @@ template {
     background-repeat: no-repeat !important;
     background-position: top center !important;
     background-size: cover !important;
+    background: url(../img/fifth-slide-bg-480@1x.jpg);
   }
 }
 
@@ -4333,15 +4347,7 @@ template {
   .quiz-slide-fourth {
     background: url(../img/fourth-slide-bg-480@2x.jpg);
   }
-}
 
-@media screen and (min-width: 0) and (min-width: 480px) {
-  .quiz-slide-fifth {
-    background: url(../img/fifth-slide-bg-480@1x.jpg);
-  }
-}
-
-@media screen and (min-width: 0) and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 0) and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 0) and (min-width: 480px) and (min-resolution: 192dpi) {
   .quiz-slide-fifth {
     background: url(../img/fifth-slide-bg-480@2x.jpg);
   }
@@ -4388,18 +4394,27 @@ template {
     margin-top: -6.0625rem;
   }
 
-  .footer--program-calc,
   .footer--form {
     padding: 3.125rem 0 1.875rem 0;
   }
 
-  .footer--program-calc .footer-arc--top,
   .footer--form .footer-arc--top {
     margin-top: -5.4375rem;
   }
 
-  .footer--program-calc .footer-arc--bottom,
   .footer--form .footer-arc--bottom {
+    margin-top: -6.0625rem;
+  }
+
+  .footer--program-calc {
+    padding: 3.125rem 0 1.875rem 0;
+  }
+
+  .footer--program-calc .footer-arc--top {
+    margin-top: -5.4375rem;
+  }
+
+  .footer--program-calc .footer-arc--bottom {
     margin-top: -6.0625rem;
   }
 
@@ -4855,7 +4870,6 @@ template {
   }
 
   .progress {
-    left: initial;
     font-size: 1.25rem;
   }
 
@@ -5820,8 +5834,16 @@ template {
     background: url(../img/program-calc-bg-1920@1x.jpg);
   }
 
+  .circle {
+    top: 27.4375rem;
+    left: calc(50vw - -16px);
+    width: 18.125rem;
+    height: 18.125rem;
+  }
+
   .progress {
-    top: 12.375rem;
+    top: 12.75rem;
+    left: initial;
   }
 }
 
@@ -5979,6 +6001,15 @@ template {
     height: 34.5rem;
     border: 0.0625rem solid #ffc343;
     border-radius: 3.125rem;
+  }
+
+  .circle {
+    top: 12.6875rem;
+    left: calc(50vw - 369px);
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/circle-1920@1x.png);
   }
 
   .personal-profile__header {
@@ -6448,6 +6479,10 @@ template {
 }
 
 @media screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+  .circle {
+    background: url(../img/circle-1920@2x.png);
+  }
+
   .personal-profile__header {
     background: url(../img/personal-profile-header-bg-1024@2x.jpg);
   }
@@ -6964,18 +6999,12 @@ template {
   }
 
   .circle {
-    top: 418px;
-    left: calc(50vw - 577px);
-  }
-
-  .circle svg {
-    transform: scale(4);
-    width: 18.125rem;
-    height: 18.125rem;
+    top: 12.6875rem;
+    left: initial;
   }
 
   .progress {
-    top: 12.625rem;
+    top: 12.875rem;
   }
 
   .dieta-icon {
@@ -7824,6 +7853,10 @@ template {
 
   .program-calc__dish {
     background: url(../img/dish-1-480@2x.png);
+  }
+
+  .circle {
+    background: url(../img/circle-480@2x.png);
   }
 
   .personal-profile__header {
