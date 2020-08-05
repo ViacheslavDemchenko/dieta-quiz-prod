@@ -1,123 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Be in Shape - программы питания</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/main.min.css">
-  <link rel="stylesheet" href="./fonts/fonts.css">
-  <link rel="icon" href="#!" type="image/x-icon">
-  <link rel="shortcut icon" href="#!" type="image/x-icon">
-  <link rel="apple-touch-icon" href="#!">
-  <!--[if lte IE 10]>
+  <head>
+    <meta charset="UTF-8">
+    <title>Be in Shape - программы питания</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="icon" href="#!" type="image/x-icon">
+    <link rel="shortcut icon" href="#!" type="image/x-icon">
+    <link rel="apple-touch-icon" href="#!"><!--[if lte IE 10]>
     <p class="browser-upgrade">Вы используете устаревшую версию браузера. Пожалуйста </p><a class="browser-upgrade__link" href="http://browsehappy.com/">обновите свой браузер</a><![endif]-->
-</head>
-
-<body>
-  <div class="container-fluid">
-    <div class="form-page">
-      <div class="logo">
-        <div class="logo__title logo__title--violet">Be <span class="logo__title--white">in Shape</span></div>
-        <div class="logo__text">Программы питания</div>
-      </div>
-      <div class="quiz-slide__content quiz-slide__content--form">
-        <div class="quiz-slide__content-title">Куда отправить?</div>
-      </div>
-      <div class="form-wrap">
-        <form class="form" id="form-email" action="#" method="post">
-          <div class="form__title">Введите свой e-mail,
-            <p class="form__title--light">чтобы получить программу</p>
-          </div>
-          <div class="form-input-wrap">
-            <input class="email-input" type="email" name="email" id="email" placeholder="Ваш email*" required>
-            <div class="envelope-icon-wrap">
-              <svg class="envelope-icon" width="19" height="15">
-                <use xlink:href="img/icons/sprite.svg#envelope"></use>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="form-page">
+        <div class="logo">
+          <div class="logo__title logo__title--violet">Be <span class="logo__title--white">in Shape</span></div>
+          <div class="logo__text">Программы питания</div>
+        </div>
+        <div class="quiz-slide__content quiz-slide__content--form">
+          <div class="quiz-slide__content-title">Куда отправить?</div>
+        </div>
+        <div class="form-wrap">
+          <form class="form" id="form-email" action="#" method="post">
+            <div class="form__title">Введите свой e-mail, 
+              <p class="form__title--light">чтобы получить программу</p>
+            </div>
+            <div class="form-input-wrap">
+              <input class="email-input" type="email" name="email" id="email" placeholder="Ваш email*" required>
+              <div class="envelope-icon-wrap">
+                <svg class="envelope-icon" width="19" height="15">
+                  <use xlink:href="img/icons/sprite.svg#envelope"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-input-wrap form-input-wrap--submit">
+              <input class="form__submit" type="submit" value="Получить">
+              <svg class="arrow-icon-right--form" width="8" height="14">
+                <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
               </svg>
             </div>
-          </div>
-          <div class="form-input-wrap form-input-wrap--submit">
-            <input class="form__submit" type="submit" value="Получить">
-            <svg class="arrow-icon-right--form" width="8" height="14">
-              <use xlink:href="img/icons/sprite.svg#arrow-right"></use>
-            </svg>
-          </div>
-          <div class="form-input-wrap--policy">
-            <input class="policy-checkbox" type="checkbox" name="policy" id="policy" checked>
-            <label for="policy"></label>
-            <div class="policy">Выражаю свое согласие с <a class="policy__link" href="policy.html">политикой
-                конфиденциальности</a></div>
-          </div>
-        </form>
-        <div class="form-img"></div>
-      </div>
-    </div>
-    <footer class="footer footer--form">
-      <svg class="footer-arc--top" viewBox="0 0 500 70" preserveAspectRatio="none">
-        <path d="M-3.10,19.23 C249.15,44.89 249.15,45.88 500.27,19.23 L501.41,153.45 L0.00,150.00 Z"
-          style="stroke: none; fill: #7c64b5;"></path>
-      </svg>
-      <svg class="footer-arc--bottom" viewBox="0 0 500 70" preserveAspectRatio="none">
-        <path d="M-3.10,19.23 C249.15,44.89 249.15,45.88 500.27,19.23 L501.41,153.45 L0.00,150.00 Z"
-          style="stroke: none; fill: #664e9d;"></path>
-      </svg>
-      <div class="container">
-        <div class="footer__inner">
-          <nav class="nav">
-            <ul class="nav-list">
-              <li class="nav__item"><a class="nav__link footer-logo footer-logo--yellow" href="index.html">Be <span
-                    class="footer-logo--white">in Shape</span></a></li>
-              <li class="nav__item"><a class="nav__link site-link" href="https://beinshape.ru/">Перейти на сайт</a></li>
-              <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
-              <li class="nav__item"><a class="nav__link" href="faq.html">Ответы на вопросы</a></li>
-              <li class="nav__item"><a class="nav__link" href="reviews.html">Отзывы</a></li>
-              <li class="nav__item"><a class="nav__link" href="terms-of-use.html">Оферта</a></li>
-              <li class="nav__item"><a class="nav__link" href="#!">Контакты</a></li>
-              <li class="nav__item"><a class="nav__link footer-mail"
-                  href="mailto:support@beinshape.ru">support@beinshape.ru
-                  <svg class="pochta_pole" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="img/icons/sprite.svg#pochta_pole"></use>
-                  </svg></a></li>
-            </ul>
-          </nav>
-          <div class="instargram"><a class="instargram__link" href="https://www.instagram.com/lena_manilovka/"
-              aria-label="Ссылка на инстаграм автора программ питания" target="_blank"
-              rel="noopener nofollow noreferrer"><img class="instargram__icon" src="img/icons/instagram.svg"></a></div>
-          <div class="copyright">© 2020</div>
+            <div class="form-input-wrap--policy">
+              <input class="policy-checkbox" type="checkbox" name="policy" id="policy" checked>
+              <label for="policy"></label>
+              <div class="policy">Выражаю свое согласие с <a class="policy__link" href="policy.html">политикой конфиденциальности</a></div>
+            </div>
+          </form>
+          <div class="form-img"></div>
         </div>
       </div>
-    </footer>
-    <div class="overlay-menu"></div>
-    <div class="desktop-menu-line"></div>
-    <div class="desktop-menu">
-      <div class="desktop-menu-inner">
-        <ul class="desktop__menu-list">
-          <li class="desktop__menu-item"><a class="menu__link menu__link--btn" a href="https://beinshape.ru/">Перейти на
-              сайт
-              <svg class="right-arrow" width="22" height="18">
-                <use xlink:href="img/icons/sprite.svg#right-arrow"></use>
-              </svg></a></li>
-          <li class="desktop__menu-item"><a class="menu__link" a href="about.html">О нас</a></li>
-          <li class="desktop__menu-item"><a class="menu__link" a href="faq.html">Ответы на вопросы</a></li>
-          <li class="desktop__menu-item"><a class="menu__link" a href="reviews.html">Отзывы</a></li>
-          <li class="desktop__menu-item"><a class="menu__link" a href="#!">Контакты</a></li>
-          <li class="desktop__menu-item"><a class="menu__link" a href="terms-of-use.html">Оферта</a></li>
-          <li class="desktop__menu-item"><a class="menu__link" a href="policy.html">Политика</a></li>
-        </ul><a class="email-link" href="mailto:support@beinshape.ru">support@beinshape.ru
-          <svg class="envelope" width="20" height="16">
-            <use xlink:href="img/icons/sprite.svg#envelope"></use>
-          </svg></a>
-        <div class="copyright">Be In Shape © 2020</div>
+      <footer class="footer footer--form">
+        <svg class="footer-arc--top" viewBox="0 0 500 50" preserveAspectRatio="none">
+          <path d="M-3.10,19.23 C249.15,44.89 249.15,45.88 500.27,19.23 L501.41,153.45 L0.00,150.00 Z" style="stroke: none; fill: #7c64b5;"></path>
+        </svg>
+        <svg class="footer-arc--bottom" viewBox="0 0 500 50" preserveAspectRatio="none">
+          <path d="M-3.10,19.23 C249.15,44.89 249.15,45.88 500.27,19.23 L501.41,153.45 L0.00,150.00 Z" style="stroke: none; fill: #664e9d;"></path>
+        </svg>
+        <div class="container">
+          <div class="footer__inner">
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav__item"><a class="nav__link footer-logo footer-logo--yellow" href="index.html">Be <span class="footer-logo--white">in Shape</span></a></li>
+                <li class="nav__item"><a class="nav__link site-link" href="https://beinshape.ru/">Перейти на сайт</a></li>
+                <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
+                <li class="nav__item"><a class="nav__link" href="faq.html">Ответы на вопросы</a></li>
+                <li class="nav__item"><a class="nav__link" href="reviews.html">Отзывы</a></li>
+                <li class="nav__item"><a class="nav__link" href="terms-of-use.html">Оферта</a></li>
+                <li class="nav__item"><a class="nav__link" href="#!">Контакты</a></li>
+                <li class="nav__item"><a class="nav__link footer-mail" href="mailto:support@beinshape.ru">support@beinshape.ru
+                    <svg class="pochta_pole" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/icons/sprite.svg#pochta_pole"></use>
+                    </svg></a></li>
+              </ul>
+            </nav>
+            <div class="instargram"><a class="instargram__link" href="https://www.instagram.com/lena_manilovka/" aria-label="Ссылка на инстаграм автора программ питания" target="_blank" rel="noopener nofollow noreferrer"><img class="instargram__icon" src="img/icons/instagram.svg"></a></div>
+            <div class="copyright">© 2020</div>
+          </div>
+        </div>
+      </footer>
+      <div class="overlay-menu"></div>
+      <div class="desktop-menu-line"></div>
+      <div class="desktop-menu">
+        <div class="desktop-menu-inner">
+          <ul class="desktop__menu-list">
+            <li class="desktop__menu-item"><a class="menu__link menu__link--btn" a href="https://beinshape.ru/">Перейти на сайт
+                <svg class="right-arrow" width="22" height="18">
+                  <use xlink:href="img/icons/sprite.svg#right-arrow"></use>
+                </svg></a></li>
+            <li class="desktop__menu-item"><a class="menu__link" a href="about.html">О нас</a></li>
+            <li class="desktop__menu-item"><a class="menu__link" a href="faq.html">Ответы на вопросы</a></li>
+            <li class="desktop__menu-item"><a class="menu__link" a href="reviews.html">Отзывы</a></li>
+            <li class="desktop__menu-item"><a class="menu__link" a href="#!">Контакты</a></li>
+            <li class="desktop__menu-item"><a class="menu__link" a href="terms-of-use.html">Оферта</a></li>
+            <li class="desktop__menu-item"><a class="menu__link" a href="policy.html">Политика</a></li>
+          </ul><a class="email-link" href="mailto:support@beinshape.ru">support@beinshape.ru
+            <svg class="envelope" width="20" height="16">
+              <use xlink:href="img/icons/sprite.svg#envelope"></use>
+            </svg></a>
+          <div class="copyright">Be In Shape © 2020</div>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/email-form-validate.js"></script>
-  <script src="js/main.min.js"></script>
-</body>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/email-form-validate.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>
