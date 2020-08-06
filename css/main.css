@@ -4066,14 +4066,18 @@ template {
 }
 
 .reviews-slider-dots {
-  position: absolute;
-  bottom: 1.875rem;
+  position: fixed;
+  left: 50%;
+  bottom: 0.1875rem;
+  transform: translateX(-50%);
   display: flex !important;
 }
 
 .reviews-slider-dot {
   width: 0.75rem;
   height: 0.75rem;
+  border: none;
+  outline: none;
   border-radius: 50%;
   background: #2c2736;
 }
@@ -4083,6 +4087,7 @@ template {
 }
 
 .reviews-slider-dot.active {
+  box-shadow: 0 0 5px 1px #f8c855;
   background: #f8c855;
 }
 
