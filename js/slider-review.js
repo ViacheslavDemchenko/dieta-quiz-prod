@@ -29,12 +29,14 @@ $(document).ready(function () {
         $('.reviews-slider.owl-carousel').owlCarousel({
             items: 1,
             autoWidth: true,
+            autoHeight: true,
             nav: false,
             center: true,
             loop: true,
             stagePadding: 20,
             margin: 10,
-            dots: false
+            dots: false,
+            dotClass: 'owl-dot'
         });
     } else if ($(window).width() >= 1365) {
         $('.reviews-slider.owl-carousel').trigger('destroy.owl.carousel');
@@ -47,6 +49,7 @@ $(document).ready(function () {
             $('.reviews-slider.owl-carousel').owlCarousel({
                 items: 1,
                 autoWidth: true,
+                autoHeight: true,
                 nav: false,
                 center: true,
                 loop: true,
@@ -65,7 +68,8 @@ $(document).ready(function () {
                 autoWidth: true,
                 center: true,
                 loop: true,
-                lazyLoad: true
+                lazyLoad: true,
+                dotClass: 'owl-dot'
             });
 
             $('.arrow-right').click(function () {

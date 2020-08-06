@@ -2555,13 +2555,12 @@ template {
 }
 
 .result-block-modal {
-  position: absolute;
+  position: fixed;
   z-index: 16000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  display: none;
+  width: 22.9375rem;
   text-align: left;
   border-radius: 1.25rem;
   background: #f4fafa;
@@ -2584,6 +2583,7 @@ template {
   color: #664e9d;
   border: 0.0625rem solid #5f4799;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .result-block-modal__text {
@@ -4067,6 +4067,17 @@ template {
 
 .owl-dots {
   display: block !important;
+}
+
+.owl-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #2c2736;
+}
+
+.owl-dot .active {
+  background: #f8c855;
 }
 
 .owl-stage {
