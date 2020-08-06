@@ -4065,32 +4065,51 @@ template {
   left: 1.8125rem;
 }
 
+.owl-dots {
+  display: block !important;
+}
+
 .owl-stage {
   display: flex !important;
 }
 
-.arrow-left {
+.reviews-slider-desktop-arrows {
   position: absolute;
-  z-index: 1000;
   top: 50%;
-  left: -6.25rem;
-  width: 2.9375rem;
-  height: 2.9375rem;
-  border: 0.125rem solid #f8c855;
-  border-radius: 50%;
-  color: #fff;
+  left: 50%;
 }
 
+.arrow-left,
 .arrow-right {
   position: absolute;
   z-index: 1000;
   top: 50%;
-  right: -6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 2.9375rem;
   height: 2.9375rem;
   border: 0.125rem solid #f8c855;
   border-radius: 50%;
-  color: #fff;
+}
+
+.arrow-left {
+  left: -14.1875rem;
+}
+
+.arrow-right {
+  right: -14.1875rem;
+}
+
+.slider-left-icon,
+.slider-right-icon {
+  width: 1.5625rem;
+  height: 1.25rem;
+  fill: #fff;
+}
+
+.slider-left-icon {
+  transform: rotate(180deg);
 }
 
 .review__desktop {
@@ -7359,6 +7378,14 @@ template {
     line-height: 1.4375rem;
   }
 
+  .reviews-page {
+    min-height: 100vh;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
   .reviews-page .btn-wrap {
     margin-top: 0;
     margin-right: 18.75rem;
@@ -7415,6 +7442,10 @@ template {
 
   .dieta-choice-img {
     background: url(../img/payment-halfform-1920@2x.jpg);
+  }
+
+  .reviews-page {
+    background: url(../img/third-slide-bg-1920@2x.jpg);
   }
 
   .reviews-slider-desktop {
@@ -7860,14 +7891,6 @@ template {
     line-height: 2.3125rem;
   }
 
-  .reviews-page {
-    min-height: 100vh;
-    background-repeat: no-repeat !important;
-    background-position: top center !important;
-    background-size: cover !important;
-    background: url(../img/third-slide-bg-1920@1x.jpg);
-  }
-
   .quiz-slide__content--reviews-page {
     margin: 9.0625rem 0 0.3125rem 0;
     transform: translateY(1.25rem);
@@ -7964,10 +7987,6 @@ template {
   }
 
   .termsofuse-page {
-    background: url(../img/third-slide-bg-1920@2x.jpg);
-  }
-
-  .reviews-page {
     background: url(../img/third-slide-bg-1920@2x.jpg);
   }
 }

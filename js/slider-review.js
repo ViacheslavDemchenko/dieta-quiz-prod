@@ -8,11 +8,18 @@ $(document).ready(function () {
             autoWidth: true,
             center: true,
             loop: true,
-            lazyLoad: true,
-            // navClass: 'reviews-slider-arrow',
-            // navContainerClass: 'reviews-slider-desktop-arrows',
-            navText: ["<span class='arrow-left'>", "<span class='arrow-right'>"]
+            lazyLoad: true
         });
+
+        $('.arrow-right').click(function () {
+            console.log('next');
+            $('.reviews-slider-desktop-inner').trigger('next.owl.carousel');
+        });
+        $('.arrow-left').click(function () {
+            console.log('prev');
+            $('.reviews-slider-desktop-inner').trigger('prev.owl.carousel');
+        });
+
     } else if ($(window).width() < 1365) {
         $('.reviews-slider-desktop-inner').trigger('destroy.owl.carousel');
     }
@@ -26,7 +33,8 @@ $(document).ready(function () {
             center: true,
             loop: true,
             stagePadding: 20,
-            margin: 10
+            margin: 10,
+            dots: false
         });
     } else if ($(window).width() >= 1365) {
         $('.reviews-slider.owl-carousel').trigger('destroy.owl.carousel');
@@ -44,7 +52,8 @@ $(document).ready(function () {
                 loop: true,
                 stagePadding: 20,
                 margin: 10,
-                lazyLoad: true
+                lazyLoad: true,
+                dots: false
             });
         }
 
@@ -56,10 +65,16 @@ $(document).ready(function () {
                 autoWidth: true,
                 center: true,
                 loop: true,
-                lazyLoad: true,
-                // navClass: 'reviews-slider-arrow',
-                // navContainerClass: 'reviews-slider-desktop-arrows',
-                navText: ["<span class='arrow-left'>", "<span class='arrow-right'>"]
+                lazyLoad: true
+            });
+
+            $('.arrow-right').click(function () {
+                console.log('next');
+                $('.reviews-slider-desktop-inner').trigger('next.owl.carousel');
+            });
+            $('.arrow-left').click(function () {
+                console.log('prev');
+                $('.reviews-slider-desktop-inner').trigger('prev.owl.carousel');
             });
         }
 
