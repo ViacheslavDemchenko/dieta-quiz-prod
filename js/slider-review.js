@@ -5,10 +5,14 @@ $(document).ready(function () {
         $('.reviews-slider-desktop-inner').owlCarousel({
             items: 1,
             nav: true,
+            autoHeight: true,
             autoWidth: true,
             center: true,
             loop: true,
             lazyLoad: true,
+            touchDrag: false,
+            mouseDrag: false,
+            pullDrag: false,
             dots: true,
             dotsClass: 'reviews-slider-dots',
             dotClass: 'reviews-slider-dot'
@@ -66,9 +70,13 @@ $(document).ready(function () {
             $('.reviews-slider-desktop-inner').owlCarousel({
                 items: 1,
                 nav: true,
+                autoHeight: true,
                 autoWidth: true,
                 center: true,
                 loop: true,
+                touchDrag: false,
+                mouseDrag: false,
+                pullDrag: false,
                 lazyLoad: true,
                 dots: true,
                 dotsClass: 'reviews-slider-dots',

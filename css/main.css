@@ -708,7 +708,6 @@ template {
 }
 
 .footer--about .footer-arc--top,
-.footer--faq .footer-arc--top,
 .footer--reviews .footer-arc--top,
 .footer--termsofuse .footer-arc--top,
 .footer--policy .footer-arc--top,
@@ -716,11 +715,10 @@ template {
   position: absolute;
   z-index: 10000;
   width: 100%;
-  margin-top: -4.5rem;
+  margin-top: -3.8125rem;
 }
 
 .footer--about .footer-arc--bottom,
-.footer--faq .footer-arc--bottom,
 .footer--reviews .footer-arc--bottom,
 .footer--termsofuse .footer-arc--bottom,
 .footer--policy .footer-arc--bottom,
@@ -728,7 +726,7 @@ template {
   position: absolute;
   z-index: 9000;
   width: 100%;
-  margin-top: -5.125rem;
+  margin-top: -4.1875rem;
 }
 
 .footer--form .footer-arc--top {
@@ -856,6 +854,7 @@ template {
 .quiz-slide {
   width: 100%;
   min-height: 28.8125rem;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4055,6 +4054,10 @@ template {
   display: none;
 }
 
+.reviews-slider-desktop .owl-stage {
+  display: flex !important;
+}
+
 .reviews-slider-desktop-inner {
   position: relative;
   overflow: hidden !important;
@@ -4091,10 +4094,6 @@ template {
   background: #f8c855;
 }
 
-.owl-stage {
-  display: flex !important;
-}
-
 .reviews-slider-desktop-arrows {
   position: absolute;
   top: 50%;
@@ -4114,6 +4113,7 @@ template {
   height: 2.9375rem;
   border: 0.125rem solid #f8c855;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .arrow-left {
@@ -4479,7 +4479,6 @@ template {
   }
 
   .footer--about .footer-arc--top,
-  .footer--faq .footer-arc--top,
   .footer--reviews .footer-arc--top,
   .footer--termsofuse .footer-arc--top,
   .footer--policy .footer-arc--top,
@@ -4488,7 +4487,6 @@ template {
   }
 
   .footer--about .footer-arc--bottom,
-  .footer--faq .footer-arc--bottom,
   .footer--reviews .footer-arc--bottom,
   .footer--termsofuse .footer-arc--bottom,
   .footer--policy .footer-arc--bottom,
@@ -6035,6 +6033,16 @@ template {
 
   .quiz-slide-fifth {
     background: url(../img/second-slide-bg-1920@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .footer--faq .footer-arc--top {
+    margin-top: -7.125rem !important;
+  }
+
+  .footer--faq .footer-arc--bottom {
+    margin-top: -7.625rem !important;
   }
 }
 

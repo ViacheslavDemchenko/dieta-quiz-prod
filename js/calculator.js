@@ -1,14 +1,14 @@
 $(document).ready(function () {
   /* СЛАЙДЕР */
 
-  let owl = $('.owl-carousel');
+  let owl = $('.quiz.owl-carousel');
 
   owl.owlCarousel({
     items: 1,
     autoHeight: true,
-    touchDrag: false,
-    mouseDrag: false,
-    pullDrag: false,
+    touchDrag: true,
+    mouseDrag: true,
+    pullDrag: true,
     lazyLoad: true,
   });
 
