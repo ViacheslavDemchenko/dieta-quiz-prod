@@ -4056,6 +4056,7 @@ template {
 }
 
 .reviews-slider-desktop-inner {
+  position: relative;
   overflow: hidden !important;
   width: 17.125rem;
   height: 28.25rem;
@@ -4064,22 +4065,32 @@ template {
   left: 1.8125rem;
 }
 
-.owl-nav {
-  display: none !important;
-}
-
 .owl-stage {
   display: flex !important;
 }
 
 .arrow-left {
   position: absolute;
+  z-index: 1000;
   top: 50%;
-  left: 3.125rem;
+  left: -6.25rem;
+  width: 2.9375rem;
+  height: 2.9375rem;
+  border: 0.125rem solid #f8c855;
+  border-radius: 50%;
+  color: #fff;
 }
 
 .arrow-right {
   position: absolute;
+  z-index: 1000;
+  top: 50%;
+  right: -6.25rem;
+  width: 2.9375rem;
+  height: 2.9375rem;
+  border: 0.125rem solid #f8c855;
+  border-radius: 50%;
+  color: #fff;
 }
 
 .review__desktop {
