@@ -4065,18 +4065,24 @@ template {
   left: 1.8125rem;
 }
 
-.owl-dots {
-  display: block !important;
+.reviews-slider-dots {
+  position: absolute;
+  bottom: 1.875rem;
+  display: flex !important;
 }
 
-.owl-dot {
+.reviews-slider-dot {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
   background: #2c2736;
 }
 
-.owl-dot .active {
+.reviews-slider-dot:not(:last-child) {
+  margin-right: 0.3125rem;
+}
+
+.reviews-slider-dot.active {
   background: #f8c855;
 }
 
@@ -4095,6 +4101,7 @@ template {
   position: absolute;
   z-index: 1000;
   top: 50%;
+  transform: translateY(calc(50% + 24px));
   display: flex;
   justify-content: center;
   align-items: center;
