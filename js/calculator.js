@@ -6,9 +6,9 @@ $(document).ready(function () {
   owl.owlCarousel({
     items: 1,
     autoHeight: true,
-    touchDrag: true,
-    mouseDrag: true,
-    pullDrag: true,
+    touchDrag: false,
+    mouseDrag: false,
+    pullDrag: false,
     lazyLoad: true,
   });
 
@@ -372,8 +372,5 @@ $(document).ready(function () {
     arrowIconRight.style.transform = 'translateY(-50%)';
     arrowIconRight.style.top = '1.5625rem';
     arrowIconRight.style.right = '1.5rem';
-    console.log('iOS');
-  } else {
-    console.log('no iOS');
   }
 });

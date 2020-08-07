@@ -2039,7 +2039,7 @@ template {
 .personal-profile__elipse {
   position: absolute;
   z-index: 500;
-  bottom: -1.625rem;
+  top: 20.625rem;
   width: 3.4375rem;
   height: 3.4375rem;
   border-radius: 50%;
@@ -2952,6 +2952,7 @@ template {
 
 .dieta__item {
   position: relative;
+  cursor: pointer;
 }
 
 .dieta__item:nth-child(2) {
@@ -3200,8 +3201,11 @@ template {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   z-index: 16000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 16.875rem;
   display: none;
   flex-direction: column;
@@ -3234,7 +3238,6 @@ template {
 }
 
 .modal-first {
-  left: -22%;
   padding: 1.75rem 2.25rem 1.75rem 1.25rem;
 }
 
@@ -3256,11 +3259,10 @@ template {
 }
 
 .modal-first--active {
-  display: block;
+  display: flex;
 }
 
 .modal-second {
-  right: -24%;
   padding: 1.75rem 0rem 1.75rem 1.25rem;
 }
 
@@ -4095,9 +4097,7 @@ template {
 }
 
 .reviews-slider-desktop-arrows {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: none;
 }
 
 .arrow-left,
@@ -5027,7 +5027,7 @@ template {
   }
 
   .personal-profile__elipse {
-    bottom: -2.0625rem;
+    top: 30rem;
     width: 4.6875rem;
     height: 4.6875rem;
   }
@@ -6136,7 +6136,7 @@ template {
   }
 
   .personal-profile__elipse {
-    bottom: -2.375rem;
+    top: 48.125rem;
   }
 
   .personal-profile__body {
@@ -6334,6 +6334,10 @@ template {
     background: url(../img/third-slide-bg-1024@1x.jpg);
   }
 
+  .quiz-slide__content--form {
+    margin: 9.375rem 0 0.625rem 0;
+  }
+
   .form {
     width: 30.9375rem;
     border-top-right-radius: 0;
@@ -6419,7 +6423,7 @@ template {
   }
 
   .quiz-slide__content--gratitude {
-    margin: 11.625rem 0 0.625rem 0;
+    margin: 6.25rem 0 0.625rem 0;
   }
 
   .gratitude__img {
@@ -6748,7 +6752,17 @@ template {
   }
 
   .reviews-page {
+    min-height: 100vh;
     padding-bottom: 0.625rem;
+  }
+
+  .reviews-page .btn-wrap {
+    margin-top: 0;
+    margin-right: 18.75rem;
+  }
+
+  .reviews-slider.owl-carousel {
+    margin-bottom: 2.5rem;
   }
 
   .reviews-slider-wrap-mobile {
@@ -6938,6 +6952,10 @@ template {
     margin-bottom: 0.5rem;
     padding: 1.4375rem 2.8125rem 1.4375rem 2.8125rem;
     border-radius: 1.25rem 2.8125rem;
+  }
+
+  .quiz-slide__content-first {
+    margin: 4.375rem 0 0.5rem 0;
   }
 
   .quiz-slide__choice {
@@ -7410,16 +7428,10 @@ template {
   }
 
   .reviews-page {
-    min-height: 100vh;
     background-repeat: no-repeat !important;
     background-position: top center !important;
     background-size: cover !important;
     background: url(../img/third-slide-bg-1920@1x.jpg);
-  }
-
-  .reviews-page .btn-wrap {
-    margin-top: 0;
-    margin-right: 18.75rem;
   }
 
   .quiz-slide__content--reviews-page {
@@ -7464,6 +7476,13 @@ template {
     background-size: cover !important;
     background: url(../img/phone-screen-bottom@1x.png);
   }
+
+  .reviews-slider-desktop-arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1365px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 1365px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1365px) and (min-resolution: 192dpi) {
@@ -7484,15 +7503,15 @@ template {
   }
 }
 
-@media screen and (min-width: 1365px) and (min-width: 1920px) {
-  .reviews-slider-desktop {
-    transform: translateY(1.25rem);
-  }
-}
-
 @media screen and (min-width: 1365px) and (min-width: 1365px) {
   .reviews-slider-desktop {
     transform: translateY(1.875rem);
+  }
+}
+
+@media screen and (min-width: 1365px) and (min-width: 1920px) {
+  .reviews-slider-desktop {
+    transform: translateY(1.25rem);
   }
 }
 
@@ -7658,6 +7677,10 @@ template {
     background: url(../img/personal-profile-header-bg-1920@1x.jpg);
   }
 
+  .personal-profile__elipse {
+    top: 58.125rem;
+  }
+
   .personal-profile__body {
     padding-bottom: 8.375rem;
     background-repeat: no-repeat !important;
@@ -7690,6 +7713,10 @@ template {
     background: url(../img/third-slide-bg-1920@1x.jpg);
   }
 
+  .quiz-slide__content--form {
+    margin: 14.0625rem 0 0.625rem 0;
+  }
+
   .form-img {
     display: block;
     width: 21.25rem;
@@ -7713,6 +7740,10 @@ template {
     background-position: top center !important;
     background-size: cover !important;
     background: url(../img/third-slide-bg-1920@1x.jpg);
+  }
+
+  .quiz-slide__content--gratitude {
+    margin: 11.625rem 0 0.625rem 0;
   }
 
   .quiz-slide__content--gratitude .quiz-slide__content-title {
