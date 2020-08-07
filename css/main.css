@@ -6087,6 +6087,13 @@ template {
     display: none;
   }
 
+  .dieta-type {
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
+    background: url(../img/dieta-type-1920@1x.png);
+  }
+
   .program-calc-desktop {
     position: relative;
     width: 45.4375rem;
@@ -6855,6 +6862,10 @@ template {
 }
 
 @media screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+  .dieta-type {
+    background: url(../img/dieta-type-1920@2x.png);
+  }
+
   .circle {
     background: url(../img/circle-1920@2x.png);
   }
@@ -7636,13 +7647,6 @@ template {
     width: 100%;
   }
 
-  .dieta-type {
-    background-repeat: no-repeat !important;
-    background-position: top center !important;
-    background-size: cover !important;
-    background: url(../img/dieta-type-1920@1x.png);
-  }
-
   .program-calc {
     background-repeat: no-repeat !important;
     background-position: top center !important;
@@ -7998,10 +8002,6 @@ template {
 
   .quiz-slide__img-modal {
     background: url(../img/third-slide-halfform-1920@1x.jpg);
-  }
-
-  .dieta-type {
-    background: url(../img/dieta-type-1920@2x.png);
   }
 
   .program-calc {
