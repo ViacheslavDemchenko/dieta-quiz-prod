@@ -3700,50 +3700,46 @@ template {
 }
 
 .faq-item__title.faq-item__title--active ~ .faq-item__text--third {
-  height: 8.125rem;
-}
-
-.faq-item__title.faq-item__title--active ~ .faq-item__text--fourth {
   height: 15.625rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--fifth {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--fourth {
   height: 12.5rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--sixth {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--fifth {
   height: 13.75rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--seventh {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--sixth {
   height: 15rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--eighth {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--seventh {
   height: 18.75rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--ninth {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--eighth {
   height: 24.375rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--tenth {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--ninth {
   height: 6.25rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--eleventh {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--tenth {
   height: 21.25rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--twelveth {
-  height: 19.375rem;
+.faq-item__title.faq-item__title--active ~ .faq-item__text--eleventh {
+  height: 12.5rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--thirteenth {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--twelveth {
   height: 9.375rem;
 }
 
-.faq-item__title.faq-item__title--active ~ .faq-item__text--fourteenth {
+.faq-item__title.faq-item__title--active ~ .faq-item__text--thirteenth {
   height: 8.75rem;
 }
 
@@ -5689,16 +5685,20 @@ template {
     margin-bottom: 1.5625rem;
   }
 
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--first {
+    height: 15rem;
+  }
+
   .faq-item__title.faq-item__title--active ~ .faq-item__text--second {
-    height: 6.25rem;
+    height: 5rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--third {
-    height: 9.375rem;
+    height: 18.75rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--fourth {
-    height: 16.875rem;
+    height: 15rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--fifth {
@@ -5710,35 +5710,31 @@ template {
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--seventh {
-    height: 18.75rem;
+    height: 22.5rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--eighth {
-    height: 20rem;
+    height: 27.5rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--ninth {
-    height: 28.75rem;
+    height: 6.875rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--tenth {
-    height: 8.75rem;
+    height: 22.5rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--eleventh {
-    height: 23.75rem;
+    height: 14.375rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--twelveth {
-    height: 24.375rem;
+    height: 10rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--thirteenth {
-    height: 11.25rem;
-  }
-
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--fourteenth {
-    height: 11.25rem;
+    height: 10rem;
   }
 
   .btn-wrap {
@@ -6584,51 +6580,55 @@ template {
     padding: 1.25rem 0 1.5625rem 0;
   }
 
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--first {
+    height: 12.5rem;
+  }
+
   .faq-item__title.faq-item__title--active ~ .faq-item__text--second {
     height: 5.625rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--third {
-    height: 10rem;
-  }
-
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--fourth {
     height: 15.625rem;
   }
 
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--fifth {
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--fourth {
     height: 14.375rem;
   }
 
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--sixth {
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--fifth {
     height: 12.5rem;
   }
 
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--seventh {
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--sixth {
     height: 13.75rem;
   }
 
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--ninth {
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--seventh {
+    height: 19.375rem;
+  }
+
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--eighth {
     height: 23.75rem;
   }
 
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--ninth {
+    height: 6.875rem;
+  }
+
   .faq-item__title.faq-item__title--active ~ .faq-item__text--tenth {
-    height: 7.5rem;
+    height: 19.375rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--eleventh {
-    height: 19.375rem;
+    height: 12.5rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--twelveth {
-    height: 19.375rem;
-  }
-
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--thirteenth {
     height: 8.125rem;
   }
 
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--fourteenth {
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--thirteenth {
     height: 9.375rem;
   }
 
@@ -7842,7 +7842,7 @@ template {
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--first {
-    height: 16.25rem;
+    height: 13.125rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--second {
@@ -7850,15 +7850,15 @@ template {
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--third {
-    height: 11.25rem;
+    height: 16.25rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--fourth {
-    height: 20rem;
+    height: 14.375rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--fifth {
-    height: 16.25rem;
+    height: 14.375rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--sixth {
@@ -7866,30 +7866,30 @@ template {
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--seventh {
-    height: 18.75rem;
+    height: 23.125rem;
+  }
+
+  .faq-item__title.faq-item__title--active ~ .faq-item__text--eighth {
+    height: 25.625rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--ninth {
-    height: 28.75rem;
+    height: 7.5rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--tenth {
-    height: 8.75rem;
+    height: 21.875rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--eleventh {
-    height: 23.75rem;
+    height: 14.375rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--twelveth {
-    height: 24.375rem;
+    height: 10.625rem;
   }
 
   .faq-item__title.faq-item__title--active ~ .faq-item__text--thirteenth {
-    height: 11.25rem;
-  }
-
-  .faq-item__title.faq-item__title--active ~ .faq-item__text--fourteenth {
     height: 11.25rem;
   }
 
