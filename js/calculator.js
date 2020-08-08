@@ -1,6 +1,10 @@
 $(document).ready(function () {
   /* СЛАЙДЕР */
 
+  window.onload = function () {
+    localStorage.clear();
+  }
+
   let owl = $('.quiz.owl-carousel');
 
   owl.owlCarousel({

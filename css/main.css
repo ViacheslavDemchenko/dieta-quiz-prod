@@ -1305,7 +1305,13 @@ template {
   border: 0.125rem solid #594193;
   border-radius: 50%;
   background-color: #e2e9f2;
+  transition: transform 1s ease-out;
   cursor: pointer;
+}
+
+.question-mark:hover {
+  transform: scale(1.2);
+  transition: transform 1s ease-out;
 }
 
 .exercices {
@@ -2039,7 +2045,7 @@ template {
 .personal-profile__elipse {
   position: absolute;
   z-index: 500;
-  top: 20.625rem;
+  top: -1.75rem;
   width: 3.4375rem;
   height: 3.4375rem;
   border-radius: 50%;
@@ -2057,6 +2063,7 @@ template {
 }
 
 .personal-profile__body {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3037,6 +3044,12 @@ template {
   border: 0.0625rem solid #594193;
   border-radius: 50%;
   background: #fff;
+  transition: transform 1s ease-out;
+}
+
+.question-mark--payment:hover {
+  transform: scale(1.2);
+  transition: transform 1s ease-out;
 }
 
 .round-text {
@@ -3082,6 +3095,7 @@ template {
   transform: translate(-50%, -50%);
   width: 0.9375rem;
   height: 1.125rem;
+  fill: #fff;
 }
 
 .inform-list {
@@ -5023,7 +5037,7 @@ template {
   }
 
   .personal-profile__elipse {
-    top: 30rem;
+    top: -2.375rem;
     width: 4.6875rem;
     height: 4.6875rem;
   }
@@ -5425,9 +5439,8 @@ template {
   }
 
   .question-mark--payment {
-    top: 66%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 58%;
+    left: calc(50% - 11px);
     width: 1.5625rem;
     height: 1.5625rem;
     font-size: 1rem;
@@ -5879,6 +5892,12 @@ template {
   }
 }
 
+@media screen and (min-width: 480px) and (min-width: 2200px) {
+  .personal-profile-blocks {
+    margin-bottom: 31.25rem;
+  }
+}
+
 @media screen and (min-width: 481px) {
   .container-fluid {
     padding-left: 10px;
@@ -6139,7 +6158,7 @@ template {
   }
 
   .personal-profile__elipse {
-    top: 48.125rem;
+    top: -2.25rem;
   }
 
   .personal-profile__body {
@@ -7014,14 +7033,10 @@ template {
     transform: translateX(26.75rem);
   }
 
-  .quiz-slide__range {
-    margin-bottom: 6.25rem;
-  }
-
   .quiz-slide-wrap .quiz-slide__img {
     display: block;
     width: 21.25rem;
-    height: 34.625rem;
+    height: 30.9375rem;
     border: 0.125rem solid #ffc343;
     border-left: none;
     border-top-right-radius: 3.125rem;
@@ -7062,7 +7077,7 @@ template {
 
   .quiz-arrows {
     width: 40rem;
-    min-height: 8.1875rem;
+    min-height: 7.5rem;
     align-items: center;
     padding: 0 4.375rem 0 7.1875rem;
     margin-top: 0;
@@ -7169,32 +7184,32 @@ template {
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(1) .check-mark {
-    top: 13.25rem;
+    top: 9.125rem;
     left: 9.0625rem;
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(1)::after {
-    top: 12.25rem;
+    top: 8.125rem;
     left: 8.125rem;
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(2) .check-mark {
-    top: 18.625rem;
+    top: 14.5rem;
     left: 9.0625rem;
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(2)::after {
-    top: 17.625rem;
+    top: 13.5rem;
     left: 8.125rem;
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(3) .check-mark {
-    top: 23.875rem;
+    top: 19.875rem;
     left: 9.0625rem;
   }
 
   .quiz-slide-fourth .quiz-slide-measure .input-wrap:nth-child(3)::after {
-    top: 22.875rem;
+    top: 18.875rem;
     left: 8.125rem;
   }
 
@@ -7206,77 +7221,77 @@ template {
   }
 
   .form__group.field .form__field:-moz-placeholder-shown ~ .form__label-first {
-    top: 13rem;
+    top: 8.875rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__field:-ms-input-placeholder ~ .form__label-first {
-    top: 13rem;
+    top: 8.875rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__field:placeholder-shown ~ .form__label-first {
-    top: 13rem;
+    top: 8.875rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__field:-moz-placeholder-shown ~ .form__label-second {
-    top: 18.25rem;
+    top: 14.125rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__field:-ms-input-placeholder ~ .form__label-second {
-    top: 18.25rem;
+    top: 14.125rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__field:placeholder-shown ~ .form__label-second {
-    top: 18.25rem;
+    top: 14.125rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__field:-moz-placeholder-shown ~ .form__label-third {
-    top: 23.625rem;
+    top: 19.5rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__field:-ms-input-placeholder ~ .form__label-third {
-    top: 23.625rem;
+    top: 19.5rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__field:placeholder-shown ~ .form__label-third {
-    top: 23.625rem;
+    top: 19.5rem;
     left: 12.6875rem;
   }
 
   .form__group.field .form__label-first {
-    top: 11.75rem;
+    top: 7.75rem;
     left: 25rem;
   }
 
   .form__group.field .form__label-second {
-    top: 17.125rem;
+    top: 12.9375rem;
     left: 25rem;
   }
 
   .form__group.field .form__label-third {
-    top: 22.375rem;
+    top: 18.25rem;
     left: 25rem;
   }
 
   .form__group.field .form__field:focus ~ .form__label-first {
-    top: 11.75rem;
+    top: 7.75rem;
     left: 25rem;
   }
 
   .form__group.field .form__field:focus ~ .form__label-second {
-    top: 17.125rem;
+    top: 12.9375rem;
     left: 25rem;
   }
 
   .form__group.field .form__field:focus ~ .form__label-third {
-    top: 22.375rem;
+    top: 18.25rem;
     left: 25rem;
   }
 
@@ -7307,7 +7322,7 @@ template {
   }
 
   .quiz-slide__content--payment {
-    margin: 9.375rem 0 1.25rem 0;
+    margin: 7.5rem 0 1.25rem 0;
   }
 
   .payment-plan {
@@ -7493,6 +7508,15 @@ template {
     top: 50%;
     left: 50%;
     display: block;
+  }
+}
+
+@media screen and (min-width: 1365px) and (min-width: 1024px) {
+  .quiz-slide__choice-second,
+  .quiz-slide__choice-third,
+  .quiz-slide__choice-fourth,
+  .quiz-slide__choice-fifth {
+    height: 18.75rem;
   }
 }
 
@@ -7682,11 +7706,10 @@ template {
   }
 
   .personal-profile__elipse {
-    top: 58.125rem;
+    top: -2.25rem;
   }
 
   .personal-profile__body {
-    padding-bottom: 8.375rem;
     background-repeat: no-repeat !important;
     background-position: top center !important;
     background-size: cover !important;
