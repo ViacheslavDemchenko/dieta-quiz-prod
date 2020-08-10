@@ -1324,9 +1324,6 @@ template {
       width: 0.75rem;
       height: 1.25rem;
       margin-right: 0.8125rem; } }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1.2) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1.2) and (min-resolution: 192dpi) {
-    .arrow-icon-right {
-      top: 1.5rem; } }
   .arrow-icon-right--form {
     position: absolute;
     top: 0.875rem;
@@ -1539,6 +1536,7 @@ template {
 
 @media screen and (min-width: 561px) {
   .quiz-slide-third {
+    min-height: 100vh;
     background: url(../img/second-slide-bg-1920@1x.jpg); } }
   @media screen and (min-width: 561px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 561px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 561px) and (min-resolution: 192dpi) {
     .quiz-slide-third {
@@ -1910,6 +1908,7 @@ template {
 
 @media screen and (min-width: 561px) {
   .quiz-slide-fourth {
+    min-height: 100vh;
     background: url(../img/second-slide-bg-1920@1x.jpg); } }
   @media screen and (min-width: 561px) and (-webkit-min-device-pixel-ratio: 1.2), screen and (min-width: 561px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 561px) and (min-resolution: 192dpi) {
     .quiz-slide-fourth {
