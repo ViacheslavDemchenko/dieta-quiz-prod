@@ -366,15 +366,4 @@ $(document).ready(function () {
     quizSlideThirdModal.classList.remove('quiz-slide-third-modal--active');
     body.classList.remove('no-scroll');
   }
-
-  /* КОРРЕКТИРОВКА СТРЕЛКИ В КНОПКЕ НА АЙФОНАХ */
-
-  const iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
-  const arrowIconRight = document.querySelector('.arrow-icon-right');
-
-  if (iOS) {
-    arrowIconRight.style.transform = 'translateY(-50%)';
-    arrowIconRight.style.top = '1.5625rem';
-    arrowIconRight.style.right = '1.5rem';
-  }
 });

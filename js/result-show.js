@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
         let targetWeight = localStorage.getItem('target-weight');
         let weight = localStorage.getItem('weight');
 
-        console.log(body_Mass_Index);
-        console.log(recommendedCaloriesStart);
-        console.log(recommendedCaloriesEnd);
-        console.log(userMetabolism);
-        console.log(BMI_Message);
-        console.log(targetType);
-        console.log(targetWeight);
-        console.log(weight);
+        // console.log(body_Mass_Index);
+        // console.log(recommendedCaloriesStart);
+        // console.log(recommendedCaloriesEnd);
+        // console.log(userMetabolism);
+        // console.log(BMI_Message);
+        // console.log(targetType);
+        // console.log(targetWeight);
+        // console.log(weight);
 
         userB_M_IResult.innerHTML = body_Mass_Index;
         caloriesResult.innerHTML = userMetabolism;
@@ -119,20 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.classList.remove('overlay--active');
         resultBlockModalResult.classList.remove('result-block-modal--result--active');
         body.classList.remove('no-scroll');
-    }
-
-    /* КОРРЕКТИРОВКА БОРДЕРА ВОКРУГ КНОПКИ НА АЙФОНАХ */
-
-    const iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
-    const btnProgram = document.querySelector('.personal-profile__get-program');
-    const menuItem = document.querySelector('.menu-list .menu__item');
-
-    if (iOS) {
-        btnProgram.classList.add('personal-profile__get-program--ios');
-        menuItem.classList.add('menu__item--ios');
-        console.log('iOS');
-    } else {
-        console.log('no iOS');
     }
 
 });
