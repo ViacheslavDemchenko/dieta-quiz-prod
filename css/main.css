@@ -5870,6 +5870,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-bottom: 2.5rem;
   background-repeat: no-repeat !important;
   background-position: top center !important;
