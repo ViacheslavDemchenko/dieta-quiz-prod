@@ -5804,11 +5804,6 @@ template {
     color: #563e90; }
   .termsofuse-page-content .terms__list .terms__item--uppercase {
     text-transform: uppercase; }
-  .termsofuse-page-content .terms__list .terms__item--contacts {
-    margin-bottom: 0 !important;
-    text-transform: uppercase; }
-  .termsofuse-page-content .terms__list .terms__item--name {
-    margin-bottom: 0 !important; }
   .termsofuse-page-content .terms__list .terms__item--round {
     position: relative;
     text-indent: 0.625rem; }
