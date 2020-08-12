@@ -1647,10 +1647,10 @@ template {
         right: 0.5625rem;
         width: 0.75rem;
         height: 0.5rem; } }
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 1365px) {
       .quantaty-check-icon {
-        bottom: 0.875rem;
-        right: 0.75rem;
+        bottom: 0.5rem;
+        right: 0.4375rem;
         width: 1.0625rem;
         height: 0.75rem; } }
     .quantaty-check-icon--active {
