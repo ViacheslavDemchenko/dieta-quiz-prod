@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.getElementsByTagName('body')[0];
     const modalFirstText = document.querySelector('.modal-first__text');
     const modalSecondtText = document.querySelector('.modal-second__text');
+    const paymentBtn = document.querySelector('.payment__btn');
 
     let targetUser = localStorage.getItem('target');
 
@@ -43,10 +44,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 dietaBlockBottom.forEach(el => {
                     el.classList.remove('dieta__item-bottom--active');
                 });
-                dietaBlockTop[i].classList.add('dieta__item-top--active');
-                caloriesQuantity[i].classList.add('calories-quantity--active');
-                caloriesText[i].classList.add('calories-text--active');
-                dietaBlockBottom[i].classList.add('dieta__item-bottom--active');
+
+                if (i != 0) {
+                    dietaBlockTop[i].classList.add('dieta__item-top--active');
+                    caloriesQuantity[i].classList.add('calories-quantity--active');
+                    caloriesText[i].classList.add('calories-text--active');
+                    dietaBlockBottom[i].classList.add('dieta__item-bottom--active');
+                }
             });
         });
     }
@@ -96,14 +100,28 @@ document.addEventListener('DOMContentLoaded', function () {
         caloriesQuantity.forEach((cal, i) => {
             if (i == 0) {
                 cal.textContent = dietaCal;
+
+                if (dietaCal == 1400) {
+                    cal.textContent = dietaCal - 100;
+                    dietaItem[i].classList.add('dieta__item--inactive');
+                    dietaItem[i].style.cursor = 'default';
+                } else {
+                    cal.textContent = dietaCal;
+                }
             }
 
             if (i == 1) {
                 cal.textContent = secondDieta;
+
+                if (dietaCal == 1400) {
+                    cal.textContent = dietaCal;
+                } else {
+                    cal.textContent = secondDieta;
+                }
             }
 
             if (i == 2) {
-                cal.textContent = thirdDieta;
+                cal.textContent = secondDieta;
             }
         });
     }

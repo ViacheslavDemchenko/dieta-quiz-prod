@@ -110,6 +110,7 @@ $(document).ready(function () {
         quizSlideTitle[i].classList.add('quiz-slide__title--active');
         bgImage.style.backgroundImage = `url(${src}${i}${imgType})`;
         userSex = btn.value;
+        localStorage.setItem('sex', userSex);
       });
       return userSex;
     });
@@ -292,7 +293,7 @@ $(document).ready(function () {
     }
 
     if (target == 1) {
-      if (weightIndex >= 19 && weightIndex < 25) {
+      if (weightIndex >= 10 && weightIndex < 25) {
         caloriesDeficiteStart = Math.round(dailyCalories - (dailyCalories / 100) * 10);
         caloriesDeficiteEnd = Math.round(dailyCalories - (dailyCalories / 100) * 15);
         localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
