@@ -4,7 +4,15 @@ document.addEventListener('DOMContentLoaded', function () {
     recommendedCal = document.querySelector('.result-block__number--loose-weight'),
     userB_M_IMes = document.querySelector('.result-block__text--bmi'),
     targetMessage = document.querySelector('.result-block__text--target'),
-    targetWeightResult = document.querySelector('.result-block__number--weight');
+    targetWeightResult = document.querySelector('.result-block__number--weight'),
+    modalMax = document.querySelector('.modal-max'),
+    modalMaxClose = document.querySelector('.close-modal-max');
+
+  const body = document.getElementsByTagName('body')[0];
+  const overlay = document.querySelector('.overlay');
+  const resultBlockModalBMI = document.querySelector('.result-block-modal--bmi');
+  const openResultBlockModalBMI = document.querySelector('.question-mark--bmi');
+  const closeResultBlockModalBMI = document.querySelector('.close-modal--bmi');
 
   function resultShow() {
     let body_Mass_Index = localStorage.getItem('BMI');
@@ -40,21 +48,18 @@ document.addEventListener('DOMContentLoaded', function () {
       targetWeightResult.innerHTML = `${weight}кг`;
     }
 
-    if (userMetabolism >= 2200) {
-      console.log('Слишком много');
-    }
-
-    if (userMetabolism <= 1400) {
-      console.log('Слишком мало');
+    if (recommendedCaloriesStart >= 2269) {
+      modalMax.classList.add('modal-max--active');
+      overlay.classList.add('overlay--active');
     }
   }
   resultShow();
 
-  const body = document.getElementsByTagName('body')[0];
-  const overlay = document.querySelector('.overlay');
-  const resultBlockModalBMI = document.querySelector('.result-block-modal--bmi');
-  const openResultBlockModalBMI = document.querySelector('.question-mark--bmi');
-  const closeResultBlockModalBMI = document.querySelector('.close-modal--bmi');
+  modalMaxClose.addEventListener('click', () => {
+    modalMax.classList.remove('modal-max--active');
+    overlay.classList.remove('overlay--active');
+    window.location.href = 'index.html';
+  });
 
   openResultBlockModalBMI.addEventListener('click', openResultBlockModalB_M_I);
   closeResultBlockModalBMI.addEventListener('click', closeResultBlockModalB_M_I);

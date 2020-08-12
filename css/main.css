@@ -3648,6 +3648,56 @@ template {
   .result-block-modal--result--active {
     display: block; }
 
+.modal-max {
+  display: none;
+  position: fixed;
+  z-index: 16000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22.9375rem;
+  text-align: left;
+  padding: 2.5rem 1.25rem 2.1875rem;
+  border-radius: 1.25rem;
+  background: #f4fafa; }
+  .modal-max .close {
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.625rem;
+    width: 1.375rem;
+    height: 1.375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "UniNeueBold";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.222;
+    color: #664e9d;
+    border: 0.0625rem solid #5f4799;
+    border-radius: 50%;
+    cursor: pointer; }
+    @media screen and (min-width: 480px) {
+      .modal-max .close {
+        top: 0.625rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        padding: 0.0625rem 0 0 0.0625rem;
+        font-size: 1.125rem; } }
+  .modal-max .modal-max__text {
+    font-family: "UniNeueBold";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 1.222;
+    color: #3a4148; }
+    @media screen and (min-width: 480px) {
+      .modal-max .modal-max__text {
+        font-size: 1.125rem; } }
+  .modal-max--active {
+    display: block; }
+
 .form-page {
   position: relative;
   width: 100%;
