@@ -2803,7 +2803,7 @@ template {
   align-items: center;
   padding-top: 3.125rem;
   background-repeat: no-repeat !important;
-  background-position: 100% 0% !important;
+  background-position: 100% -140px !important;
   background-size: 100% !important;
   background: url(../img/personal-profile-bg-480@1x.jpg); }
   @media (-webkit-min-device-pixel-ratio: 1.2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -2812,7 +2812,10 @@ template {
   @media screen and (min-width: 480px) {
     .personal-profile__body {
       padding-top: 4.25rem;
-      background-position: 100% 0% !important; } }
+      background-position: 100% -300px !important; } }
+  @media screen and (min-width: 768px) {
+    .personal-profile__body {
+      background-position: 0 -478px !important; } }
   @media screen and (min-width: 1024px) {
     .personal-profile__body {
       padding-bottom: 8.375rem;

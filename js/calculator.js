@@ -297,17 +297,17 @@ $(document).ready(function () {
     }
 
     if (target == 1) {
-      if (weightIndex >= 10 && weightIndex < 25) {
+      if (weightIndex >= 10 && weightIndex <= 25) {
         caloriesDeficiteStart = Math.round(dailyCalories - (dailyCalories / 100) * 10);
         caloriesDeficiteEnd = Math.round(dailyCalories - (dailyCalories / 100) * 15);
         localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
         localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
-      } else if (weightIndex >= 25 && weightIndex < 30) {
+      } else if (weightIndex >= 26 && weightIndex <= 29) {
         caloriesDeficiteStart = Math.round(dailyCalories - (dailyCalories / 100) * 15);
         caloriesDeficiteEnd = Math.round(dailyCalories - (dailyCalories / 100) * 20);
         localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
         localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
-      } else if (weightIndex >= 30) {
+      } else if (weightIndex > 29) {
         caloriesDeficiteStart = Math.round(dailyCalories - (dailyCalories / 100) * 10);
         caloriesDeficiteEnd = Math.round(dailyCalories - (dailyCalories / 100) * 15);
         localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
