@@ -286,6 +286,10 @@ $(document).ready(function () {
 
   function dailyCaloriesCalc() {
     dailyCalories = Math.round(metabolism * userActivity);
+    caloriesDeficiteStart = dailyCalories - 50;
+    caloriesDeficiteEnd = dailyCalories + 50;
+    localStorage.setItem('caloriesDeficiteStart', caloriesDeficiteStart);
+    localStorage.setItem('caloriesDeficiteEnd', caloriesDeficiteEnd);
 
     if (weightIndex >= 0 && weightIndex < 19) {
       dailyCalories = Math.round(metabolism * userActivity);

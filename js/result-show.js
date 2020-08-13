@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function resultShow() {
 
-    // console.log(body_Mass_Index);
-    // console.log(recommendedCaloriesStart);
-    // console.log(recommendedCaloriesEnd);
-    // console.log(userMetabolism);
-    // console.log(BMI_Message);
-    // console.log(targetType);
-    // console.log(targetWeight);
-    // console.log(weight);
+    console.log(body_Mass_Index);
+    console.log(recommendedCaloriesStart);
+    console.log(recommendedCaloriesEnd);
+    console.log(userMetabolism);
+    console.log(BMI_Message);
+    console.log(targetType);
+    console.log(targetWeight);
+    console.log(weight);
 
     userB_M_IResult.innerHTML = body_Mass_Index;
     caloriesResult.innerHTML = userMetabolism;
