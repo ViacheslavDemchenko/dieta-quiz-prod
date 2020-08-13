@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.getElementsByTagName('body')[0];
     const modalFirstText = document.querySelector('.modal-first__text');
     const modalSecondtText = document.querySelector('.modal-second__text');
-    const paymentBtn = document.querySelector('.payment__btn');
+    const choosenDieta = document.querySelectorAll('.calories-quantity');
 
     let targetUser = localStorage.getItem('target');
 
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     caloriesQuantity[i].classList.add('calories-quantity--active');
                     caloriesText[i].classList.add('calories-text--active');
                     dietaBlockBottom[i].classList.add('dieta__item-bottom--active');
+                    let dietaChoosen = choosenDieta[i].textContent;
+                    localStorage.setItem('dietaChoosen', dietaChoosen);
                 }
             });
         });
@@ -126,5 +128,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     caloriesRound();
+
+    let body_Mass_Index = localStorage.getItem('BMI');
+    let recommendedCaloriesStart = localStorage.getItem('caloriesDeficiteStart');
+    let recommendedCaloriesEnd = localStorage.getItem('caloriesDeficiteEnd');
+    let userMetabolism = localStorage.getItem('metabolism');
+    let BMI_Message = localStorage.getItem('weightIndexMessage');
+    let targetType = localStorage.getItem('target');
+    let targetWeight = localStorage.getItem('target-weight');
+    let weight = localStorage.getItem('weight');
+    let userSex = localStorage.getItem('sex');
+
+    // console.log(body_Mass_Index);
+    // console.log(recommendedCaloriesStart);
+    // console.log(recommendedCaloriesEnd);
+    // console.log(userMetabolism);
+    // console.log(BMI_Message);
+    // console.log(targetType);
+    // console.log(targetWeight);
+    // console.log(weight);
+    // console.log(userSex);
 
 });

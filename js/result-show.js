@@ -13,26 +13,28 @@ document.addEventListener('DOMContentLoaded', function () {
   const resultBlockModalBMI = document.querySelector('.result-block-modal--bmi');
   const openResultBlockModalBMI = document.querySelector('.question-mark--bmi');
   const closeResultBlockModalBMI = document.querySelector('.close-modal--bmi');
+  const getProgramBtn = document.querySelectorAll('.get-program-btn');
+
+  let body_Mass_Index = localStorage.getItem('BMI');
+  let recommendedCaloriesStart = localStorage.getItem('caloriesDeficiteStart');
+  let recommendedCaloriesEnd = localStorage.getItem('caloriesDeficiteEnd');
+
+  let userMetabolism = localStorage.getItem('metabolism');
+  let BMI_Message = localStorage.getItem('weightIndexMessage');
+  let targetType = localStorage.getItem('target');
+  let targetWeight = localStorage.getItem('target-weight');
+  let weight = localStorage.getItem('weight');
 
   function resultShow() {
-    let body_Mass_Index = localStorage.getItem('BMI');
-    let recommendedCaloriesStart = localStorage.getItem('caloriesDeficiteStart');
-    let recommendedCaloriesEnd = localStorage.getItem('caloriesDeficiteEnd');
 
-    let userMetabolism = localStorage.getItem('metabolism');
-    let BMI_Message = localStorage.getItem('weightIndexMessage');
-    let targetType = localStorage.getItem('target');
-    let targetWeight = localStorage.getItem('target-weight');
-    let weight = localStorage.getItem('weight');
-
-    console.log(body_Mass_Index);
-    console.log(recommendedCaloriesStart);
-    console.log(recommendedCaloriesEnd);
-    console.log(userMetabolism);
-    console.log(BMI_Message);
-    console.log(targetType);
-    console.log(targetWeight);
-    console.log(weight);
+    // console.log(body_Mass_Index);
+    // console.log(recommendedCaloriesStart);
+    // console.log(recommendedCaloriesEnd);
+    // console.log(userMetabolism);
+    // console.log(BMI_Message);
+    // console.log(targetType);
+    // console.log(targetWeight);
+    // console.log(weight);
 
     userB_M_IResult.innerHTML = body_Mass_Index;
     caloriesResult.innerHTML = userMetabolism;
@@ -47,19 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (targetWeight == 3) {
       targetWeightResult.innerHTML = `${weight}кг`;
     }
-
-    if (recommendedCaloriesStart >= 2269) {
-      modalMax.classList.add('modal-max--active');
-      overlay.classList.add('overlay--active');
-    }
   }
   resultShow();
-
-  modalMaxClose.addEventListener('click', () => {
-    modalMax.classList.remove('modal-max--active');
-    overlay.classList.remove('overlay--active');
-    window.location.href = 'index.html';
-  });
 
   openResultBlockModalBMI.addEventListener('click', openResultBlockModalB_M_I);
   closeResultBlockModalBMI.addEventListener('click', closeResultBlockModalB_M_I);
@@ -132,4 +123,26 @@ document.addEventListener('DOMContentLoaded', function () {
     resultBlockModalResult.classList.remove('result-block-modal--result--active');
     body.classList.remove('no-scroll');
   }
+
+  function getProgram() {
+    getProgramBtn.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (recommendedCaloriesStart >= 2269) {
+          e.preventDefault();
+          modalMax.classList.add('modal-max--active');
+          overlay.classList.add('overlay--active');
+        } else {
+          window.location.href = 'personal-profile.html';
+        }
+      });
+    });
+  }
+  getProgram();
+
+  modalMaxClose.addEventListener('click', () => {
+    modalMax.classList.remove('modal-max--active');
+    overlay.classList.remove('overlay--active');
+    window.location.href = 'index.html';
+  });
+
 });
