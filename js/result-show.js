@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
           modalMax.classList.add('modal-max--active');
           overlay.classList.add('overlay--active');
         } else {
-          window.location.href = 'payment.html';
+          window.location.href = 'form.html';
         }
       });
     });
