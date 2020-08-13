@@ -6149,6 +6149,7 @@ template {
 
 .reviews-page__slide {
   width: 16.5625rem;
+  max-height: 37.5rem;
   display: flex;
   padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
   border-radius: 3.125rem;
